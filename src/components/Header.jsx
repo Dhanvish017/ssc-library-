@@ -67,7 +67,7 @@ export default function Header({ onOpenSearch }) {
           <div className="header-actions">
             <div className="masthead-contact" aria-hidden="false">
               <a href="mailto:library@sscasc.in">library@sscasc.in</a>
-              <span>+91-XXXXX XXXXX</span>
+              <span>-0816-2278569</span>
             </div>
             <button className="search-trigger" onClick={onOpenSearch} aria-label={t('search')}>
               <span aria-hidden="true">🔍</span>

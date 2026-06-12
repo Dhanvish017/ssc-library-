@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 // Sets the section heading and (optionally) updates the document title.
 export function PageHead({ eyebrow, title }) {
   useEffect(() => {
-    if (title) document.title = `${title} — SSCASC Library, Tumkur`
+    if (title) document.title = `SSCASC Library, Tumkur`
   }, [title])
   return (
     <header className="page-head">

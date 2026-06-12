@@ -13,7 +13,7 @@ export function Contact() {
             {college.place}
           </p>
           <div className="deflist" style={{ marginTop: 16 }}>
-            <div className="item"><strong>Phone:</strong> +91-XXXXXXXXXX (add number)</div>
+            <div className="item"><strong>Phone:</strong> -0816-2278569(add number)</div>
             <div className="item"><strong>Email:</strong> library@sscasc.in (add email)</div>
             <div className="item"><strong>Librarian:</strong> Smt. Parimala B N.</div>
           </div>
