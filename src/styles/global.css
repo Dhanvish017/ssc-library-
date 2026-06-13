@@ -1501,3 +1501,17 @@ table.data td a {
     padding-right: var(--photo-col);
   }
 }
+
+.read-aloud-btn {
+  background: #ffffff;
+  color: #7a1023;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.read-aloud-btn:hover {
+  opacity: 0.9;
+}

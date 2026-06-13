@@ -5,6 +5,7 @@ import { navStructure, college } from '../data/site.js'
 import logo from '../assets/logo.png'
 import banner from '../assets/banner.png'
 import { FaYoutube, FaFacebook } from "react-icons/fa";
+import ReadAloudButton from "./ReadAloudButton";
 
 function LangAndAccess() {
   const { lang, toggleLang, incScale, decScale, resetScale, t } = useApp()
@@ -46,7 +47,7 @@ export default function Header({ onOpenSearch }) {
             <a href={college.facebook} target="_blank" rel="noopener noreferrer">
               <FaFacebook />
             </a>
-
+            <ReadAloudButton />
             <LangAndAccess />
           </div>
         </div>
