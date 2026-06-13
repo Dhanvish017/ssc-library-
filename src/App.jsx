@@ -13,8 +13,10 @@ import {
 } from './pages/About.jsx'
 import { Collection, Services } from './pages/CollectionServices.jsx'
 import { OAResources, ResearchSupport, AITools, Elearning } from './pages/Resources.jsx'
-import { Gallery, VirtualTour, BestPractices, Activities, Feedback } from './pages/More.jsx'
+import { Gallery, VirtualTour, BestPractices, Activities } from './pages/More.jsx'
 import { Contact, Disclaimer, Privacy, NotFound } from './pages/Contact.jsx'
+import { FAQ, Feedback, ReportConnectionProblem, RecommendBook, RecommendJournals } from './pages/Askus.jsx'
+
 
 // Scroll to top on route change, or to an anchor when a hash is present.
 function ScrollManager() {
@@ -53,37 +55,43 @@ export default function App() {
       <a className="skip-link" href="#main">{t('skip')}</a>
       <ScrollManager />
       <div className="site-frame">
-      <Header onOpenSearch={() => setSearchOpen(true)} />
-      <main id="main">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about/institution" element={<AboutInstitution />} />
-          <Route path="/about/library" element={<AboutLibrary />} />
-          <Route path="/about/vision" element={<Vision />} />
-          <Route path="/about/rules" element={<Rules />} />
-          <Route path="/about/committee" element={<Committee />} />
-          <Route path="/about/timings" element={<Timings />} />
-          <Route path="/about/future" element={<Future />} />
-          <Route path="/about/staff" element={<Staff />} />
-          <Route path="/about/budget" element={<Budget />} />
-          <Route path="/collection" element={<Collection />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/oa-resources" element={<OAResources />} />
-          <Route path="/research-support" element={<ResearchSupport />} />
-          <Route path="/ai-tools" element={<AITools />} />
-          <Route path="/e-learning" element={<Elearning />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/virtual-tour" element={<VirtualTour />} />
-          <Route path="/best-practices" element={<BestPractices />} />
-          <Route path="/activities" element={<Activities />} />
-          <Route path="/feedback" element={<Feedback />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/disclaimer" element={<Disclaimer />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
-      <Footer />
+        <Header onOpenSearch={() => setSearchOpen(true)} />
+        <main id="main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about/institution" element={<AboutInstitution />} />
+            <Route path="/about/library" element={<AboutLibrary />} />
+            <Route path="/about/vision" element={<Vision />} />
+            <Route path="/about/rules" element={<Rules />} />
+            <Route path="/about/committee" element={<Committee />} />
+            <Route path="/about/timings" element={<Timings />} />
+            <Route path="/about/future" element={<Future />} />
+            <Route path="/about/staff" element={<Staff />} />
+            <Route path="/about/budget" element={<Budget />} />
+            <Route path="/collection" element={<Collection />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/oa-resources" element={<OAResources />} />
+            <Route path="/research-support" element={<ResearchSupport />} />
+            <Route path="/ai-tools" element={<AITools />} />
+            <Route path="/e-learning" element={<Elearning />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/virtual-tour" element={<VirtualTour />} />
+            <Route path="/best-practices" element={<BestPractices />} />
+            <Route path="/activities" element={<Activities />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/feedback" element={<Feedback />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/racp" element={<ReportConnectionProblem />} />
+            <Route path="/rab" element={<RecommendBook />} />
+            <Route path="/rj" element={<RecommendJournals />} />
+
+
+          </Routes>
+        </main>
+        <Footer />
       </div>
       <div className="site-watermark" aria-hidden="true">SSCASC&nbsp;LIBRARY</div>
       <Chatbot />

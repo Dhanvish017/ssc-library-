@@ -6,6 +6,7 @@ import logo from '../assets/logo.png'
 import banner from '../assets/banner.png'
 import { FaYoutube, FaFacebook } from "react-icons/fa";
 import ReadAloudButton from "./ReadAloudButton";
+import { useEffect } from 'react'
 
 function LangAndAccess() {
   const { lang, toggleLang, incScale, decScale, resetScale, t } = useApp()
@@ -31,6 +32,11 @@ export default function Header({ onOpenSearch }) {
   const [navOpen, setNavOpen] = useState(false)
   const [expanded, setExpanded] = useState(null)
   const { pathname } = useLocation()
+
+  useEffect(() => {
+    setExpanded(null)
+    setNavOpen(false)
+  }, [pathname])
 
   return (
     <>
@@ -89,38 +95,40 @@ export default function Header({ onOpenSearch }) {
       <nav className="mainnav" aria-label="Primary">
         <div className="container">
           <ul className={`navlist ${navOpen ? 'open' : ''}`} id="primary-nav">
-            {navStructure.map((item) => {
-              const isActive = item.to && (item.to === '/' ? pathname === '/' : pathname.startsWith(item.to))
-              if (item.children) {
-                const open = expanded === item.label
+            {navStructure
+              .filter(item => item.label !== 'More')
+              .map((item) => {
+                const isActive = item.to && (item.to === '/' ? pathname === '/' : pathname.startsWith(item.to))
+                if (item.children) {
+                  const open = expanded === item.label
+                  return (
+                    <li key={item.label} className={open ? 'expanded' : ''}>
+                      <button
+                        aria-expanded={open}
+                        onClick={() => setExpanded(open ? null : item.label)}
+                      >
+                        {t(`nav.${item.label}`)} <span className="caret" aria-hidden="true">▼</span>
+                      </button>
+                      <ul className="dropdown">
+                        {item.children.map((c) => (
+                          <li key={c.to}>
+                            <Link to={c.to} onClick={() => { setNavOpen(false); setExpanded(null) }}>
+                              {c.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  )
+                }
                 return (
-                  <li key={item.label} className={open ? 'expanded' : ''}>
-                    <button
-                      aria-expanded={open}
-                      onClick={() => setExpanded(open ? null : item.label)}
-                    >
-                      {t(`nav.${item.label}`)} <span className="caret" aria-hidden="true">▼</span>
-                    </button>
-                    <ul className="dropdown">
-                      {item.children.map((c) => (
-                        <li key={c.to}>
-                          <Link to={c.to} onClick={() => { setNavOpen(false); setExpanded(null) }}>
-                            {c.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+                  <li key={item.to} className={isActive ? 'active' : ''}>
+                    <NavLink to={item.to} onClick={() => setNavOpen(false)}>
+                      {t(`nav.${item.label}`)}
+                    </NavLink>
                   </li>
                 )
-              }
-              return (
-                <li key={item.to} className={isActive ? 'active' : ''}>
-                  <NavLink to={item.to} onClick={() => setNavOpen(false)}>
-                    {t(`nav.${item.label}`)}
-                  </NavLink>
-                </li>
-              )
-            })}
+              })}
           </ul>
         </div>
       </nav>

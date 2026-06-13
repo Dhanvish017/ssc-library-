@@ -361,6 +361,7 @@ img {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 10px;
 }
 
 .navlist>li {
@@ -416,8 +417,7 @@ img {
   z-index: 950;
 }
 
-.navlist>li:hover .dropdown,
-.navlist>li:focus-within .dropdown {
+.navlist>li.expanded .dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -435,6 +435,7 @@ img {
   text-decoration: none;
   color: var(--garnet);
 }
+
 
 /* ---------- Hero ---------- */
 .hero {
@@ -1433,70 +1434,164 @@ table.data td a {
    HOME 2-COLUMN SIDEBAR LAYOUT  (menu | content)
    Swamiji floating photo is unchanged — fixed bottom-left on every page.
    ============================================================ */
-   .sidebar-layout {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 0;
-    align-items: start;
-    padding: 0 0 64px;
-  }
-  
-  /* Column 1 — vertical star menu (formerly "More" dropdown) */
-  .sidebar-menu { position: sticky; top: 84px; border-right: 2px solid var(--line); padding: 28px 0; }
-  .sidebar-menu ul { list-style: none; margin: 0; padding: 0; }
-  .sidebar-menu li { border-bottom: 1px solid var(--line); }
-  .sidebar-menu a {
-    display: block; position: relative;
-    padding: 13px 12px 13px 32px;
-    color: var(--ink); font-weight: 600; font-size: 1rem;
-  }
-  .sidebar-menu a::before {
-    content: '\2605'; position: absolute; left: 10px; top: 14px;
-    color: var(--garnet); font-size: 0.82rem;
-  }
-  .sidebar-menu a:hover { color: var(--garnet); background: var(--gold-soft); text-decoration: none; }
-  
-  /* Column 2 — homepage content */
-  .sidebar-main { padding: 32px; }
-  .sidebar-main .eyebrow {
-    text-transform: uppercase; letter-spacing: 0.16em;
-    font-size: 0.78rem; color: var(--gold); font-weight: 700; margin-bottom: 10px;
-  }
-  .sidebar-main h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--garnet); margin: 0 0 0.5em; }
-  .sidebar-main h2 em { font-style: italic; color: var(--gold); }
-  .sidebar-main .hero-stats {
-    display: grid; grid-template-columns: repeat(4,1fr); gap: 1px;
-    background: var(--line); border: 1px solid var(--line);
-    border-radius: var(--radius); overflow: hidden; margin-top: 28px;
-  }
-  .sidebar-main .hero-stat { background: var(--garnet-dark); padding: 16px 14px; }
-  .sidebar-main .hero-stat .num { font-family: var(--font-display); font-size: 1.6rem; color: var(--gold); font-weight: 700; }
-  .sidebar-main .hero-stat .lbl { font-size: 0.8rem; color: #f0ddc9; }
-  
-  /* outline button */
-  .btn-outline { background: transparent; color: var(--garnet); border: 1px solid var(--garnet); }
-  .btn-outline:hover { background: var(--garnet); color: #fff; text-decoration: none; }
-  
-  /* Responsive */
-  @media (max-width: 860px) {
-    .sidebar-layout { grid-template-columns: 200px 1fr; }
-    .sidebar-main { padding: 20px 16px; }
-  }
-  @media (max-width: 640px) {
-    .sidebar-layout { grid-template-columns: 1fr; }
-    .sidebar-menu { position: static; border-right: none; border-bottom: 2px solid var(--line); padding: 12px 0; }
-    .sidebar-main { padding: 20px 12px; }
-    .sidebar-main .hero-stats { grid-template-columns: repeat(2,1fr); }
+.sidebar-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 0;
+  align-items: start;
+  padding: 0 0 64px;
+}
+
+/* Column 1 — vertical star menu (formerly "More" dropdown) */
+.sidebar-menu {
+  position: sticky;
+  top: 84px;
+  border-right: 2px solid var(--line);
+  padding: 28px 0;
+}
+
+.sidebar-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  border-bottom: 1px solid var(--line);
+}
+
+.sidebar-menu a {
+  display: block;
+  position: relative;
+  padding: 13px 12px 13px 32px;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.sidebar-menu a::before {
+  content: '\2605';
+  position: absolute;
+  left: 10px;
+  top: 14px;
+  color: var(--garnet);
+  font-size: 0.82rem;
+}
+
+.sidebar-menu a:hover {
+  color: var(--garnet);
+  background: var(--gold-soft);
+  text-decoration: none;
+}
+
+/* Column 2 — homepage content */
+.sidebar-main {
+  padding: 32px;
+}
+
+.sidebar-main .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.sidebar-main h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: var(--garnet);
+  margin: 0 0 0.5em;
+}
+
+.sidebar-main h2 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.sidebar-main .hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 28px;
+}
+
+.sidebar-main .hero-stat {
+  background: var(--garnet-dark);
+  padding: 16px 14px;
+}
+
+.sidebar-main .hero-stat .num {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.sidebar-main .hero-stat .lbl {
+  font-size: 0.8rem;
+  color: #f0ddc9;
+}
+
+/* outline button */
+.btn-outline {
+  background: transparent;
+  color: var(--garnet);
+  border: 1px solid var(--garnet);
+}
+
+.btn-outline:hover {
+  background: var(--garnet);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .sidebar-layout {
+    grid-template-columns: 200px 1fr;
   }
 
-  /* Center body content with symmetric gutters; the left gutter clears the photo.
+  .sidebar-main {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-menu {
+    position: static;
+    border-right: none;
+    border-bottom: 2px solid var(--line);
+    padding: 12px 0;
+  }
+
+  .sidebar-main {
+    padding: 20px 12px;
+  }
+
+  .sidebar-main .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Center body content with symmetric gutters; the left gutter clears the photo.
    Header/topbar/nav stay full width. */
 @media (min-width: 861px) {
+
   .hero .container,
   .container.page,
   .container.footer-grid,
   .container.footer-bottom,
-  .sidebar-layout {           /* ← add this line */
+  .sidebar-layout {
+    /* ← add this line */
     padding-left: 120px;
     padding-right: var(--photo-col);
   }

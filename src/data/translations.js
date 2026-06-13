@@ -28,6 +28,8 @@ export const translations = {
       'AI Tools': 'AI Tools',
       'E-learning': 'E-learning',
       More: 'More',
+      Feedback: 'Feedback',
+      AskUs: 'Ask Us',
       Contact: 'Contact',
     },
     // hero
@@ -81,6 +83,9 @@ export const translations = {
       'AI Tools': 'AI ಸಾಧನಗಳು',
       'E-learning': 'ಇ-ಕಲಿಕೆ',
       More: 'ಇನ್ನಷ್ಟು',
+      FAQ: 'FAQ',
+      Feedback: 'ಪ್ರತಿಕ್ರಿಯೆ',
+      AskUs: 'ನಮ್ಮನ್ನು ಕೇಳಿ',
       Contact: 'ಸಂಪರ್ಕ',
     },
     heroEyebrow: 'NAAC “A” ಶ್ರೇಣಿ • ತುಮಕೂರು, ಕರ್ನಾಟಕ',

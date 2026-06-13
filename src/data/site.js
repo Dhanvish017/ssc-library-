@@ -262,8 +262,19 @@ export const navStructure = [
       { label: 'Virtual Tour', to: '/virtual-tour' },
       { label: 'Best Practices', to: '/best-practices' },
       { label: 'Library Activities', to: '/activities' },
-      { label: 'Feedback', to: '/feedback' },
     ],
   },
+
+  {
+    label: 'AskUs',
+    children: [
+      { label: 'FAQ', to: '/faq' },
+      { label: 'Report a connection problem', to: '/racp' },
+      { label: 'Recommend a book', to: '/rab' },
+      { label: 'Recommend Journals', to: '/rj' },
+      { label: 'Give us feedback', to: '/feedback' },
+    ]
+  },
+
   { label: 'Contact', to: '/contact' },
 ]
