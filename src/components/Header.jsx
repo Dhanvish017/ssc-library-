@@ -10,6 +10,7 @@ import { useEffect } from 'react'
 import SwamijiPhoto from './SwamijiPhoto.jsx'
 import bgbanner from '../assets/bgbanner.png'
 import bigswamiji from '../assets/bigswamiji.png'
+import tsh from '../assets/tsh.png'
 
 function LangAndAccess() {
   const { lang, toggleLang, incScale, decScale, resetScale, t } = useApp()
@@ -75,7 +76,7 @@ export default function Header({ onOpenSearch }) {
         </div>
 
         <img
-          src={bigswamiji}
+          src={tsh}
           alt="Swamiji"
           className="header-swamiji"
         />
