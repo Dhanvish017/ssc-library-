@@ -7,6 +7,9 @@ import banner from '../assets/banner.png'
 import { FaYoutube, FaFacebook } from "react-icons/fa";
 import ReadAloudButton from "./ReadAloudButton";
 import { useEffect } from 'react'
+import SwamijiPhoto from './SwamijiPhoto.jsx'
+import bgbanner from '../assets/bgbanner.png'
+import bigswamiji from '../assets/bigswamiji.png'
 
 function LangAndAccess() {
   const { lang, toggleLang, incScale, decScale, resetScale, t } = useApp()
@@ -46,22 +49,38 @@ export default function Header({ onOpenSearch }) {
             <span>{college.accreditation}</span>
           </div>
           <div className="topbar-social">
-            <a href={college.youtube} target="_blank" rel="noopener noreferrer">
-              <FaYoutube />
-            </a>
-
-            <a href={college.facebook} target="_blank" rel="noopener noreferrer">
-              <FaFacebook />
-            </a>
             <ReadAloudButton />
             <LangAndAccess />
           </div>
         </div>
       </div>
 
-      <div className="header-banner">
-        <img src={banner} alt={college.name} className="header-banner-img" />
+
+
+
+
+      <div className="header-main">
+        <img
+          src={logo}
+          alt="College Logo"
+          className="header-logo"
+        />
+
+        <div className="header-banner">
+          <img
+            src={bgbanner}
+            alt={college.name}
+            className="header-banner-img"
+          />
+        </div>
+
+        <img
+          src={bigswamiji}
+          alt="Swamiji"
+          className="header-swamiji"
+        />
       </div>
+
 
 
       <div className="masthead">
@@ -113,7 +132,7 @@ export default function Header({ onOpenSearch }) {
                         {item.children.map((c) => (
                           <li key={c.to}>
                             <Link to={c.to} onClick={() => { setNavOpen(false); setExpanded(null) }}>
-                              {c.label}
+                              {t(`nav.${c.label}`)}
                             </Link>
                           </li>
                         ))}

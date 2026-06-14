@@ -21,17 +21,81 @@ export const translations = {
     nav: {
       Home: 'Home',
       'About Us': 'About Us',
+      'About Institution': 'About Institution',
+      'About the Library': 'About the Library',
+      'Vision / Mission': 'Vision / Mission',
+
+      'Library Rules': 'Library Rules',
+
+      'Library Committee': 'Library Committee',
+
+      'Library Timings': 'Library Timings',
+
+      'Future Plan': 'Future Plan',
+
+      'Library Staff': 'Library Staff',
+
+      'Library Budget': 'Library Budget',
+
+
       Collection: 'Collection',
+      'Overview': 'Overview',
+
+      'Books': 'Books',
+
+      'Journals': 'Journals',
+
+      'Magazines': 'Magazines',
+
+
+
       Services: 'Services',
+      'All Services': 'All Services',
+
+      'Circulation': 'Circulation',
+
+      'Reference': 'Reference',
+
+      'OPAC': 'OPAC',
       'OA Resources': 'OA Resources',
       'Research Support': 'Research Support',
       'AI Tools': 'AI Tools',
       'E-learning': 'E-learning',
+
+
       More: 'More',
+      'Photo Gallery': 'Photo Gallery',
+
+      'Virtual Tour': 'Virtual Tour',
+
+      'Best Practices': 'Best Practices',
+
+      'Library Activities': 'Library Activities',
+
+
       Feedback: 'Feedback',
       AskUs: 'Ask Us',
       Contact: 'Contact',
+      'AskUs': 'Ask Us',
+
+      'FAQ': 'FAQ',
+
+      'Report a connection problem': 'Report a connection problem',
+
+      'Recommend a book': 'Recommend a book',
+
+      'Recommend Journals': 'Recommend Journals',
+
+      'Give us feedback': 'Give us feedback',
     },
+
+    home: {
+      'Photo Gallery': 'Photo Gallery',
+      'Virtual Tour': 'Virtual Tour',
+      'Best Practices': 'Best Practices',
+      'Library Activities': 'Library Activities'
+    },
+
     // hero
     heroEyebrow: 'NAAC “A” Grade • Tumkur, Karnataka',
     heroTitle: 'A gateway to the world of <em>knowledge</em>',
@@ -57,6 +121,8 @@ export const translations = {
     chatPlaceholder: 'Type your question…',
     chatSend: 'Send',
     chatNote: 'This is a demo assistant. Live answers can be connected to an AI service later.',
+
+
   },
   kn: {
     langName: 'ಕನ್ನಡ',
@@ -76,18 +142,94 @@ export const translations = {
     nav: {
       Home: 'ಮುಖಪುಟ',
       'About Us': 'ನಮ್ಮ ಬಗ್ಗೆ',
+      'About Institution': 'ಕಾಲೇಜಿನ ಬಗ್ಗೆ',
+      'About the Library': 'ಗ್ರಂಥಾಲಯದ ಬಗ್ಗೆ',
+      'Vision / Mission': 'ದೃಷ್ಟಿ ಮತ್ತು ಧ್ಯೇಯ',
+
+      'Library Rules': 'ಗ್ರಂಥಾಲಯದ ನಿಯಮಗಳು',
+
+      'Library Committee': 'ಗ್ರಂಥಾಲಯ ಸಮಿತಿ',
+
+      'Library Timings': 'ಗ್ರಂಥಾಲಯದ ಸಮಯ',
+
+      'Future Plan': 'ಭವಿಷ್ಯದ ಯೋಜನೆ',
+
+      'Library Staff': 'ಗ್ರಂಥಾಲಯ ಸಿಬ್ಬಂದಿ',
+
+      'Library Budget': 'ಗ್ರಂಥಾಲಯದ ಬಜೆಟ್',
+
+
       Collection: 'ಸಂಗ್ರಹ',
+      'Overview': 'ಸಮಗ್ರ ಮಾಹಿತಿ',
+
+      'Books': 'ಪುಸ್ತಕಗಳು',
+
+      'Journals': 'ಜರ್ನಲ್‌ಗಳು',
+
+      'Magazines': 'ಮಾಸಪತ್ರಿಕೆಗಳು',
       Services: 'ಸೇವೆಗಳು',
+      'All Services': 'ಎಲ್ಲಾ ಸೇವೆಗಳು',
+
+      'Circulation': 'ಪುಸ್ತಕ ವಿತರಣೆ',
+
+      'Reference': 'ಉಲ್ಲೇಖ ಸೇವೆ',
+
+      'OPAC': 'ಆನ್‌ಲೈನ್ ಸಾರ್ವಜನಿಕ ಪ್ರವೇಶ ಕ್ಯಾಟಲಾಗ್ (OPAC)',
       'OA Resources': 'ಮುಕ್ತ ಸಂಪನ್ಮೂಲ',
       'Research Support': 'ಸಂಶೋಧನಾ ಬೆಂಬಲ',
       'AI Tools': 'AI ಸಾಧನಗಳು',
       'E-learning': 'ಇ-ಕಲಿಕೆ',
+
+
       More: 'ಇನ್ನಷ್ಟು',
+      'Photo Gallery': 'ಚಿತ್ರ ಗ್ಯಾಲರಿ',
+
+      'Virtual Tour': 'ವರ್ಚುವಲ್ ಪ್ರವಾಸ',
+
+      'Best Practices': 'ಉತ್ತಮ ಕಾರ್ಯಪದ್ಧತಿಗಳು',
+
+      'Library Activities': 'ಗ್ರಂಥಾಲಯ ಚಟುವಟಿಕೆಗಳು',
+
+
       FAQ: 'FAQ',
       Feedback: 'ಪ್ರತಿಕ್ರಿಯೆ',
       AskUs: 'ನಮ್ಮನ್ನು ಕೇಳಿ',
       Contact: 'ಸಂಪರ್ಕ',
+      'AskUs': 'ನಮ್ಮನ್ನು ಕೇಳಿ',
+
+      'FAQ': 'ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು',
+
+      'Report a connection problem': 'ಸಂಪರ್ಕ ಸಮಸ್ಯೆಯನ್ನು ವರದಿ ಮಾಡಿ',
+
+      'Recommend a book': 'ಪುಸ್ತಕವನ್ನು ಶಿಫಾರಸು ಮಾಡಿ',
+
+      'Recommend Journals': 'ಜರ್ನಲ್‌ಗಳನ್ನು ಶಿಫಾರಸು ಮಾಡಿ',
+
+      'Give us feedback': 'ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆ ನೀಡಿ',
+
+      quick: {
+        'Library Collection': 'ಗ್ರಂಥಾಲಯ ಸಂಗ್ರಹ',
+        'OPAC Search': 'ಒಪಾಕ್ ಹುಡುಕಾಟ',
+        'Open Access': 'ಮುಕ್ತ ಪ್ರವೇಶ',
+        'Research Support': 'ಸಂಶೋಧನಾ ಬೆಂಬಲ',
+        'AI Tools': 'AI ಸಾಧನಗಳು',
+        'E-learning': 'ಇ-ಕಲಿಕೆ'
+      }
     },
+
+
+    home: {
+      'Photo Gallery': 'ಚಿತ್ರ ಗ್ಯಾಲರಿ',
+      'Virtual Tour': 'ವರ್ಚುವಲ್ ಪ್ರವಾಸ',
+      'Best Practices': 'ಉತ್ತಮ ಕಾರ್ಯಪದ್ಧತಿಗಳು',
+      'Library Activities': 'ಗ್ರಂಥಾಲಯ ಚಟುವಟಿಕೆಗಳು'
+    },
+
+
+
+
+
+
     heroEyebrow: 'NAAC “A” ಶ್ರೇಣಿ • ತುಮಕೂರು, ಕರ್ನಾಟಕ',
     heroTitle: '<em>ಜ್ಞಾನದ</em> ಜಗತ್ತಿಗೆ ಪ್ರವೇಶ ದ್ವಾರ',
     heroLead:

@@ -16,6 +16,7 @@ import { OAResources, ResearchSupport, AITools, Elearning } from './pages/Resour
 import { Gallery, VirtualTour, BestPractices, Activities } from './pages/More.jsx'
 import { Contact, Disclaimer, Privacy, NotFound } from './pages/Contact.jsx'
 import { FAQ, Feedback, ReportConnectionProblem, RecommendBook, RecommendJournals } from './pages/Askus.jsx'
+import SocialLinks from './components/SocialLinks.jsx'
 
 
 // Scroll to top on route change, or to an anchor when a hash is present.
@@ -94,6 +95,7 @@ export default function App() {
         <Footer />
       </div>
       <div className="site-watermark" aria-hidden="true">SSCASC&nbsp;LIBRARY</div>
+      <SocialLinks />
       <Chatbot />
       <SwamijiPhoto />
       <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />

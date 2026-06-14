@@ -165,6 +165,94 @@ img {
   align-items: center;
 }
 
+.bigswamiji {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+.header-main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 20px;
+  background-color: #7A1E2E;
+}
+
+.header-logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.header-banner {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-banner-img {
+  width: 100%;
+  max-width: 1200px;
+  /* adjust as needed */
+  height: auto;
+  object-fit: contain;
+}
+
+.header-swamiji {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.header-main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 20px;
+}
+
+.header-logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.header-banner {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-banner-img {
+  width: 100%;
+  max-width: 900px;
+  /* adjust as needed */
+  height: auto;
+  object-fit: contain;
+}
+
+.header-swamiji {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+
+
+
+
+
 /* ---------- Language + accessibility controls ---------- */
 .ctrl-group {
   display: flex;
@@ -254,6 +342,8 @@ img {
   font-style: italic;
   text-align: center;
   padding-left: 0;
+  margin-top: -40px;
+
 }
 
 .brand-text p {
@@ -1104,13 +1194,14 @@ table.data td a {
   .container.page,
   .container.footer-grid,
   .container.footer-bottom {
-    padding-left: var(--photo-col);
-    padding-right: var(--photo-col);
+    padding-left: var(--photo-col, 50px) !important;
+    padding-right: var(--photo-col, )
   }
 }
 
 /* Smaller reserved column on tablet (the photo is smaller there too) */
 @media (min-width: 861px) and (max-width: 1079px) {
+
   :root {
     --photo-col: 180px;
   }
@@ -1609,4 +1700,64 @@ table.data td a {
 
 .read-aloud-btn:hover {
   opacity: 0.9;
+}
+
+
+.social-sidebar {
+  position: fixed;
+  right: 20px;
+  bottom: 110px;
+  /* above chatbot */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+
+/* social media links */
+.social-sidebar {
+  position: fixed;
+  right: 20px;
+  bottom: 110px;
+  /* above chatbot */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.social-sidebar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 38px;
+  transition: transform 0.2s ease;
+}
+
+.social-sidebar a:hover {
+  transform: scale(1.15);
+}
+
+.social-sidebar svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.social-sidebar a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /* Makes it circular */
+  background: #951a30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+}
+
+.social-sidebar svg {
+  font-size: 24px;
+  color: white;
 }

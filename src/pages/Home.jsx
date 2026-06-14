@@ -22,7 +22,11 @@ export default function Home() {
       <nav className="sidebar-menu" aria-label="Library sections">
         <ul>
           {sidebarLinks.map((l) => (
-            <li key={l.to}><Link to={l.to}>{l.label}</Link></li>
+            <li key={l.to}>
+              <Link to={l.to}>
+                {t(`home.${l.label}`)}
+              </Link>
+            </li>
           ))}
         </ul>
       </nav>
@@ -56,7 +60,7 @@ export default function Home() {
             {QUICK.map((c) => (
               <Link to={c.to} className="card" key={c.title} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="icon" aria-hidden="true">{c.icon}</div>
-                <h3>{c.title}</h3>
+                <h3>{t(c.title)}</h3>
                 <p>{c.desc}</p>
                 <span className="card-link">Open →</span>
               </Link>
