@@ -10,8 +10,12 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
-        contact
+        <Link to="/contact">Contact</Link>
+        <div className="head count">  hit count - 34</div>
       </div>
+
+
+
       <div className="container footer-bottom">
         <span>{t('copyright').replace('{year}', year)}</span>
         <span>

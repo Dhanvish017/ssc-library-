@@ -50,7 +50,7 @@ body {
 
 /* Boxed "WordPress-style" content frame with visible side gaps */
 .site-frame {
-  max-width: 1180px;
+  max-width: 1050px;
   margin: 0 auto;
   background: var(--white);
   min-height: 100vh;
@@ -203,12 +203,21 @@ img {
   object-fit: contain;
 }
 
+.header-swamiji-group {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-shrink: 0;
+}
+
 .header-swamiji {
-  width: 140px;
-  height: auto;
-  object-fit: contain;
+  width: 100px;
+  height: 110px;
+  object-fit: cover;
   flex-shrink: 0;
   border-radius: 50%;
+  border: 3px solid #FEEC41;
+  background-color: #fff;
 }
 
 .header-main {
@@ -218,6 +227,7 @@ img {
   justify-content: space-between;
   gap: 20px;
   padding: 10px 20px;
+
 }
 
 .header-logo {
@@ -242,12 +252,6 @@ img {
   object-fit: contain;
 }
 
-.header-swamiji {
-  width: 140px;
-  height: auto;
-  object-fit: contain;
-  flex-shrink: 0;
-}
 
 
 
@@ -311,14 +315,14 @@ img {
 
 .brand {
   display: flex;
-  align-items: center;
   gap: 14px;
   flex: 1;
   min-width: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
+  padding-left: 200px;
+  padding-bottom: -20px;
+
 }
 
 .crest {
@@ -338,12 +342,13 @@ img {
 .brand-text h1 {
   font-size: 2.25rem;
   margin: 0;
-  line-height: 1.5;
+  line-height: 0.9;
   color: #fff;
   font-style: italic;
   text-align: center;
-  padding-left: 0;
+  padding-left: 20px;
   margin-top: -40px;
+
 
 }
 
@@ -372,7 +377,7 @@ img {
 
 .masthead-contact {
   position: absolute;
-  top: 180px;
+  top: 150px;
   left: 40px;
   z-index: 10;
   padding-top: 30px;
@@ -402,7 +407,7 @@ img {
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 999px;
-  padding: 9px 16px;
+  padding: 5px 10px;
   cursor: pointer;
   font: inherit;
   font-size: 0.9rem;
@@ -418,7 +423,7 @@ img {
 
 .search-trigger {
   position: absolute;
-  top: 200px;
+  top: 180px;
   right: 50px;
 }
 
@@ -431,6 +436,61 @@ img {
   max-height: 130px;
   object-fit: contain;
 }
+
+.college-info {
+  position: relative;
+  left: -100px;
+}
+
+
+
+
+.college-info {
+  text-align: center;
+  font-family: "Gentium Book Basic", serif;
+  line-height: 1.1;
+  left: -2px;
+}
+
+.society-name {
+  color: #F7F1DE;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.college-name {
+  margin: 0;
+  color: #FEEC41;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.college-streams {
+  margin: 0;
+  color: #FEEC41;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.affiliation {
+  margin-top: 8px;
+  color: #F7F1DE;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.address {
+  margin-top: 6px;
+  color: #F7F1DE;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
 
 /* ---------- Primary navigation ---------- */
 .mainnav {
@@ -675,8 +735,9 @@ img {
 }
 
 .prose {
-  max-width: 72ch;
+  width: 500px;
   overflow-wrap: anywhere;
+  text-align: justify;
 }
 
 .prose p {
@@ -869,6 +930,13 @@ table.data td a {
 
 .footer-bottom a {
   margin-left: 14px;
+}
+
+.footer-grid {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  font-size: small;
 }
 
 /* ---------- Search modal ---------- */
@@ -1336,6 +1404,7 @@ table.data td a {
 
   .brand-text h1 {
     font-size: 1.2rem;
+
   }
 
   .brand-text p {
@@ -1642,6 +1711,17 @@ table.data td a {
   text-decoration: none;
 }
 
+.sidebar-main .hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 28px;
+}
+
 /* Responsive */
 @media (max-width: 860px) {
   .sidebar-layout {
@@ -1704,61 +1784,72 @@ table.data td a {
 }
 
 
-.social-sidebar {
-  position: fixed;
-  right: 20px;
-  bottom: 110px;
-  /* above chatbot */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 1000;
+#main {
+  position: relative;
 }
 
+/* ============================================================
+   SOCIAL MEDIA SIDEBAR — Professional Sticky Floating Sidebar
+   ============================================================ */
+.social-sidebar-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 48px;
+  pointer-events: none;
+  z-index: 1100;
+}
 
-/* social media links */
 .social-sidebar {
-  position: fixed;
-  right: 20px;
-  bottom: 110px;
-  /* above chatbot */
+  position: sticky;
+  top: 120px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  z-index: 1000;
+  gap: 0;
+  /* no gaps between buttons */
+  overflow: hidden;
+  border-radius: 0;
+  pointer-events: auto;
+  /* enable interaction with links */
+  margin-top: 40px;
+  /* starting gap below top header/nav */
 }
 
 .social-sidebar a {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  flex-shrink: 0;
   text-decoration: none;
-  font-size: 38px;
-  transition: transform 0.2s ease;
+  border-radius: 0;
+  /* square — no rounding */
+  transition: transform 0.18s ease, filter 0.18s ease;
+  /* background-color is set inline per icon */
 }
 
 .social-sidebar a:hover {
-  transform: scale(1.15);
+  transform: scale(1.12);
+  filter: brightness(1.15);
+  z-index: 1;
+  position: relative;
 }
 
 .social-sidebar svg {
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  font-size: 22px;
+  color: #fff !important;
+  /* always white, regardless of icon's own color prop */
+  fill: #fff !important;
+  flex-shrink: 0;
 }
 
-.social-sidebar a {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  /* Makes it circular */
-  background: #951a30;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-decoration: none;
-}
-
-.social-sidebar svg {
-  font-size: 24px;
-  color: white;
+/* Hide on phones — sidebar would overlap content */
+@media (max-width: 640px) {
+  .social-sidebar-wrapper {
+    display: none;
+  }
 }

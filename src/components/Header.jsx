@@ -3,14 +3,13 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useApp } from '../context/AppContext.jsx'
 import { navStructure, college } from '../data/site.js'
 import logo from '../assets/logo.png'
-import banner from '../assets/banner.png'
 import { FaYoutube, FaFacebook } from "react-icons/fa";
 import ReadAloudButton from "./ReadAloudButton";
 import { useEffect } from 'react'
 import SwamijiPhoto from './SwamijiPhoto.jsx'
-import bgbanner from '../assets/bgbanner.png'
 import bigswamiji from '../assets/bigswamiji.png'
 import tsh from '../assets/tsh.png'
+import smallswamiji from '../assets/smallswamiji.png'
 
 function LangAndAccess() {
   const { lang, toggleLang, incScale, decScale, resetScale, t } = useApp()
@@ -67,19 +66,40 @@ export default function Header({ onOpenSearch }) {
           className="header-logo"
         />
 
-        <div className="header-banner">
-          <img
-            src={bgbanner}
-            alt={college.name}
-            className="header-banner-img"
-          />
+        <div className="college-info">
+          <div className="society-name">
+            SREE SIDDAGANGA EDUCATION SOCIETY (R.)
+          </div>
+
+          <h1 className="college-name">
+            SREE SIDDAGANGA COLLEGE OF
+          </h1>
+
+          <h2 className="college-streams">
+            ARTS, SCIENCE AND COMMERCE
+          </h2>
+
+          <div className="affiliation">
+            (Affiliated to Tumkur University, Tumkur)
+          </div>
+
+          <div className="address">
+            B. H. ROAD, TUMKUR - 572 102. KARNATAKA
+          </div>
         </div>
 
-        <img
-          src={tsh}
-          alt="Swamiji"
-          className="header-swamiji"
-        />
+        <div className="header-swamiji-group">
+          <img
+            src={smallswamiji}
+            alt="Swamiji"
+            className="header-swamiji"
+          />
+          <img
+            src={tsh}
+            alt="Swamiji"
+            className="header-swamiji"
+          />
+        </div>
       </div>
 
 
