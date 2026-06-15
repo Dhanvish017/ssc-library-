@@ -5,7 +5,7 @@ export const translations = {
   en: {
     langName: 'English',
     college: 'Sree Siddaganga College of Arts, Science and Commerce',
-    libCenter: 'Library & Information Center',
+    libCenter: 'Library and Information Center',
     tagline: 'The library is the heart of the institution.',
     search: 'Search',
     searchPlaceholder: 'Search pages, resources and services…',
@@ -22,9 +22,13 @@ export const translations = {
     collegeStreams: 'ARTS, SCIENCE AND COMMERCE',
     affiliation: '(Affiliated to Tumkur University, Tumkur)',
     address: 'B. H. ROAD, TUMKUR - 572 102. KARNATAKA',
+
+
     // nav
     nav: {
       Home: 'Home',
+      syllabus: 'Syllabus',
+      questionPapers: 'Question Papers',
       'About Us': 'About Us',
       'About Institution': 'About Institution',
       'About the Library': 'About the Library',
@@ -41,7 +45,7 @@ export const translations = {
       'Journals': 'Journals',
       'Question Paper': 'Question Paper',
       'Magazines': 'Magazines',
-      Services: 'Services',
+      'Library Services': 'Library Services',
       'All Services': 'All Services',
       'Circulation': 'Circulation',
       'Reference': 'Reference',
@@ -64,6 +68,8 @@ export const translations = {
       'Recommend a book': 'Recommend a book',
       'Recommend Journals': 'Recommend Journals',
       'Give us feedback': 'Give us feedback',
+      syllabus: 'Syllabus',
+      questionPapers: 'Question Papers',
     },
 
     home: {
@@ -591,23 +597,15 @@ export const translations = {
         tourNotice: 'Virtual tour placeholder — embed a 360° tour or a YouTube walkthrough video here. You can reuse the college YouTube channel for the embed.',
         practicesEyebrow: 'More',
         practicesTitle: 'Best Practices',
-        practicesIntro: 'The library follows certain best practices to promote reading habits, effective use of resources and student participation.',
-        practices: {
-          awardTitle: 'Best User of the Library Award:',
-          awardDesc: 'Recognition is given to students and users who make effective and regular use of library resources.',
-          guidanceTitle: 'Weekly Library Guidance — MANADAALADA MAATU:',
-          guidanceDesc: 'Library guidance for students every Thursday from 11:15 a.m. to 11:30 a.m. to improve awareness about books, magazines and library use.'
-        },
+        practicesIntro: `Best User of the Library Award: The library recognizes and honours students and users who make regular, effective, and maximum use of library resources and services.
+        Weekly Library Guidance – “MANADAALADA MAATU”: A special library guidance programme conducted every Thursday from 11: 15 a.m.to 11: 30 a.m.to create awareness about books, magazines, library services, reading habits, and the effective use of information resources.`,
         activitiesEyebrow: 'More',
         activitiesTitle: 'Library Activities',
-        activities: {
-          items: {
-            'Library orientation for new students': 'Library orientation for new students',
-            'Book exhibitions': 'Book exhibitions',
-            'Reading and awareness programmes': 'Reading and awareness programmes',
-            'Information-literacy sessions': 'Information-literacy sessions'
-          }
-        }
+        activities: `Library Orientation Programme: Introduces new students to library resources, services, rules, and facilities.
+Book Exhibitions: Displays selected books on various themes to promote reading and awareness.
+Reading and Awareness Programmes: Encourages reading habits and creates awareness about information resources and services.
+Information Literacy Sessions: Trains users to locate, evaluate, and effectively use information resources for academic and research purposes.`,
+
       }
     }
   },
@@ -631,8 +629,11 @@ export const translations = {
     collegeStreams: 'ಕಲಾ, ವಿಜ್ಞಾನ ಮತ್ತು ವಾಣಿಜ್ಯ',
     affiliation: '(ತುಮಕೂರು ವಿಶ್ವವಿದ್ಯಾಲಯಕ್ಕೆ ಸಂಯೋಜಿತ)',
     address: 'ಬಿ.ಎಚ್. ರಸ್ತೆ, ತುಮಕೂರು - 572 102, ಕರ್ನಾಟಕ',
+
     nav: {
       Home: 'ಮುಖಪುಟ',
+      syllabus: 'ಪಠ್ಯಕ್ರಮ',
+      questionPapers: 'ಪ್ರಶ್ನೆ ಪತ್ರಿಕೆಗಳು',
       'About Us': 'ನಮ್ಮ ಬಗ್ಗೆ',
       'About Institution': 'ಕಾಲೇಜಿನ ಬಗ್ಗೆ',
       'About the Library': 'ಗ್ರಂಥಾಲಯದ ಬಗ್ಗೆ',
@@ -649,7 +650,7 @@ export const translations = {
       'Journals': 'ಜರ್ನಲ್‌ಗಳು',
       'question papers': 'ಪ್ರಶ್ನೆ ಪತ್ರಿಕೆಗಳು',
       'Magazines': 'ಮಾಸಪತ್ರಿಕೆಗಳು',
-      Services: 'ಸೇವೆಗಳು',
+      'Library Services': 'ಗ್ರಂಥಾಲಯ ಸೇವೆಗಳು',
       'All Services': 'ಎಲ್ಲಾ ಸೇವೆಗಳು',
       'Circulation': 'ಪುಸ್ತಕ ವಿತರಣೆ',
       'Reference': 'ಉಲ್ಲೇಖ ಸೇವೆ',
@@ -673,6 +674,7 @@ export const translations = {
       'Recommend a book': 'ಪುಸ್ತಕವನ್ನು ಶಿಫಾರಸು ಮಾಡಿ',
       'Recommend Journals': 'ಜರ್ನಲ್‌ಗಳನ್ನು ಶಿಫಾರಸು ಮಾಡಿ',
       'Give us feedback': 'ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆ ನೀಡಿ',
+
       quick: {
         'Library Collection': 'ಗ್ರಂಥಾಲಯ ಸಂಗ್ರಹ',
         'OPAC Search': 'ಒಪಾಕ್ ಹುಡುಕಾಟ',
@@ -681,6 +683,10 @@ export const translations = {
         'AI Tools': 'AI ಸಾಧನಗಳು',
         'E-learning': 'ಇ-ಕಲಿಕೆ'
       }
+
+
+
+
     },
 
     home: {
@@ -1197,7 +1203,7 @@ export const translations = {
             'Book Exhibition': 'ಪುಸ್ತಕ ಪ್ರದರ್ಶನ',
             'Orientation Day': 'ಪರಿಚಯಾತ್ಮಕ ದಿನ',
             'Rare Collection': 'ಅಪರೂಪದ ಸಂಗ್ರಹ',
-            'Circulation Desk': 'ಪುಸ್ತಕ ವಿತರಣಾ ಕೌಂಟರ್'
+            'Circulation Desk': 'ಪುಸ್ತಕ ವಿತರಣಾ ಕೌಂಟರ್',
           }
         },
         tourEyebrow: 'ಇನ್ನಷ್ಟು',
@@ -1206,23 +1212,15 @@ export const translations = {
         tourNotice: 'ವರ್ಚುವಲ್ ಪ್ರವಾಸದ ಪ್ಲೇಸ್‌ಹೋಲ್ಡರ್ — ಇಲ್ಲಿ 360° ಪ್ರವಾಸ ಅಥವಾ ಯೂಟ್ಯೂಬ್ ಪ್ರವಾಸದ ವೀಡಿಯೊವನ್ನು ಎಂಬೆಡ್ ಮಾಡಿ. ಎಂಬೆಡ್‌ಗಾಗಿ ಕಾಲೇಜಿನ ಯೂಟ್ಯೂಬ್ ಚಾನಲ್ ಅನ್ನು ನೀವು ಮರುಬಳಕೆ ಮಾಡಬಹುದು.',
         practicesEyebrow: 'ಇನ್ನಷ್ಟು',
         practicesTitle: 'ಉತ್ತಮ ಕಾರ್ಯಪದ್ಧತಿಗಳು',
-        practicesIntro: 'ಓದುವ ಹವ್ಯಾಸಗಳು, ಸಂಪನ್ಮೂಲಗಳ ಪರಿಣಾಮಕಾರಿ ಬಳಕೆ ಮತ್ತು ವಿದ್ಯಾರ್ಥಿಗಳ ಭಾಗವಹಿಸುವಿಕೆಯನ್ನು ಉತ್ತೇಜಿಸಲು ಗ್ರಂಥಾಲಯವು ಕೆಲವು ಉತ್ತಮ ಕಾರ್ಯಪದ್ಧತಿಗಳನ್ನು ಅನುಸರಿಸುತ್ತದೆ.',
-        practices: {
-          awardTitle: 'ಗ್ರಂಥಾಲಯದ ಅತ್ಯುತ್ತಮ ಬಳಕೆದಾರ ಪ್ರಶಸ್ತಿ:',
-          awardDesc: 'ಗ್ರಂಥಾಲಯ ಸಂಪನ್ಮೂಲಗಳನ್ನು ಪರಿಣಾಮಕಾರಿಯಾಗಿ ಮತ್ತು ನಿಯಮಿತವಾಗಿ ಬಳಸುವ ವಿದ್ಯಾರ್ಥಿಗಳು ಮತ್ತು ಬಳಕೆದಾರರಿಗೆ ಗುರುತಿಸುವಿಕೆ ನೀಡಲಾಗುತ್ತದೆ.',
-          guidanceTitle: 'ವಾರದ ಗ್ರಂಥಾಲಯ ಮಾರ್ಗದರ್ಶನ — ಮನದಾಳದ ಮಾತು:',
-          guidanceDesc: 'ಪುಸ್ತಕಗಳು, ನಿಯತಕಾಲಿಕೆಗಳು ಮತ್ತು ಗ್ರಂಥಾಲಯದ ಬಳಕೆಯ ಬಗ್ಗೆ ಜಾಗೃತಿ ಮೂಡಿಸಲು ಪ್ರತಿ ಗುರುವಾರ ಬೆಳಗ್ಗೆ 11:15 ರಿಂದ 11:30 ರವರೆಗೆ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಗ್ರಂಥಾಲಯ ಮಾರ್ಗದರ್ಶನ.'
-        },
+        practicesIntro: `
+          ಅತ್ಯುತ್ತಮ ಗ್ರಂಥಾಲಯ ಬಳಕೆದಾರ ಪ್ರಶಸ್ತಿ: ಗ್ರಂಥಾಲಯದ ಸಂಪನ್ಮೂಲಗಳು ಮತ್ತು ಸೇವೆಗಳನ್ನು ನಿಯಮಿತವಾಗಿ ಹಾಗೂ ಪರಿಣಾಮಕಾರಿಯಾಗಿ ಬಳಸುವ ವಿದ್ಯಾರ್ಥಿಗಳು ಮತ್ತು ಬಳಕೆದಾರರನ್ನು ಗುರುತಿಸಿ ಪ್ರಶಂಸಿಸಲಾಗುತ್ತದೆ
+          ಸಾಪ್ತಾಹಿಕ ಗ್ರಂಥಾಲಯ ಮಾರ್ಗದರ್ಶನ “ಮನದಾಳದ ಮಾತು” ಪ್ರತಿ ಗುರುವಾರ ಬೆಳಿಗ್ಗೆ 11:15 ರಿಂದ 11:30 ರವರೆಗೆ ನಡೆಸಲಾಗುವ ವಿಶೇಷ ಮಾರ್ಗದರ್ಶನ ಕಾರ್ಯಕ್ರಮ. ಇದರ ಮೂಲಕ ಪುಸ್ತಕಗಳು, ನಿಯತಕಾಲಿಕೆಗಳು, ಗ್ರಂಥಾಲಯ ಸೇವೆಗಳು, ಓದುವ ಅಭ್ಯಾಸ ಹಾಗೂ ಮಾಹಿತಿ ಸಂಪನ್ಮೂಲಗಳ ಪರಿಣಾಮಕಾರಿ ಬಳಕೆಯ ಕುರಿತು ಜಾಗೃತಿ ಮೂಡಿಸಲಾಗುತ್ತದೆ.`,
         activitiesEyebrow: 'ಇನ್ನಷ್ಟು',
         activitiesTitle: 'ಗ್ರಂಥಾಲಯದ ಚಟುವಟಿಕೆಗಳು',
-        activities: {
-          items: {
-            'Library orientation for new students': 'ಹೊಸ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಗ್ರಂಥಾಲಯ ಪರಿಚಯ ಕಾರ್ಯಕ್ರಮ',
-            'Book exhibitions': 'ಪುಸ್ತಕ ಪ್ರದರ್ಶನಗಳು',
-            'Reading and awareness programmes': 'ಓದುವ ಮತ್ತು ಜಾಗೃತಿ ಕಾರ್ಯಕ್ರಮಗಳು',
-            'Information-literacy sessions': 'ಮಾಹಿತಿ ಸಾಕ್ಷರತಾ ಅವಧಿಗಳು'
-          }
-        }
+        activities: `ಗ್ರಂಥಾಲಯ ಪರಿಚಯ ಕಾರ್ಯಕ್ರಮ: ಹೊಸ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಗ್ರಂಥಾಲಯದ ಸಂಪನ್ಮೂಲಗಳು, ಸೇವೆಗಳು, ನಿಯಮಗಳು ಮತ್ತು ಸೌಲಭ್ಯಗಳ ಕುರಿತು ಪರಿಚಯ ನೀಡಲಾಗುತ್ತದೆ.
+ಪುಸ್ತಕ ಪ್ರದರ್ಶನಗಳು: ವಿವಿಧ ವಿಷಯಗಳಿಗೆ ಸಂಬಂಧಿಸಿದ ಪುಸ್ತಕಗಳನ್ನು ಪ್ರದರ್ಶಿಸುವ ಮೂಲಕ ಓದುವ ಆಸಕ್ತಿಯನ್ನು ಉತ್ತೇಜಿಸಲಾಗುತ್ತದೆ.
+ಓದು ಮತ್ತು ಜಾಗೃತಿ ಕಾರ್ಯಕ್ರಮಗಳು: ಓದುವ ಅಭ್ಯಾಸವನ್ನು ಬೆಳೆಸುವುದು ಹಾಗೂ ಮಾಹಿತಿ ಸಂಪನ್ಮೂಲಗಳ ಬಗ್ಗೆ ಜಾಗೃತಿ ಮೂಡಿಸುವ ಕಾರ್ಯಕ್ರಮಗಳು.
+ಮಾಹಿತಿ ಸಾಕ್ಷರತಾ ಕಾರ್ಯಕ್ರಮಗಳು: ಶೈಕ್ಷಣಿಕ ಮತ್ತು ಸಂಶೋಧನಾ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಮಾಹಿತಿಯನ್ನು ಹುಡುಕುವುದು, ಮೌಲ್ಯಮಾಪನ ಮಾಡುವುದು ಮತ್ತು ಪರಿಣಾಮಕಾರಿಯಾಗಿ ಬಳಸುವುದು ಕುರಿತು ತರಬೇತಿ ನೀಡಲಾಗುತ್ತದೆ.`,
       }
     }
   },

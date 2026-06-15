@@ -238,13 +238,8 @@ export const navStructure = [
     to: '/collection'
   },
   {
-    label: 'Services',
-    children: [
-      { label: 'All Services', to: '/services' },
-      { label: 'Circulation', to: '/services#circulation' },
-      { label: 'Reference', to: '/services#reference' },
-      { label: 'OPAC', to: '/services#opac' },
-    ],
+    label: 'Library Services',
+    to: '/Services'
   },
   { label: 'OA Resources', to: '/oa-resources' },
   { label: 'Research Support', to: '/research-support' },
@@ -264,7 +259,6 @@ export const navStructure = [
     label: 'AskUs',
     children: [
       { label: 'FAQ', to: '/faq' },
-      { label: 'Report a connection problem', to: '/racp' },
       { label: 'Recommend a book', to: '/rab' },
       { label: 'Recommend Journals', to: '/rj' },
       { label: 'Give us feedback', to: '/feedback' },

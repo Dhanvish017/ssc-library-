@@ -21,6 +21,7 @@ export default function PageLayout({ children }) {
 
   return (
     <>
+
       <div className="sidebar-layout">
 
         {/* Column 1 — Left Sidebar Area */}
@@ -34,28 +35,28 @@ export default function PageLayout({ children }) {
                   </Link>
                 </li>
               ))}
+
+              <li>
+                <a
+                  href="https://tumkuruniversity.ac.in/?%2Fug_syllabus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t('nav.syllabus')}
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://drive.google.com/drive/folders/1-yMB3mqyGBuH2LKI6cdqlzgbEXfl3Zym"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t('nav.questionPapers')}
+                </a>
+              </li>
             </ul>
           </nav>
-
-          <div className="sidebar-links-card">
-            <a
-              href="https://tumkuruniversity.ac.in/?%2Fug_syllabus"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="sidebar-link-btn"
-            >
-              Syllabus
-            </a>
-
-            <a
-              href="https://drive.google.com/drive/folders/1-yMB3mqyGBuH2LKI6cdqlzgbEXfl3Zym"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="sidebar-link-btn"
-            >
-              Question Papers
-            </a>
-          </div>
 
           <Link to="/noticeboard" className="noticeboard-card-wrapper" aria-label="Library Notice Board">
             <img src={noticeBoardImg} alt="Library Notice Board" className="noticeboard-card-img" />

@@ -513,6 +513,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin-left: 10px;
+
 }
 
 .navlist>li {
@@ -529,7 +530,7 @@ img {
   border: 0;
   padding: 13px 16px;
   font: inherit;
-  font-size: 0.92rem;
+  font-size: 0.76rem;
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
@@ -565,7 +566,7 @@ img {
   visibility: hidden;
   transform: translateY(6px);
   transition: opacity .15s, transform .15s, visibility .15s;
-  z-index: 950;
+  z-index: 9999;
 }
 
 .navlist>li.expanded .dropdown {
@@ -1952,4 +1953,50 @@ table.data td a {
 
 .sidebar-link-btn:hover {
   color: var(--gold);
+}
+
+
+/*gallery*/
+
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  background: transparent;
+  padding: 0;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  /* adjust as needed */
+  object-fit: cover;
+  /* fills box without distortion */
+  display: block;
+  border-radius: 12px;
+}
+
+.gallery-image-1 {
+  height: 350px;
+  object-fit: contain;
+  background: #fff;
+}
+
+
+
+/*fixed social side bar coming over dropdown*/
+
+.social-sidebar {
+  z-index: 1000;
+}
+
+.mainnav {
+  position: relative;
+  z-index: 2000;
+  overflow: visible;
+}
+
+.dropdown {
+  position: absolute;
+  z-index: 3000;
 }
