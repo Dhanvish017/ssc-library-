@@ -48,7 +48,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Boxed "WordPress-style" content frame with visible side gaps */
+/* Boxed "WordPress-style" content frame */
 .site-frame {
   max-width: 1050px;
   margin: 0 auto;
@@ -58,7 +58,6 @@ body {
   position: relative;
 }
 
-/* Kannada mode swaps the body font globally */
 body[data-lang='kn'] {
   font-family: var(--font-kn);
 }
@@ -165,12 +164,18 @@ img {
   align-items: center;
 }
 
-.bigswamiji {
-  width: 120px;
-  height: auto;
-  object-fit: contain;
+.topbar-social a {
+  font-size: 24px;
+  margin: 0 5px;
+  color: #fff;
+  text-decoration: none;
 }
 
+.topbar-social a:hover {
+  color: #B8862F;
+}
+
+/* ---------- Header Main ---------- */
 .header-main {
   width: 100%;
   display: flex;
@@ -197,8 +202,7 @@ img {
 
 .header-banner-img {
   width: 100%;
-  max-width: 1200px;
-  /* adjust as needed */
+  max-width: 900px;
   height: auto;
   object-fit: contain;
 }
@@ -220,43 +224,11 @@ img {
   background-color: #fff;
 }
 
-.header-main {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 10px 20px;
-
-}
-
-.header-logo {
+.bigswamiji {
   width: 120px;
   height: auto;
   object-fit: contain;
-  flex-shrink: 0;
 }
-
-.header-banner {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-banner-img {
-  width: 100%;
-  max-width: 900px;
-  /* adjust as needed */
-  height: auto;
-  object-fit: contain;
-}
-
-
-
-
-
-
 
 /* ---------- Language + accessibility controls ---------- */
 .ctrl-group {
@@ -283,173 +255,11 @@ img {
   font-weight: 600;
 }
 
-/* ---------- College banner ---------- */
-.header-banner {
-  background: #7a1e2e;
-}
-
-.header-banner-img {
-  display: block;
-  width: 100%;
-  max-height: 160px;
-  margin: 0 auto;
-  object-fit: contain;
-  object-position: center;
-}
-
-
-
-/* ---------- Header / brand ---------- */
-.masthead {
-  background: var(--garnet);
-  border-bottom: 4px solid var(--gold);
-}
-
-.masthead .container {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding-top: 18px;
-  padding-bottom: 18px;
-}
-
-.brand {
-  display: flex;
-  gap: 14px;
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  width: 100%;
-  padding-left: 200px;
-  padding-bottom: -20px;
-
-}
-
-.crest {
-  width: 80px;
-  height: 80px;
-  flex: none;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
-  transition: transform 0.25s ease, filter 0.25s ease;
-}
-
-.crest:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
-}
-
-.brand-text h1 {
-  font-size: 2.25rem;
-  margin: 0;
-  line-height: 0.9;
-  color: #fff;
-  font-style: italic;
-  text-align: center;
-  padding-left: 20px;
-  margin-top: -40px;
-
-
-}
-
-.brand-text p {
-  margin: 3px 0 0;
-  font-size: 0.86rem;
-  color: #f0ddc9;
-  text-align: center;
-}
-
-.header-actions {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-}
-
-
-.masthead-contact {
-  text-align: right;
-  font-size: 0.82rem;
-  line-height: 1.5;
-  color: #f0ddc9;
-  display: flex;
-  flex-direction: column;
-}
-
-.masthead-contact {
-  position: absolute;
-  top: 150px;
-  left: 40px;
-  z-index: 10;
-  padding-top: 30px;
-
-}
-
-.right-section {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.masthead-contact {
-  text-align: left;
-  color: #f0ddc9;
-}
-
-.masthead-contact a {
-  color: #fff;
-}
-
-.search-trigger,
-.menu-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 999px;
-  padding: 5px 10px;
-  cursor: pointer;
-  font: inherit;
-  font-size: 0.9rem;
-  color: #fdf6ec;
-}
-
-.search-trigger:hover,
-.menu-toggle:hover {
-  background: rgba(255, 255, 255, 0.22);
-  border-color: var(--gold);
-  color: #fff;
-}
-
-.search-trigger {
-  position: absolute;
-  top: 180px;
-  right: 50px;
-}
-
-.menu-toggle {
-  display: none;
-}
-
-.header-banner-img {
-  width: 100%;
-  max-height: 130px;
-  object-fit: contain;
-}
-
-.college-info {
-  position: relative;
-  left: -100px;
-}
-
-
-
-
+/* ---------- College info ---------- */
 .college-info {
   text-align: center;
   font-family: "Gentium Book Basic", serif;
   line-height: 1.1;
-  left: -2px;
 }
 
 .society-name {
@@ -490,16 +300,131 @@ img {
   font-weight: 700;
 }
 
+/* ---------- Masthead / brand ---------- */
+.masthead {
+  background: var(--garnet);
+  border-bottom: 4px solid var(--gold);
+}
 
+.masthead .container {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.brand {
+  display: flex;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+  padding-left: 200px;
+}
+
+.crest {
+  width: 80px;
+  height: 80px;
+  flex: none;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.crest:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+}
+
+.brand-text h1 {
+  font-size: 2.25rem;
+  margin: 0;
+  line-height: 0.9;
+  color: #fff;
+  font-style: italic;
+  text-align: center;
+  padding-left: 20px;
+  margin-top: -40px;
+}
+
+.brand-text p {
+  margin: 3px 0 0;
+  font-size: 0.86rem;
+  color: #f0ddc9;
+  text-align: center;
+}
+
+.header-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.masthead-contact {
+  position: absolute;
+  top: 150px;
+  left: 40px;
+  z-index: 10;
+  padding-top: 30px;
+  text-align: left;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #f0ddc9;
+  display: flex;
+  flex-direction: column;
+}
+
+.masthead-contact a {
+  color: #fff;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-trigger,
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  color: #fdf6ec;
+}
+
+.search-trigger:hover,
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: var(--gold);
+  color: #fff;
+}
+
+.search-trigger {
+  position: absolute;
+  top: 180px;
+  right: 50px;
+}
+
+.menu-toggle {
+  display: none;
+}
 
 /* ---------- Primary navigation ---------- */
 .mainnav {
   background: var(--gold);
   position: sticky;
   top: 0;
-  z-index: 900;
+  z-index: 2000;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
   border-bottom: 3px solid var(--garnet);
+  overflow: visible;
 }
 
 .mainnav .container {
@@ -513,7 +438,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin-left: 10px;
-
 }
 
 .navlist>li {
@@ -566,7 +490,7 @@ img {
   visibility: hidden;
   transform: translateY(6px);
   transition: opacity .15s, transform .15s, visibility .15s;
-  z-index: 9999;
+  z-index: 3000;
 }
 
 .navlist>li.expanded .dropdown {
@@ -588,12 +512,10 @@ img {
   color: var(--garnet);
 }
 
-
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  background:
-    linear-gradient(180deg, #fdf4ed, #fdf4ed);
+  background: linear-gradient(180deg, #fdf4ed, #fdf4ed);
   color: #fdf6ec;
   padding: 64px 0 72px;
   overflow: hidden;
@@ -671,6 +593,18 @@ img {
 .btn-ghost:hover {
   background: rgba(122, 30, 46, 0.05);
   transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--garnet);
+  border: 1px solid var(--garnet);
+}
+
+.btn-outline:hover {
+  background: var(--garnet);
+  color: #fff;
   text-decoration: none;
 }
 
@@ -763,6 +697,10 @@ img {
   border-left: 4px solid var(--gold);
   padding-left: 12px;
   margin-bottom: 18px;
+}
+
+.container.page {
+  text-align: justify;
 }
 
 /* ---------- Cards ---------- */
@@ -866,12 +804,9 @@ table.data td a {
 
 .deflist .item {
   border-left: 3px solid var(--gold);
-  padding: 4px 0 4px 16px;
+  padding: 12px 14px 12px 16px;
   background: var(--paper);
   border-radius: 0 8px 8px 0;
-  padding-right: 14px;
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 
 .deflist .item strong {
@@ -932,13 +867,6 @@ table.data td a {
 
 .footer-bottom a {
   margin-left: 14px;
-}
-
-.footer-grid {
-  display: flex;
-  align-items: center;
-  gap: 80px;
-  font-size: small;
 }
 
 /* ---------- Search modal ---------- */
@@ -1182,7 +1110,7 @@ table.data td a {
   font-weight: 600;
 }
 
-/* ---------- Misc ---------- */
+/* ---------- Gallery ---------- */
 .gallery-grid {
   display: grid;
   gap: 14px;
@@ -1202,6 +1130,21 @@ table.data td a {
   border: 1px solid var(--line);
 }
 
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.gallery-image-1 {
+  height: 350px;
+  object-fit: contain;
+  background: #fff;
+}
+
+/* ---------- Misc ---------- */
 .map-embed {
   border: 0;
   width: 100%;
@@ -1219,23 +1162,20 @@ table.data td a {
   font-size: 0.92rem;
 }
 
-/* ---------- Persistent Swamiji photo (big, bottom-left, every page) ---------- */
+/* ---------- Persistent Swamiji photo ---------- */
 .swamiji-photo {
   position: fixed;
   bottom: -70px;
   left: 50px;
-  /* extreme bottom-left corner of the window */
   width: clamp(470px, 50vw, 300px);
   height: auto;
   z-index: 1200;
-  /* above page content, below nav/modals/chatbot */
   pointer-events: none;
-  /* decorative — never blocks clicks */
   filter: drop-shadow(0 8px 18px rgba(28, 26, 23, 0.32));
   user-select: none;
 }
 
-/* Vertical site watermark down the right gutter (WordPress-style) */
+/* Vertical site watermark */
 .site-watermark {
   position: fixed;
   bottom: 30px;
@@ -1251,33 +1191,7 @@ table.data td a {
   z-index: 5;
 }
 
-@media (max-width: 1260px) {
-  .site-watermark {
-    display: none;
-  }
-}
-
-/* Center body content with symmetric gutters; the left gutter clears the photo.
-   Header/topbar/nav stay full width. */
-@media (min-width: 861px) {
-
-  .hero .container,
-  .container.page,
-  .container.footer-grid,
-  .container.footer-bottom {
-    padding-left: var(--photo-col, 50px) !important;
-    padding-right: var(--photo-col, )
-  }
-}
-
-/* Smaller reserved column on tablet (the photo is smaller there too) */
-@media (min-width: 861px) and (max-width: 1079px) {
-
-  :root {
-    --photo-col: 180px;
-  }
-}
-
+/* ---------- Form ---------- */
 .form-grid {
   display: grid;
   gap: 16px;
@@ -1309,299 +1223,23 @@ table.data td a {
   outline: none;
 }
 
-/* ---------- Responsive ---------- */
-
-/* Tablet: smaller persistent photo (the reserved gutter is smaller too) */
-@media (max-width: 1079px) {
-  .swamiji-photo {
-    width: clamp(110px, 16vw, 160px);
-  }
+/* ---------- Read aloud ---------- */
+.read-aloud-btn {
+  background: #ffffff;
+  color: #7a1023;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-/* Tablet & below: collapse nav into a toggle menu, tighten the header */
-@media (max-width: 860px) {
-  .menu-toggle {
-    display: inline-flex;
-  }
-
-  .mainnav {
-    position: static;
-  }
-
-  .mainnav .container {
-    padding: 0;
-  }
-
-  .navlist {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .navlist.open {
-    display: flex;
-  }
-
-  .navlist>li>a,
-  .navlist>li>button {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .dropdown {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    box-shadow: none;
-    border: 0;
-    border-radius: 0;
-    background: var(--garnet-dark);
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .2s;
-  }
-
-  .navlist>li.expanded .dropdown {
-    max-height: 600px;
-  }
-
-  .dropdown a {
-    color: #f7eee2;
-    padding-left: 32px;
-  }
-
-  .dropdown a:hover {
-    background: rgba(0, 0, 0, 0.2);
-    color: #fff;
-  }
-
-  .hero-stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .masthead .container {
-    gap: 12px;
-    padding-top: 14px;
-    padding-bottom: 14px;
-  }
-
-  .masthead-contact {
-    display: none;
-  }
-
-  .crest {
-    width: 48px;
-    height: 48px;
-  }
-
-  .brand-text h1 {
-    font-size: 1.2rem;
-
-  }
-
-  .brand-text p {
-    font-size: 0.76rem;
-  }
-
-  .hero {
-    padding: 44px 0 52px;
-  }
-
-  .page {
-    padding-top: 36px;
-    padding-bottom: 52px;
-  }
-
-  /* Reserve a left lane so text never sits under the corner photo */
-  .container.page,
-  .container.footer-grid,
-  .container.footer-bottom,
-  .hero .container {
-    padding-left: 178px;
-  }
-
-  /* Inside PageLayout, sidebar-layout already handles gutters */
-  .sidebar-main .container.page {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
-
-/* Phones */
-@media (max-width: 640px) {
-  .topbar .container {
-    justify-content: center;
-  }
-
-  .topbar-links {
-    display: none;
-  }
-
-  /* declutter the utility bar */
-
-  .masthead .container {
-    flex-wrap: wrap;
-  }
-
-  .brand {
-    gap: 10px;
-  }
-
-  .header-actions {
-    gap: 8px;
-  }
-
-  .search-trigger,
-  .menu-toggle {
-    padding: 8px 12px;
-    font-size: 0.85rem;
-  }
-
-  .search-trigger span.label {
-    display: none;
-  }
-
-  .hero {
-    padding: 32px 0 40px;
-  }
-
-  .hero h2 {
-    font-size: 1.85rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .hero-cta {
-    gap: 10px;
-  }
-
-  .hero-cta .btn {
-    flex: 1 1 auto;
-    text-align: center;
-  }
-
-  .page {
-    padding-top: 26px;
-    padding-bottom: 44px;
-  }
-
-  .section {
-    margin-bottom: 30px;
-  }
-
-  .section>h3 {
-    font-size: 1.18rem;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  table.data {
-    font-size: 0.86rem;
-  }
-
-  table.data th,
-  table.data td {
-    padding: 9px 10px;
-  }
-
-  .deflist .item {
-    font-size: 0.92rem;
-  }
-
-  .chat-panel {
-    right: 12px;
-    left: 12px;
-    width: auto;
-    bottom: 82px;
-    height: 60vh;
-  }
-
-  .chat-fab {
-    right: 16px;
-    bottom: 16px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .footer-bottom a {
-    margin-left: 0;
-    margin-right: 14px;
-  }
-
-  /* slim left lane for the smaller corner photo */
-  .container.page,
-  .container.footer-grid,
-  .container.footer-bottom,
-  .hero .container {
-    padding-left: 96px;
-  }
-
-  .swamiji-photo {
-    width: 80px;
-  }
-}
-
-/* Small phones */
-@media (max-width: 400px) {
-  .hero-stats {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .brand-text h1 {
-    font-size: 1.05rem;
-  }
-
-  .brand-text p {
-    display: none;
-  }
-
-  .hero h2 {
-    font-size: 1.6rem;
-  }
-
-  .container.page,
-  .container.footer-grid,
-  .container.footer-bottom,
-  .hero .container {
-    padding-left: 82px;
-  }
-
-  .swamiji-photo {
-    width: 66px;
-  }
-}
-
-.topbar-social a {
-  font-size: 24px;
-  margin: 0 5px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.topbar-social a:hover {
-  color: #B8862F;
+.read-aloud-btn:hover {
+  opacity: 0.9;
 }
 
 /* ============================================================
-   HOME 2-COLUMN SIDEBAR LAYOUT  (menu | content)
-   Swamiji floating photo is unchanged — fixed bottom-left on every page.
+   HOME 2-COLUMN SIDEBAR LAYOUT
    ============================================================ */
 .sidebar-layout {
   display: grid;
@@ -1611,7 +1249,6 @@ table.data td a {
   padding: 0 0 64px;
 }
 
-/* Column 1 — vertical star menu (formerly "More" dropdown) */
 .sidebar-left-area {
   position: sticky;
   top: 84px;
@@ -1657,7 +1294,6 @@ table.data td a {
   text-decoration: none;
 }
 
-/* Column 2 — homepage content */
 .sidebar-main {
   padding: 32px;
 }
@@ -1684,7 +1320,7 @@ table.data td a {
 
 .sidebar-main .hero-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
@@ -1710,118 +1346,13 @@ table.data td a {
   color: #f0ddc9;
 }
 
-/* outline button */
-.btn-outline {
-  background: transparent;
-  color: var(--garnet);
-  border: 1px solid var(--garnet);
-}
-
-.btn-outline:hover {
-  background: var(--garnet);
-  color: #fff;
-  text-decoration: none;
-}
-
-.sidebar-main .hero-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
-  margin-top: 28px;
-}
-
-/* Responsive */
-@media (max-width: 860px) {
-  .sidebar-layout {
-    grid-template-columns: 200px 1fr;
-  }
-
-  .sidebar-main {
-    padding: 20px 16px;
-  }
-}
-
-@media (max-width: 640px) {
-  .sidebar-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .sidebar-left-area {
-    position: static;
-    border-right: none;
-    padding: 12px 0;
-  }
-
-  .sidebar-menu {
-    border-bottom: 2px solid var(--line);
-    padding-bottom: 12px;
-  }
-
-  .sidebar-main {
-    padding: 20px 12px;
-  }
-
-  .sidebar-main .hero-stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Center body content with symmetric gutters; the left gutter clears the photo.
-   Header/topbar/nav stay full width. */
-@media (min-width: 861px) {
-
-  .hero .container,
-  .container.page,
-  .container.footer-grid,
-  .container.footer-bottom {
-    padding-left: 120px;
-    padding-right: var(--photo-col);
-  }
-
-  /* sidebar-layout only needs enough right padding for the social sidebar (48px),
-     NOT the full photo-col — that would squeeze the content column too much. */
-  .sidebar-layout {
-    padding-left: 120px;
-    padding-right: 64px;
-  }
-
-  /* When .container.page is inside .sidebar-main (PageLayout),
-     .sidebar-layout already carries the big gutters — reset to avoid doubling.
-     Use !important to beat the earlier !important rule on .container.page. */
-  .sidebar-main .container.page {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    max-width: none;
-    margin: 0;
-  }
-}
-
-.read-aloud-btn {
-  background: #ffffff;
-  color: #7a1023;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.read-aloud-btn:hover {
-  opacity: 0.9;
-}
-
-
+/* ============================================================
+   SOCIAL MEDIA SIDEBAR
+   ============================================================ */
 #main {
   position: relative;
 }
 
-/* ============================================================
-   SOCIAL MEDIA SIDEBAR — Professional Sticky Floating Sidebar
-   ============================================================ */
 .social-sidebar-wrapper {
   position: absolute;
   top: 0;
@@ -1838,13 +1369,11 @@ table.data td a {
   display: flex;
   flex-direction: column;
   gap: 0;
-  /* no gaps between buttons */
   overflow: hidden;
   border-radius: 0;
   pointer-events: auto;
-  /* enable interaction with links */
   margin-top: 40px;
-  /* starting gap below top header/nav */
+  z-index: 1000;
 }
 
 .social-sidebar a {
@@ -1858,9 +1387,7 @@ table.data td a {
   flex-shrink: 0;
   text-decoration: none;
   border-radius: 0;
-  /* square — no rounding */
   transition: transform 0.18s ease, filter 0.18s ease;
-  /* background-color is set inline per icon */
 }
 
 .social-sidebar a:hover {
@@ -1873,28 +1400,17 @@ table.data td a {
 .social-sidebar svg {
   font-size: 22px;
   color: #fff !important;
-  /* always white, regardless of icon's own color prop */
   fill: #fff !important;
   flex-shrink: 0;
 }
 
-/* Hide on phones — sidebar would overlap content */
-@media (max-width: 640px) {
-  .social-sidebar-wrapper {
-    display: none;
-  }
-}
-
-.container.page {
-  text-align: justify;
-}
-
 /* ============================================================
-   NOTICE BOARD CARD SIDEBAR COMPONENT
+   NOTICE BOARD CARD
    ============================================================ */
 .noticeboard-card-wrapper {
   display: block;
-  margin: 50px 16px 0;
+  width: 120px;
+  margin: 40px auto 0;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -1902,9 +1418,6 @@ table.data td a {
   cursor: pointer;
   background-color: var(--white);
   border: 1px solid var(--line);
-  width: 120px !important;
-  margin: 40px auto 0 !important;
-
 }
 
 .noticeboard-card-wrapper:hover {
@@ -1919,20 +1432,9 @@ table.data td a {
   object-fit: cover;
 }
 
-@media (max-width: 500px) {
-  .noticeboard-card-wrapper {
-    margin: 24px auto 0;
-    max-width: 100px;
-    width: calc(100% - 32px);
-  }
-
-
-}
-
 /* ============================================================
-   question paper and syllabus
+   QUESTION PAPER & SYLLABUS SIDEBAR LINKS
    ============================================================ */
-
 .sidebar-links-card {
   display: flex;
   flex-direction: column;
@@ -1955,48 +1457,618 @@ table.data td a {
   color: var(--gold);
 }
 
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
 
-/*gallery*/
+/* ---- Desktop wide: reserve gutters for Swamiji photo ---- */
+@media (min-width: 1080px) {
 
+  .hero .container,
+  .container.page,
+  .container.footer-grid,
+  .container.footer-bottom {
+    padding-left: 120px;
+    padding-right: var(--photo-col);
+  }
 
-.gallery-item {
-  overflow: hidden;
-  border-radius: 12px;
-  background: transparent;
-  padding: 0;
+  .sidebar-layout {
+    padding-left: 120px;
+    padding-right: 64px;
+  }
+
+  .sidebar-main .container.page {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: none;
+    margin: 0;
+  }
+
+  .site-watermark {
+    display: block;
+  }
 }
 
-.gallery-image {
-  width: 100%;
-  height: 200px;
-  /* adjust as needed */
-  object-fit: cover;
-  /* fills box without distortion */
-  display: block;
-  border-radius: 12px;
+/* ---- Tablet landscape (861px–1079px) ---- */
+@media (min-width: 861px) and (max-width: 1079px) {
+  :root {
+    --photo-col: 180px;
+  }
+
+  .hero .container,
+  .container.page,
+  .container.footer-grid,
+  .container.footer-bottom {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .sidebar-layout {
+    padding-left: 100px;
+    padding-right: 40px;
+    grid-template-columns: 200px 1fr;
+  }
+
+  .sidebar-main .container.page {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .swamiji-photo {
+    width: clamp(110px, 16vw, 160px);
+    bottom: -30px;
+    left: 10px;
+  }
+
+  .site-watermark {
+    display: none;
+  }
+
+  .header-swamiji-group {
+    gap: 20px;
+  }
+
+  .header-swamiji {
+    width: 80px;
+    height: 90px;
+  }
+
+  .header-logo {
+    width: 90px;
+  }
+
+  .college-name {
+    font-size: 17px;
+  }
+
+  .college-streams {
+    font-size: 13px;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.gallery-image-1 {
-  height: 350px;
-  object-fit: contain;
-  background: #fff;
+/* ---- Tablet portrait & small laptop (max 860px) ---- */
+@media (max-width: 860px) {
+
+  /* Nav: collapse into hamburger */
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .mainnav {
+    position: static;
+  }
+
+  .mainnav .container {
+    padding: 0;
+  }
+
+  .navlist {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navlist.open {
+    display: flex;
+  }
+
+  .navlist>li>a,
+  .navlist>li>button {
+    width: 100%;
+    justify-content: space-between;
+    padding: 14px 20px;
+    font-size: 0.88rem;
+  }
+
+  .dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    background: var(--garnet-dark);
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s;
+  }
+
+  .navlist>li.expanded .dropdown {
+    max-height: 600px;
+  }
+
+  .dropdown a {
+    color: #f7eee2;
+    padding-left: 32px;
+    font-size: 0.88rem;
+  }
+
+  .dropdown a:hover {
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+
+  /* Header */
+  .masthead .container {
+    gap: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .masthead-contact {
+    display: none;
+  }
+
+  .search-trigger {
+    position: static;
+    top: auto;
+    right: auto;
+  }
+
+  .brand {
+    padding-left: 0;
+  }
+
+  .crest {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-text h1 {
+    font-size: 1.2rem;
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  .brand-text p {
+    font-size: 0.76rem;
+  }
+
+  /* Header main */
+  .header-main {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 8px 14px;
+  }
+
+  .header-logo {
+    width: 80px;
+  }
+
+  .header-swamiji-group {
+    gap: 16px;
+  }
+
+  .header-swamiji {
+    width: 72px;
+    height: 80px;
+  }
+
+  .college-name {
+    font-size: 15px;
+  }
+
+  .college-streams {
+    font-size: 12px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 44px 0 52px;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Page */
+  .page {
+    padding-top: 36px;
+    padding-bottom: 52px;
+  }
+
+  /* Sidebar layout */
+  .sidebar-layout {
+    grid-template-columns: 200px 1fr;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .sidebar-main {
+    padding: 20px 16px;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Swamiji photo: much smaller, still visible in corner */
+  .swamiji-photo {
+    width: 120px;
+    bottom: -20px;
+    left: 8px;
+  }
+
+  /* Content padding clears small photo */
+  .container.page,
+  .container.footer-grid,
+  .container.footer-bottom,
+  .hero .container {
+    padding-left: 140px;
+    padding-right: 16px;
+  }
+
+  .sidebar-main .container.page {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Social sidebar */
+  .social-sidebar-wrapper {
+    width: 40px;
+  }
+
+  .social-sidebar a {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+  }
 }
 
+/* ---- Mobile (max 640px) ---- */
+@media (max-width: 640px) {
 
+  /* Topbar */
+  .topbar .container {
+    justify-content: center;
+    padding: 6px 12px;
+  }
 
-/*fixed social side bar coming over dropdown*/
+  .topbar-links {
+    display: none;
+  }
 
-.social-sidebar {
-  z-index: 1000;
+  /* Header main: stack nicely on mobile */
+  .header-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+  }
+
+  .header-logo {
+    width: 70px;
+  }
+
+  .header-swamiji-group {
+    gap: 12px;
+  }
+
+  .header-swamiji {
+    width: 60px;
+    height: 68px;
+    border-width: 2px;
+  }
+
+  .college-name {
+    font-size: 14px;
+  }
+
+  .college-streams {
+    font-size: 11px;
+  }
+
+  .affiliation,
+  .address {
+    font-size: 9px;
+  }
+
+  .header-banner-img {
+    max-height: 90px;
+  }
+
+  /* Masthead */
+  .masthead .container {
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .search-trigger {
+    position: static;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .search-trigger span.label {
+    display: none;
+  }
+
+  .menu-toggle {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .brand-text h1 {
+    font-size: 1rem;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 32px 0 40px;
+  }
+
+  .hero h2 {
+    font-size: 1.85rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-cta {
+    gap: 10px;
+  }
+
+  .hero-cta .btn {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .hero-stat .num {
+    font-size: 1.7rem;
+  }
+
+  /* Page */
+  .page {
+    padding-top: 26px;
+    padding-bottom: 44px;
+  }
+
+  .section {
+    margin-bottom: 30px;
+  }
+
+  .section>h3 {
+    font-size: 1.18rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tables */
+  table.data {
+    font-size: 0.86rem;
+  }
+
+  table.data th,
+  table.data td {
+    padding: 9px 10px;
+  }
+
+  /* Sidebar layout: stack on mobile */
+  .sidebar-layout {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .sidebar-left-area {
+    position: static;
+    border-right: none;
+    border-bottom: 2px solid var(--line);
+    padding: 12px 0;
+  }
+
+  .sidebar-menu {
+    padding-bottom: 8px;
+  }
+
+  .sidebar-main {
+    padding: 20px 12px;
+  }
+
+  .sidebar-main .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Chat */
+  .chat-panel {
+    right: 12px;
+    left: 12px;
+    width: auto;
+    bottom: 82px;
+    height: 60vh;
+  }
+
+  .chat-fab {
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+    font-size: 1.3rem;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    font-size: small;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-bottom a {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+
+  /* Social sidebar: hide on phones */
+  .social-sidebar-wrapper {
+    display: none;
+  }
+
+  /* Swamiji photo: small corner */
+  .swamiji-photo {
+    width: 80px;
+    bottom: -10px;
+    left: 4px;
+  }
+
+  /* Content padding: slim left lane for small photo */
+  .container.page,
+  .container.footer-grid,
+  .container.footer-bottom,
+  .hero .container {
+    padding-left: 88px;
+    padding-right: 12px;
+  }
+
+  .sidebar-main .container.page {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .gallery-image {
+    height: 140px;
+  }
+
+  .gallery-image-1 {
+    height: 220px;
+  }
+
+  /* Noticeboard */
+  .noticeboard-card-wrapper {
+    margin: 24px auto 0;
+    width: 100px;
+  }
+
+  /* Forms */
+  .form-grid {
+    max-width: 100%;
+  }
+
+  /* Map */
+  .map-embed {
+    height: 260px;
+  }
 }
 
-.mainnav {
-  position: relative;
-  z-index: 2000;
-  overflow: visible;
+/* ---- Small phones (max 400px) ---- */
+@media (max-width: 400px) {
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .hero-stat .num {
+    font-size: 1.5rem;
+  }
+
+  .brand-text h1 {
+    font-size: 0.95rem;
+  }
+
+  .brand-text p {
+    display: none;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .college-name {
+    font-size: 12px;
+  }
+
+  .college-streams {
+    font-size: 10px;
+  }
+
+  .swamiji-photo {
+    width: 66px;
+  }
+
+  .container.page,
+  .container.footer-grid,
+  .container.footer-bottom,
+  .hero .container {
+    padding-left: 74px;
+    padding-right: 10px;
+  }
+
+  .sidebar-main .hero-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-image {
+    height: 180px;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.88rem;
+  }
 }
 
-.dropdown {
-  position: absolute;
-  z-index: 3000;
+/* ---- Watermark: hide below 1260px ---- */
+@media (max-width: 1260px) {
+  .site-watermark {
+    display: none;
+  }
 }
