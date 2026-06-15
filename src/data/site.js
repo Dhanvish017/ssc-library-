@@ -26,7 +26,7 @@ export const staff = [
 ]
 
 export const budget = [
-  { head: 'Annual library budget (approx.)', amount: '₹ 1,48,900' },
+  { head: 'annualBudget', amount: '₹ 1,48,900' },
   { head: 'Books', amount: '₹ 48,310' },
   { head: 'Periodicals / Journals', amount: '₹ 32,378' },
   { head: 'Other related head', amount: '₹ 9,430' },
@@ -235,12 +235,7 @@ export const navStructure = [
   },
   {
     label: 'Collection',
-    children: [
-      { label: 'Overview', to: '/collection' },
-      { label: 'Books', to: '/collection#books' },
-      { label: 'Journals', to: '/collection#journals' },
-      { label: 'Magazines', to: '/collection#magazines' },
-    ],
+    to: '/collection'
   },
   {
     label: 'Services',

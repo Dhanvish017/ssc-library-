@@ -1,85 +1,100 @@
 import { PageHead } from '../components/Building.jsx'
 import { collection, services } from '../data/site.js'
+import PageLayout from '../components/PageLayout.jsx'
+import { useApp } from '../context/AppContext.jsx'
 
 export function Collection() {
+  const { t } = useApp()
   return (
-    <div className="container page">
-      <PageHead eyebrow="Collection" title="Library Collection" />
-      <p className="prose">
-        The college library has a rich collection of books and information resources for
-        students, teachers and staff — a total of 69,456 books across 13,032 titles. The
-        collection includes textbooks, reference books, periodicals, magazines, newspapers,
-        journals, previous question papers, competitive-examination books and other learning
-        materials.
-      </p>
+    <PageLayout>
+      <div className="container page">
+        <PageHead eyebrow={t('pages.collection.eyebrow')} title={t('pages.collection.title')} />
+        <p className="prose">
+          {t('pages.collection.intro')}
+        </p>
 
-      <div className="section" id="books">
-        <h3>Stock at a glance</h3>
-        <div className="table-wrap">
-          <table className="data">
-            <thead><tr><th>Sl. No.</th><th>Resource / Stock Item</th><th>Details</th></tr></thead>
-            <tbody>
-              {collection.map((c) => (
-                <tr key={c.sl}><td>{c.sl}</td><td>{c.item}</td><td>{c.details}</td></tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="section" id="books">
+          <h3>{t('pages.collection.stockTitle')}</h3>
+          <div className="table-wrap">
+            <table className="data">
+              <thead>
+                <tr>
+                  <th>{t('pages.collection.tableHeaderSl')}</th>
+                  <th>{t('pages.collection.tableHeaderItem')}</th>
+                  <th>{t('pages.collection.tableHeaderDetails')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {collection.map((c) => (
+                  <tr key={c.sl}>
+                    <td>{c.sl}</td>
+                    <td>{t(`pages.collection.items.${c.item}`, c.item)}</td>
+                    <td>{t(`pages.collection.details.${c.details}`, c.details)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div className="section" id="journals">
+          <h3>{t('pages.collection.journalsTitle')}</h3>
+          <p className="prose">
+            {t('pages.collection.journalsDesc')}
+          </p>
+        </div>
+
+        <div className="section" id="question-paper">
+          <h3>{t('pages.collection.questionPaperTitle')}</h3>
+          <p className="prose">
+            {t('pages.collection.questionPaperDesc')}
+          </p>
+        </div>
+
+        <div className="section" id="magazines">
+          <h3>{t('pages.collection.magazinesTitle')}</h3>
+          <p className="prose">
+            {t('pages.collection.magazinesDesc')}
+          </p>
         </div>
       </div>
-
-      <div className="section" id="journals">
-        <h3>Journals</h3>
-        <p className="prose">
-          The library subscribes to printed journals across disciplines, complemented by
-          thousands of e-journals through INFLIBNET N-LIST and open access collections.
-        </p>
-      </div>
-
-      <div className="section" id="magazines">
-        <h3>Magazines &amp; Newspapers</h3>
-        <p className="prose">
-          A range of general and subject magazines and daily newspapers are available in the
-          reading room to keep users informed and to support general reading.
-        </p>
-      </div>
-    </div>
+    </PageLayout>
   )
 }
 
 export function Services() {
+  const { t } = useApp()
   return (
-    <div className="container page">
-      <PageHead eyebrow="Services" title="Library Services" />
-      <p className="prose">The library provides the following services to students and staff:</p>
+    <PageLayout>
+      <div className="container page">
+        <PageHead eyebrow={t('pages.services.eyebrow')} title={t('pages.services.title')} />
+        <p className="prose">{t('pages.services.intro')}</p>
 
-      <div className="section" id="circulation">
-        <h3>Circulation &amp; user services</h3>
-        <div className="deflist">
-          {services.map(([name, desc]) => (
-            <div className="item" key={name}><strong>{name}:</strong> {desc}</div>
-          ))}
+        <div className="section" id="circulation">
+          <h3>{t('pages.services.circulationTitle')}</h3>
+          <div className="deflist">
+            {services.map(([name, desc]) => (
+              <div className="item" key={name}>
+                <strong>{t(`pages.services.list.${name}.title`, name)}:</strong> {t(`pages.services.list.${name}.desc`, desc)}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="section" id="reference">
+          <h3>{t('pages.services.referenceTitle')}</h3>
+          <p className="prose">
+            {t('pages.services.referenceDesc')}
+          </p>
+        </div>
+
+        <div className="section" id="opac">
+          <h3>{t('pages.services.opacTitle')}</h3>
+          <p className="prose">
+            {t('pages.services.opacDesc')}
+          </p>
         </div>
       </div>
-
-      <div className="section" id="reference">
-        <h3>Reference service</h3>
-        <p className="prose">
-          Users are assisted in finding and using reference sources, encyclopaedias,
-          dictionaries, yearbooks and subject reference works for study and research.
-        </p>
-      </div>
-
-      <div className="section" id="opac">
-        <h3>OPAC — Online Public Access Catalogue</h3>
-        <p className="prose">
-          OPAC lets you search the library collection by title, author, subject or keyword and
-          check availability before visiting the shelves.
-        </p>
-        <div className="notice">
-          OPAC link placeholder — connect your library automation OPAC URL here (for example,
-          Koha or SOUL). Replace this notice with the live catalogue link or embed.
-        </div>
-      </div>
-    </div>
+    </PageLayout>
   )
 }

@@ -16,6 +16,8 @@ import { OAResources, ResearchSupport, AITools, Elearning } from './pages/Resour
 import { Gallery, VirtualTour, BestPractices, Activities } from './pages/More.jsx'
 import { Contact, Disclaimer, Privacy, NotFound } from './pages/Contact.jsx'
 import { FAQ, Feedback, ReportConnectionProblem, RecommendBook, RecommendJournals } from './pages/Askus.jsx'
+import NoticeBoard from './pages/noticeboard.jsx'
+
 
 
 // Scroll to top on route change, or to an anchor when a hash is present.
@@ -87,6 +89,7 @@ export default function App() {
             <Route path="/racp" element={<ReportConnectionProblem />} />
             <Route path="/rab" element={<RecommendBook />} />
             <Route path="/rj" element={<RecommendJournals />} />
+            <Route path="/noticeboard" element={<NoticeBoard />} />
 
 
 

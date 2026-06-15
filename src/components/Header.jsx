@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useApp } from '../context/AppContext.jsx'
 import { navStructure, college } from '../data/site.js'
@@ -34,12 +34,28 @@ export default function Header({ onOpenSearch }) {
   const { t } = useApp()
   const [navOpen, setNavOpen] = useState(false)
   const [expanded, setExpanded] = useState(null)
+  const navRef = useRef(null)
   const { pathname } = useLocation()
 
   useEffect(() => {
     setExpanded(null)
     setNavOpen(false)
   }, [pathname])
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setExpanded(null)
+        setNavOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
 
   return (
     <>
@@ -68,23 +84,23 @@ export default function Header({ onOpenSearch }) {
 
         <div className="college-info">
           <div className="society-name">
-            SREE SIDDAGANGA EDUCATION SOCIETY (R.)
+            {t('societyName')}
           </div>
 
           <h1 className="college-name">
-            SREE SIDDAGANGA COLLEGE OF
+            {t('collegeName')}
           </h1>
 
           <h2 className="college-streams">
-            ARTS, SCIENCE AND COMMERCE
+            {t('collegeStreams')}
           </h2>
 
           <div className="affiliation">
-            (Affiliated to Tumkur University, Tumkur)
+            {t('affiliation')}
           </div>
 
           <div className="address">
-            B. H. ROAD, TUMKUR - 572 102. KARNATAKA
+            {t('address')}
           </div>
         </div>
 
@@ -132,7 +148,7 @@ export default function Header({ onOpenSearch }) {
         </div>
       </div>
 
-      <nav className="mainnav" aria-label="Primary">
+      <nav className="mainnav" aria-label="Primary" ref={navRef}>
         <div className="container">
           <ul className={`navlist ${navOpen ? 'open' : ''}`} id="primary-nav">
             {navStructure

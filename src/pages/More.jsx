@@ -1,104 +1,115 @@
 import { useState } from 'react'
 import { PageHead } from '../components/Building.jsx'
+import PageLayout from '../components/PageLayout.jsx'
+import { useApp } from '../context/AppContext.jsx'
 
 export function Gallery() {
+  const { t } = useApp()
   const items = ['Reading Room', 'Reference Section', 'Digital Library', 'Journal Section', 'Book Exhibition', 'Orientation Day', 'Rare Collection', 'Circulation Desk']
   return (
-    <div className="container page">
-      <PageHead eyebrow="More" title="Photo Gallery" />
-      <p className="prose">A glimpse of the library spaces and activities. Replace these placeholders with actual photographs.</p>
-      <div className="gallery-grid">
-        {items.map((label) => (
-          <div className="gallery-item" key={label}>{label}</div>
-        ))}
+    <PageLayout>
+      <div className="container page">
+        <PageHead eyebrow={t('pages.more.galleryEyebrow')} title={t('pages.more.galleryTitle')} />
+        <p className="prose">{t('pages.more.galleryIntro')}</p>
+        <div className="gallery-grid">
+          {items.map((label) => (
+            <div className="gallery-item" key={label}>{t(`pages.more.gallery.items.${label}`, label)}</div>
+          ))}
+        </div>
       </div>
-    </div>
+    </PageLayout>
   )
 }
 
 export function VirtualTour() {
+  const { t } = useApp()
   return (
-    <div className="container page">
-      <PageHead eyebrow="More" title="Library Virtual Tour" />
-      <p className="prose">
-        Take a virtual walkthrough of the library — the reading room, reference section,
-        journal section and digital library.
-      </p>
-      <div className="notice">
-        Virtual tour placeholder — embed a 360° tour or a YouTube walkthrough video here. You
-        can reuse the college YouTube channel for the embed.
+    <PageLayout>
+      <div className="container page">
+        <PageHead eyebrow={t('pages.more.tourEyebrow')} title={t('pages.more.tourTitle')} />
+        <p className="prose">
+          {t('pages.more.tourIntro')}
+        </p>
+        <div className="notice">
+          {t('pages.more.tourNotice')}
+        </div>
       </div>
-    </div>
+    </PageLayout>
   )
 }
 
 export function BestPractices() {
+  const { t } = useApp()
   return (
-    <div className="container page">
-      <PageHead eyebrow="More" title="Best Practices" />
-      <p className="prose">
-        The library follows certain best practices to promote reading habits, effective use of
-        resources and student participation.
-      </p>
-      <div className="deflist">
-        <div className="item">
-          <strong>Best User of the Library Award:</strong> Recognition is given to students and
-          users who make effective and regular use of library resources.
-        </div>
-        <div className="item">
-          <strong>Weekly Library Guidance — MANADAALADA MAATU:</strong> Library guidance for
-          students every Thursday from 11:15 a.m. to 11:30 a.m. to improve awareness about
-          books, magazines and library use.
+    <PageLayout>
+      <div className="container page">
+        <PageHead eyebrow={t('pages.more.practicesEyebrow')} title={t('pages.more.practicesTitle')} />
+        <p className="prose">
+          {t('pages.more.practicesIntro')}
+        </p>
+        <div className="deflist">
+          <div className="item">
+            <strong>{t('pages.more.practices.awardTitle')}</strong> {t('pages.more.practices.awardDesc')}
+          </div>
+          <div className="item">
+            <strong>{t('pages.more.practices.guidanceTitle')}</strong> {t('pages.more.practices.guidanceDesc')}
+          </div>
         </div>
       </div>
-    </div>
+    </PageLayout>
   )
 }
 
 export function Activities() {
+  const { t } = useApp()
   const items = ['Library orientation for new students', 'Book exhibitions', 'Reading and awareness programmes', 'Information-literacy sessions']
   return (
-    <div className="container page">
-      <PageHead eyebrow="More" title="Library Activities" />
-      <ul className="prose">{items.map((i) => <li key={i}>{i}</li>)}</ul>
-    </div>
+    <PageLayout>
+      <div className="container page">
+        <PageHead eyebrow={t('pages.more.activitiesEyebrow')} title={t('pages.more.activitiesTitle')} />
+        <ul className="prose">{items.map((i) => <li key={i}>{t(`pages.more.activities.items.${i}`, i)}</li>)}</ul>
+      </div>
+    </PageLayout>
   )
 }
 
 export function Feedback() {
+  const { t } = useApp()
   const [sent, setSent] = useState(false)
   return (
-    <div className="container page">
-      <PageHead eyebrow="More" title="Feedback" />
-      <p className="prose">Your suggestions help us improve. Please share your feedback below.</p>
-      {sent ? (
-        <div className="notice">Thank you — your feedback has been recorded (demo). Connect this form to your backend or a Google Form to collect responses.</div>
-      ) : (
-        <form className="form-grid" onSubmit={(e) => { e.preventDefault(); setSent(true) }}>
-          <div>
-            <label htmlFor="fb-name">Name</label>
-            <input id="fb-name" type="text" required />
-          </div>
-          <div>
-            <label htmlFor="fb-email">Email</label>
-            <input id="fb-email" type="email" required />
-          </div>
-          <div>
-            <label htmlFor="fb-type">Type</label>
-            <select id="fb-type">
-              <option>Suggestion</option>
-              <option>Compliment</option>
-              <option>Complaint</option>
-              <option>Resource request</option>
-            </select>
-          </div>
-          <div>
-            <label htmlFor="fb-msg">Message</label>
-            <textarea id="fb-msg" rows="5" required></textarea>
-          </div>
-          <button className="btn btn-gold" type="submit">Submit feedback</button>
-        </form>
-      )}
-    </div>
+    <PageLayout>
+      <div className="container page">
+        <PageHead eyebrow={t('pages.askus.feedbackEyebrow')} title={t('pages.askus.feedbackTitle')} />
+        <p className="prose">{t('pages.askus.feedbackIntro')}</p>
+        {sent ? (
+          <div className="notice">{t('pages.askus.feedbackSuccess')}</div>
+        ) : (
+          <form className="form-grid" onSubmit={(e) => { e.preventDefault(); setSent(true) }}>
+            <div>
+              <label htmlFor="fb-name">{t('pages.askus.feedback.name')}</label>
+              <input id="fb-name" type="text" required />
+            </div>
+            <div>
+              <label htmlFor="fb-email">{t('pages.askus.feedback.email')}</label>
+              <input id="fb-email" type="email" required />
+            </div>
+            <div>
+              <label htmlFor="fb-type">{t('pages.askus.feedback.type')}</label>
+              <select id="fb-type">
+                <option value="Suggestion">{t('pages.askus.feedback.options.suggestion')}</option>
+                <option value="Compliment">{t('pages.askus.feedback.options.compliment')}</option>
+                <option value="Complaint">{t('pages.askus.feedback.options.complaint')}</option>
+                <option value="Resource request">{t('pages.askus.feedback.options.resourceRequest')}</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="fb-msg">{t('pages.askus.feedback.message')}</label>
+              <textarea id="fb-msg" rows="5" required></textarea>
+            </div>
+            <button className="btn btn-gold" type="submit">{t('pages.askus.feedback.submit')}</button>
+          </form>
+        )}
+      </div>
+    </PageLayout>
   )
 }

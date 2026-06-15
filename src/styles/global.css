@@ -710,7 +710,7 @@ img {
 
 /* ---------- Generic page ---------- */
 .page {
-  padding-top: 48px;
+  padding-top: 2.5px;
   padding-bottom: 64px;
 }
 
@@ -735,7 +735,8 @@ img {
 }
 
 .prose {
-  width: 500px;
+  width: 100%;
+  max-width: none;
   overflow-wrap: anywhere;
   text-align: justify;
 }
@@ -1427,6 +1428,12 @@ table.data td a {
   .hero .container {
     padding-left: 178px;
   }
+
+  /* Inside PageLayout, sidebar-layout already handles gutters */
+  .sidebar-main .container.page {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 /* Phones */
@@ -1604,11 +1611,15 @@ table.data td a {
 }
 
 /* Column 1 — vertical star menu (formerly "More" dropdown) */
-.sidebar-menu {
+.sidebar-left-area {
   position: sticky;
   top: 84px;
   border-right: 2px solid var(--line);
   padding: 28px 0;
+}
+
+.sidebar-menu {
+  padding: 0;
 }
 
 .sidebar-menu ul {
@@ -1738,11 +1749,15 @@ table.data td a {
     grid-template-columns: 1fr;
   }
 
-  .sidebar-menu {
+  .sidebar-left-area {
     position: static;
     border-right: none;
-    border-bottom: 2px solid var(--line);
     padding: 12px 0;
+  }
+
+  .sidebar-menu {
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 12px;
   }
 
   .sidebar-main {
@@ -1761,11 +1776,26 @@ table.data td a {
   .hero .container,
   .container.page,
   .container.footer-grid,
-  .container.footer-bottom,
-  .sidebar-layout {
-    /* ← add this line */
+  .container.footer-bottom {
     padding-left: 120px;
     padding-right: var(--photo-col);
+  }
+
+  /* sidebar-layout only needs enough right padding for the social sidebar (48px),
+     NOT the full photo-col — that would squeeze the content column too much. */
+  .sidebar-layout {
+    padding-left: 120px;
+    padding-right: 64px;
+  }
+
+  /* When .container.page is inside .sidebar-main (PageLayout),
+     .sidebar-layout already carries the big gutters — reset to avoid doubling.
+     Use !important to beat the earlier !important rule on .container.page. */
+  .sidebar-main .container.page {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: none;
+    margin: 0;
   }
 }
 
@@ -1852,4 +1882,74 @@ table.data td a {
   .social-sidebar-wrapper {
     display: none;
   }
+}
+
+.container.page {
+  text-align: justify;
+}
+
+/* ============================================================
+   NOTICE BOARD CARD SIDEBAR COMPONENT
+   ============================================================ */
+.noticeboard-card-wrapper {
+  display: block;
+  margin: 50px 16px 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  background-color: var(--white);
+  border: 1px solid var(--line);
+  width: 120px !important;
+  margin: 40px auto 0 !important;
+
+}
+
+.noticeboard-card-wrapper:hover {
+  transform: scale(1.04);
+  box-shadow: var(--shadow-lg);
+}
+
+.noticeboard-card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 500px) {
+  .noticeboard-card-wrapper {
+    margin: 24px auto 0;
+    max-width: 100px;
+    width: calc(100% - 32px);
+  }
+
+
+}
+
+/* ============================================================
+   question paper and syllabus
+   ============================================================ */
+
+.sidebar-links-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 50px 0 24px;
+  width: 100%;
+}
+
+.sidebar-link-btn {
+  display: block;
+  text-decoration: none;
+  color: var(--garnet);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sidebar-link-btn:hover {
+  color: var(--gold);
 }

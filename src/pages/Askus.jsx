@@ -1,256 +1,254 @@
 import { useState } from 'react'
 import { PageHead } from '../components/Building.jsx'
+import PageLayout from '../components/PageLayout.jsx'
+import { useApp } from '../context/AppContext.jsx'
 
-
-
-function Page({ children }) {
-    return <div className="container page">{children}</div>
-}
 export function FAQ() {
-    const faqs = [
-        {
-            q: 'What are the library timings?',
-            a: 'The library is open from 9:00 AM to 6:00 PM on working days.'
-        },
-        {
-            q: 'How many books can I borrow?',
-            a: 'Students may borrow books as per the library borrowing rules.'
-        },
-        {
-            q: 'Can I access INFLIBNET resources?',
-            a: 'Yes. INFLIBNET resources are available through the library.'
-        },
-        {
-            q: 'Is Wi-Fi available in the library?',
-            a: 'Yes. Internet and digital library facilities are available for users.'
-        },
-        {
-            q: 'Can I renew borrowed books?',
-            a: 'Yes, provided the book has not been reserved by another user.'
-        },
-        {
-            q: 'How can I suggest a new book for purchase?',
-            a: 'Students and faculty may submit suggestions to the librarian.'
-        }
-    ]
+  const { t } = useApp()
+  const faqs = [
+    {
+      q: t('pages.askus.faq.q1'),
+      a: t('pages.askus.faq.a1')
+    },
+    {
+      q: t('pages.askus.faq.q2'),
+      a: t('pages.askus.faq.a2')
+    },
+    {
+      q: t('pages.askus.faq.q3'),
+      a: t('pages.askus.faq.a3')
+    },
+    {
+      q: t('pages.askus.faq.q4'),
+      a: t('pages.askus.faq.a4')
+    },
+    {
+      q: t('pages.askus.faq.q5'),
+      a: t('pages.askus.faq.a5')
+    },
+    {
+      q: t('pages.askus.faq.q6'),
+      a: t('pages.askus.faq.a6')
+    }
+  ]
 
-    return (
-        <Page>
-            <PageHead eyebrow="Ask Us" title="Frequently Asked Questions" />
+  return (
+    <PageLayout>
+      <div className="container page">
+        <PageHead eyebrow={t('pages.askus.faqEyebrow')} title={t('pages.askus.faqTitle')} />
 
-            <div className="prose">
-                {faqs.map((faq, index) => (
-                    <div key={index} style={{ marginBottom: '20px' }}>
-                        <h3>{faq.q}</h3>
-                        <p>{faq.a}</p>
-                    </div>
-                ))}
+        <div className="prose">
+          {faqs.map((faq, index) => (
+            <div key={index} style={{ marginBottom: '20px' }}>
+              <h3>{faq.q}</h3>
+              <p>{faq.a}</p>
             </div>
+          ))}
+        </div>
 
-            <div className="notice" style={{ marginTop: '20px' }}>
-                If your question is not listed here, please contact the library staff
-                or submit your query through the feedback section.
-            </div>
-        </Page>
-    )
+      </div>
+    </PageLayout>
+  )
 }
-
 
 export function Feedback() {
-    const [sent, setSent] = useState(false)
-    return (
-        <div className="container page">
-            <PageHead eyebrow="More" title="Feedback" />
-            <p className="prose">Your suggestions help us improve. Please share your feedback below.</p>
-            {sent ? (
-                <div className="notice">Thank you — your feedback has been recorded (demo). Connect this form to your backend or a Google Form to collect responses.</div>
-            ) : (
-                <form className="form-grid" onSubmit={(e) => { e.preventDefault(); setSent(true) }}>
-                    <div>
-                        <label htmlFor="fb-name">Name</label>
-                        <input id="fb-name" type="text" required />
-                    </div>
-                    <div>
-                        <label htmlFor="fb-email">Email</label>
-                        <input id="fb-email" type="email" required />
-                    </div>
-                    <div>
-                        <label htmlFor="fb-type">Type</label>
-                        <select id="fb-type">
-                            <option>Suggestion</option>
-                            <option>Compliment</option>
-                            <option>Complaint</option>
-                            <option>Resource request</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label htmlFor="fb-msg">Message</label>
-                        <textarea id="fb-msg" rows="5" required></textarea>
-                    </div>
-                    <button className="btn btn-gold" type="submit">Submit feedback</button>
-                </form>
-            )}
-        </div>
-    )
+  const { t } = useApp()
+  const [sent, setSent] = useState(false)
+  return (
+    <PageLayout>
+      <div className="container page">
+        <PageHead eyebrow={t('pages.askus.feedbackEyebrow')} title={t('pages.askus.feedbackTitle')} />
+        <p className="prose">{t('pages.askus.feedbackIntro')}</p>
+        {sent ? (
+          <div className="notice">{t('pages.askus.feedbackSuccess')}</div>
+        ) : (
+          <form className="form-grid" onSubmit={(e) => { e.preventDefault(); setSent(true) }}>
+            <div>
+              <label htmlFor="fb-name">{t('pages.askus.feedback.name')}</label>
+              <input id="fb-name" type="text" required />
+            </div>
+            <div>
+              <label htmlFor="fb-email">{t('pages.askus.feedback.email')}</label>
+              <input id="fb-email" type="email" required />
+            </div>
+            <div>
+              <label htmlFor="fb-type">{t('pages.askus.feedback.type')}</label>
+              <select id="fb-type">
+                <option value="Suggestion">{t('pages.askus.feedback.options.suggestion')}</option>
+                <option value="Compliment">{t('pages.askus.feedback.options.compliment')}</option>
+                <option value="Complaint">{t('pages.askus.feedback.options.complaint')}</option>
+                <option value="Resource request">{t('pages.askus.feedback.options.resourceRequest')}</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="fb-msg">{t('pages.askus.feedback.message')}</label>
+              <textarea id="fb-msg" rows="5" required></textarea>
+            </div>
+            <button className="btn btn-gold" type="submit">{t('pages.askus.feedback.submit')}</button>
+          </form>
+        )}
+      </div>
+    </PageLayout>
+  )
 }
-
 
 export function ReportConnectionProblem() {
-    return (
-        <div className="container page">
-            <PageHead eyebrow="Ask Us" title="Report a Connection Problem" />
+  const { t } = useApp()
+  return (
+    <PageLayout>
+      <div className="container page">
+        <PageHead eyebrow={t('pages.askus.reportEyebrow')} title={t('pages.askus.reportTitle')} />
 
-            <p className="prose">
-                If you are facing issues accessing OPAC, e-resources, INFLIBNET,
-                library Wi-Fi, digital library services, or any online resource,
-                please report the problem to the library staff.
-            </p>
+        <p className="prose">
+          {t('pages.askus.reportIntro')}
+        </p>
 
-            <form className="form-grid">
-                <div>
-                    <label>Name</label>
-                    <input type="text" />
-                </div>
+        <form className="form-grid" onSubmit={(e) => e.preventDefault()}>
+          <div>
+            <label>{t('pages.askus.report.name')}</label>
+            <input type="text" />
+          </div>
 
-                <div>
-                    <label>Email</label>
-                    <input type="email" />
-                </div>
+          <div>
+            <label>{t('pages.askus.report.email')}</label>
+            <input type="email" />
+          </div>
 
-                <div>
-                    <label>Problem Description</label>
-                    <textarea rows="5"></textarea>
-                </div>
+          <div>
+            <label>{t('pages.askus.report.problemDesc')}</label>
+            <textarea rows="5"></textarea>
+          </div>
 
-                <button className="btn btn-gold">
-                    Submit Report
-                </button>
-            </form>
-        </div>
-    )
+          <button className="btn btn-gold">
+            {t('pages.askus.report.submit')}
+          </button>
+        </form>
+      </div>
+    </PageLayout>
+  )
 }
-
 
 export function RecommendBook() {
-    return (
-        <div className="container page">
-            <PageHead eyebrow="Ask Us" title="Recommend a Book" />
+  const { t } = useApp()
+  return (
+    <PageLayout>
+      <div className="container page">
+        <PageHead eyebrow={t('pages.askus.recommendBookEyebrow')} title={t('pages.askus.recommendBookTitle')} />
 
-            <p className="prose">
-                Have you read a great book recently?
-                Do you feel a title would benefit our collection?
-                Please share your book recommendations with us.
-            </p>
+        <p className="prose">
+          {t('pages.askus.recommendBookIntro')}
+        </p>
 
-            <form className="form-grid">
-                <div>
-                    <label>Your Name</label>
-                    <input type="text" />
-                </div>
+        <form className="form-grid" onSubmit={(e) => e.preventDefault()}>
+          <div>
+            <label>{t('pages.askus.recommendBook.name')}</label>
+            <input type="text" />
+          </div>
 
-                <div>
-                    <label>Email</label>
-                    <input type="email" />
-                </div>
+          <div>
+            <label>{t('pages.askus.recommendBook.email')}</label>
+            <input type="email" />
+          </div>
 
-                <div>
-                    <label>Book Title</label>
-                    <input type="text" />
-                </div>
+          <div>
+            <label>{t('pages.askus.recommendBook.title')}</label>
+            <input type="text" />
+          </div>
 
-                <div>
-                    <label>Author(s)</label>
-                    <input type="text" />
-                </div>
+          <div>
+            <label>{t('pages.askus.recommendBook.authors')}</label>
+            <input type="text" />
+          </div>
 
-                <div>
-                    <label>Publisher (Optional)</label>
-                    <input type="text" />
-                </div>
+          <div>
+            <label>{t('pages.askus.recommendBook.publisher')}</label>
+            <input type="text" />
+          </div>
 
-                <div>
-                    <label>Year of Publication (Optional)</label>
-                    <input type="text" />
-                </div>
+          <div>
+            <label>{t('pages.askus.recommendBook.year')}</label>
+            <input type="text" />
+          </div>
 
-                <div>
-                    <label>ISBN (Optional)</label>
-                    <input type="text" />
-                </div>
+          <div>
+            <label>{t('pages.askus.recommendBook.isbn')}</label>
+            <input type="text" />
+          </div>
 
-                <div>
-                    <label>Reason / Justification</label>
-                    <textarea rows="4" placeholder="Why should we add this book to the library?"></textarea>
-                </div>
+          <div>
+            <label>{t('pages.askus.recommendBook.reason')}</label>
+            <textarea rows="4" placeholder={t('pages.askus.recommendBook.reasonPlaceholder')}></textarea>
+          </div>
 
-                <button className="btn btn-gold">
-                    Submit Recommendation
-                </button>
-            </form>
-        </div>
-    )
+          <button className="btn btn-gold">
+            {t('pages.askus.recommendBook.submit')}
+          </button>
+        </form>
+      </div>
+    </PageLayout>
+  )
 }
-
 
 export function RecommendJournals() {
-    return (
-        <div className="container page">
-            <PageHead eyebrow="Ask Us" title="Recommend Journals" />
+  const { t } = useApp()
+  return (
+    <PageLayout>
+      <div className="container page">
+        <PageHead eyebrow={t('pages.askus.recommendJournalEyebrow')} title={t('pages.askus.recommendJournalTitle')} />
 
-            <p className="prose">
-                Suggest journals, magazines, or periodicals that would enrich our
-                library’s collection and support teaching and research.
-            </p>
+        <p className="prose">
+          {t('pages.askus.recommendJournalIntro')}
+        </p>
 
-            <form className="form-grid">
-                <div>
-                    <label>Your Name</label>
-                    <input type="text" />
-                </div>
+        <form className="form-grid" onSubmit={(e) => e.preventDefault()}>
+          <div>
+            <label>{t('pages.askus.recommendJournal.name')}</label>
+            <input type="text" />
+          </div>
 
-                <div>
-                    <label>Email</label>
-                    <input type="email" />
-                </div>
+          <div>
+            <label>{t('pages.askus.recommendJournal.email')}</label>
+            <input type="email" />
+          </div>
 
-                <div>
-                    <label>Journal Title</label>
-                    <input type="text" />
-                </div>
+          <div>
+            <label>{t('pages.askus.recommendJournal.title')}</label>
+            <input type="text" />
+          </div>
 
-                <div>
-                    <label>Publisher</label>
-                    <input type="text" />
-                </div>
+          <div>
+            <label>{t('pages.askus.recommendJournal.publisher')}</label>
+            <input type="text" />
+          </div>
 
-                <div>
-                    <label>ISSN (Optional)</label>
-                    <input type="text" />
-                </div>
+          <div>
+            <label>{t('pages.askus.recommendJournal.issn')}</label>
+            <input type="text" />
+          </div>
 
-                <div>
-                    <label>Frequency (Monthly, Quarterly, Yearly, etc.)</label>
-                    <input type="text" />
-                </div>
+          <div>
+            <label>{t('pages.askus.recommendJournal.frequency')}</label>
+            <input type="text" />
+          </div>
 
-                <div>
-                    <label>Subject Area</label>
-                    <input type="text" />
-                </div>
+          <div>
+            <label>{t('pages.askus.recommendJournal.subject')}</label>
+            <input type="text" />
+          </div>
 
-                <div>
-                    <label>Reason for Recommendation</label>
-                    <textarea
-                        rows="4"
-                        placeholder="How will this journal benefit students and researchers?"
-                    />
-                </div>
+          <div>
+            <label>{t('pages.askus.recommendJournal.reason')}</label>
+            <textarea
+              rows="4"
+              placeholder={t('pages.askus.recommendJournal.reasonPlaceholder')}
+            />
+          </div>
 
-                <button className="btn btn-gold">
-                    Submit Recommendation
-                </button>
-            </form>
-        </div>
-    );
+          <button className="btn btn-gold">
+            {t('pages.askus.recommendJournal.submit')}
+          </button>
+        </form>
+      </div>
+    </PageLayout>
+  )
 }
-
