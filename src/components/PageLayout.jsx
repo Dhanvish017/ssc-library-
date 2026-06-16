@@ -12,7 +12,7 @@ import {
 } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import { SiAcademia } from 'react-icons/si'
-import { MdArticle } from 'react-icons/md'
+import { SiBlogger } from "react-icons/si";
 
 const sidebarLinks = navStructure.find((i) => i.label === 'More')?.children ?? []
 
@@ -94,7 +94,7 @@ export default function PageLayout({ children }) {
             <FaResearchgate />
           </a>
 
-          <a href="https://www.academia.edu" target="_blank" rel="noopener noreferrer" title="Academia" style={{ background: '#41454A' }}>
+          <a href="https://independent.academia.edu/LibraryTumkur" target="_blank" rel="noopener noreferrer" title="Academia" style={{ background: '#41454A' }}>
             <SiAcademia />
           </a>
 
@@ -102,12 +102,12 @@ export default function PageLayout({ children }) {
             <FaLinkedin />
           </a>
 
-          <a href="https://slideshare.net" target="_blank" rel="noopener noreferrer" title="SlideShare" style={{ background: '#008ED2' }}>
+          <a href="https://www.slideshare.net/sscasclibrarytumakur" target="_blank" rel="noopener noreferrer" title="SlideShare" style={{ background: '#008ED2' }}>
             <FaSlideshare />
           </a>
 
-          <a href="https://yourblog.com" target="_blank" rel="noopener noreferrer" title="Blog" style={{ background: '#FF8C00' }}>
-            <MdArticle />
+          <a href="https://sscacslibrary.blogspot.com/2026/06/library.html" target="_blank" rel="noopener noreferrer" title="Blog" style={{ background: '#FF8C00' }}>
+            <SiBlogger />
           </a>
 
         </div>
