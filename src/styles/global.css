@@ -399,6 +399,13 @@ img {
   color: #fdf6ec;
 }
 
+@media (max-width: 1079px) {
+  .search-trigger {
+    position: relative;
+    top: 150px !important;
+  }
+}
+
 .search-trigger:hover,
 .menu-toggle:hover {
   background: rgba(255, 255, 255, 0.22);
@@ -1175,11 +1182,22 @@ table.data td a {
   user-select: none;
 }
 
+/* Around 1290px */
+@media (max-width: 1290px) {
+  .swamiji-photo {
+    left: -30px !important;
+    top: 300px
+  }
+}
+
+
 /* Around 1231px */
 @media (max-width: 1250px) {
   .swamiji-photo {
     left: -70px !important;
-    top: 230px;
+    top: 300px;
+    width: 470px !important;
+    height: auto;
   }
 }
 
@@ -1198,9 +1216,7 @@ table.data td a {
   .swamiji-photo {
     left: -90px !important;
     z-index: 1;
-    width: 520px !important;
-    height: auto;
-    top: 230px !important;
+    top: 280px !important;
   }
 }
 
@@ -1210,8 +1226,6 @@ table.data td a {
     left: -90px !important;
     z-index: 1;
     top: 230px;
-    width: 550px;
-    height: auto;
   }
 }
 
@@ -1220,47 +1234,33 @@ table.data td a {
   .swamiji-photo {
     left: -100px !important;
     z-index: 1;
-    top: 230px;
-    width: 550px;
-    height: auto;
+    top: 270px;
   }
 }
 
 /* Around 865px */
 @media (max-width: 865px) {
   .swamiji-photo {
-    left: -100px !important;
+    left: -150px !important;
     z-index: 1;
     top: 210px;
-    width: 580px;
-    height: auto;
   }
 }
 
 /* Around 845px */
 @media (max-width: 845px) {
   .swamiji-photo {
-    left: -100px !important;
+    left: -130px !important;
     z-index: 1;
     top: 210px;
-    width: 600px;
-    height: auto;
   }
 }
 
 @media (max-width: 640px) {
   .swamiji-photo {
-    left: -200px !important;
-    width: 320px !important;
-    display: none !important;
-  }
-}
-
-
-@media (max-width: 1231px) {
-  .swamiji-photo {
-    left: 60px;
-    transition: all 0.3s ease;
+    left: -130px !important;
+    z-index: 1;
+    top: 500px !important;
   }
 }
 
@@ -1634,6 +1634,11 @@ table.data td a {
     width: clamp(110px, 16vw, 160px);
     bottom: -30px;
     left: 10px;
+  }
+
+  .brand-text h1 {
+    font-size: 2.2rem;
+    margin-top: -3px;
   }
 
   .site-watermark {
