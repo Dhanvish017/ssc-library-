@@ -74,7 +74,7 @@ export default function PageLayout({ children }) {
       <div className="social-sidebar-wrapper">
         <div className="social-sidebar">
 
-          <a href="https://www.facebook.com/%40sscasctumakuru" target="_blank" rel="noopener noreferrer" title="Facebook" style={{ background: '#1877F2' }}>
+          <a href="https://www.facebook.com/profile.php?id=61590656140302" target="_blank" rel="noopener noreferrer" title="Facebook" style={{ background: '#1877F2' }}>
             <FaFacebook />
           </a>
 

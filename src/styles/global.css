@@ -215,6 +215,17 @@ img {
 }
 
 .header-swamiji {
+  width: 70px;
+  height: 80px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 3px solid #FEEC41;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.small-swamiji {
   width: 100px;
   height: 110px;
   object-fit: cover;
@@ -224,10 +235,17 @@ img {
   background-color: #fff;
 }
 
+
 .bigswamiji {
   width: 120px;
   height: auto;
   object-fit: contain;
+}
+
+
+.bigswamiji {
+  width: 120px;
+  height: 120px;
 }
 
 /* ---------- Language + accessibility controls ---------- */
@@ -363,11 +381,11 @@ img {
 .masthead-contact {
   position: absolute;
   top: 150px;
-  left: 40px;
+  left: 15px;
   z-index: 10;
   padding-top: 30px;
   text-align: left;
-  font-size: 0.82rem;
+  font-size: 0.7rem;
   line-height: 1.5;
   color: #f0ddc9;
   display: flex;

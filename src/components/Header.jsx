@@ -105,16 +105,18 @@ export default function Header({ onOpenSearch }) {
         </div>
 
         <div className="header-swamiji-group">
+
+          <img
+            src={tsh}
+            alt="Swamiji"
+            className="small-swamiji"
+          />
           <img
             src={smallswamiji}
             alt="Swamiji"
             className="header-swamiji"
           />
-          <img
-            src={tsh}
-            alt="Swamiji"
-            className="header-swamiji"
-          />
+
         </div>
       </div>
 
@@ -129,7 +131,7 @@ export default function Header({ onOpenSearch }) {
           </Link>
           <div className="header-actions">
             <div className="masthead-contact" aria-hidden="false">
-              <a href="mailto:library@sscasc.in">library@sscasc.in</a>
+              <a href="mailto:library@sscasc.in">sscasclibrarytumakur@gmail.com</a>
               <span>-0816-2278569</span>
             </div>
             <button className="search-trigger" onClick={onOpenSearch} aria-label={t('search')}>
