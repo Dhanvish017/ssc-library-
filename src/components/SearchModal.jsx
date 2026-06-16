@@ -35,7 +35,15 @@ export default function SearchModal({ open, onClose }) {
 
   if (!open) return null
 
-  const go = (to) => { onClose(); navigate(to) }
+  const go = (result) => {
+    onClose()
+
+    if (result.external) {
+      window.open(result.external, '_blank')
+    } else {
+      navigate(result.to)
+    }
+  }
 
   return (
     <div className="modal-overlay" onClick={onClose} role="dialog" aria-modal="true" aria-label={t('search')}>
@@ -55,10 +63,13 @@ export default function SearchModal({ open, onClose }) {
           )}
           {results.map((r) => (
             <a
-              key={r.to}
-              href={r.to}
+              key={r.title}
+              href={r.external || r.to}
               className="search-result"
-              onClick={(e) => { e.preventDefault(); go(r.to) }}
+              onClick={(e) => {
+                e.preventDefault()
+                go(r)
+              }}
             >
               <span className="sr-crumb">{r.crumb}</span>
               <div className="sr-title">{highlight(r.title, query)}</div>

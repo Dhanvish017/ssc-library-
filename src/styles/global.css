@@ -397,6 +397,7 @@ img {
   font: inherit;
   font-size: 0.9rem;
   color: #fdf6ec;
+  z-index: 99999 !important;
 }
 
 @media (max-width: 1079px) {
@@ -428,7 +429,7 @@ img {
   background: var(--gold);
   position: sticky;
   top: 0;
-  z-index: 2000;
+  z-index: 1000;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
   border-bottom: 3px solid var(--garnet);
   overflow: visible;
@@ -1366,7 +1367,7 @@ table.data td a {
 
   position: sticky;
   z-index: 100;
-  min-height: 100vh;
+  min-height: 60vh;
 
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 }
@@ -1476,7 +1477,7 @@ table.data td a {
   right: 0;
   width: 48px;
   pointer-events: none;
-  z-index: 1100;
+  z-index: 500;
 }
 
 .social-sidebar {
@@ -1489,7 +1490,7 @@ table.data td a {
   border-radius: 0;
   pointer-events: auto;
   margin-top: 40px;
-  z-index: 1000;
+  z-index: 500;
 }
 
 .social-sidebar a {
@@ -1534,6 +1535,7 @@ table.data td a {
   cursor: pointer;
   background-color: var(--white);
   border: 1px solid var(--line);
+  top: 50px;
 }
 
 .noticeboard-card-wrapper:hover {

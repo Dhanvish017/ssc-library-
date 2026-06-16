@@ -165,7 +165,14 @@ export const translations = {
         timingsNotice: 'Timings are indicative — please confirm current working hours at the circulation desk.',
 
         futureTitle: 'Future Plan',
-        futureIntro: 'The library is committed to continuous improvement and modernization to meet the evolving academic and research needs of its users. The following initiatives are planned for the future:',
+        futurePara: `The library is committed to continuous improvement and modernization to meet the evolving academic and research needs of its users. The following initiatives are planned for the future:
+Complete digitization of the library catalogue and preservation of rare palm-leaf manuscripts and handwritten collections in digital format.
+Implementation of RFID-based circulation systems and self-service kiosks for efficient borrowing and return of library materials.
+Expansion of electronic resources, including e-books, e-journals, databases, and remote access facilities for users.
+Establishment of a dedicated Research Commons and Discussion Zone to support collaborative learning and research activities.
+Organization of regular Information Literacy Programmes, Research Support Services, and Database Training Workshops to enhance users' information retrieval and research skills.
+Strengthening digital library services and integrating emerging technologies for improved access to knowledge resources.
+Development of institutional digital repositories for preserving and disseminating scholarly publications and academic outputs.`,
 
         staffTitle: 'Library Staff',
         staffDesc: 'The library staff maintain the collection, guide users, support circulation work, and help students and teachers access the information they need.',
@@ -669,7 +676,7 @@ Information Literacy Sessions: Trains users to locate, evaluate, and effectively
       AskUs: 'ನಮ್ಮನ್ನು ಕೇಳಿ',
       Contact: 'ಸಂಪರ್ಕ',
       'AskUs': 'ನಮ್ಮನ್ನು ಕೇಳಿ',
-      'FAQ': 'ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು',
+      'FAQ': 'ಪುನರಾವರ್ತಿತ ಪ್ರಶ್ನೆಗಳು',
       'Report a connection problem': 'ಸಂಪರ್ಕ ಸಮಸ್ಯೆಯನ್ನು ವರದಿ ಮಾಡಿ',
       'Recommend a book': 'ಪುಸ್ತಕವನ್ನು ಶಿಫಾರಸು ಮಾಡಿ',
       'Recommend Journals': 'ಜರ್ನಲ್‌ಗಳನ್ನು ಶಿಫಾರಸು ಮಾಡಿ',
@@ -780,7 +787,15 @@ Information Literacy Sessions: Trains users to locate, evaluate, and effectively
         timingsNotice: 'ಸಮಯಗಳು ಸೂಚಕವಾಗಿವೆ — ದಯವಿಟ್ಟು ಪುಸ್ತಕ ವಿತರಣಾ ಕೌಂಟರ್‌ನಲ್ಲಿ ಪ್ರಸ್ತುತ ಕೆಲಸದ ಸಮಯವನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.',
 
         futureTitle: 'ಭವಿಷ್ಯದ ಯೋಜನೆ',
-        futureIntro: 'ಬಳಕೆದಾರರ ವಿಕಸನಗೊಳ್ಳುತ್ತಿರುವ ಶೈಕ್ಷಣಿಕ ಮತ್ತು ಸಂಶೋಧನಾ ಅಗತ್ಯಗಳನ್ನು ಪೂರೈಸಲು ಗ್ರಂಥಾಲಯವು ನಿರಂತರ ಸುಧಾರಣೆ ಮತ್ತು ಆಧುನೀಕರಣಕ್ಕೆ ಬದ್ಧವಾಗಿದೆ. ಭವಿಷ್ಯಕ್ಕಾಗಿ ಈ ಕೆಳಗಿನ ಉಪಕ್ರಮಗಳನ್ನು ಯೋಜಿಸಲಾಗಿದೆ:',
+        futurePara: `ಬಳಕೆದಾರರ ಬದಲಾಗುತ್ತಿರುವ ಶೈಕ್ಷಣಿಕ, ಮಾಹಿತಿ ಹಾಗೂ ಸಂಶೋಧನಾ ಅಗತ್ಯಗಳನ್ನು ಪೂರೈಸುವ ಉದ್ದೇಶದಿಂದ ಗ್ರಂಥಾಲಯವು ನಿರಂತರ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ಆಧುನೀಕರಣಕ್ಕೆ ಬದ್ಧವಾಗಿದೆ. ಈ ನಿಟ್ಟಿನಲ್ಲಿ ಕೆಳಕಂಡ ಯೋಜನೆಗಳನ್ನು ಜಾರಿಗೊಳಿಸಲು ಉದ್ದೇಶಿಸಲಾಗಿದೆ:
+
+ಗ್ರಂಥಾಲಯದ ಸಂಪೂರ್ಣ ಪುಸ್ತಕ ಸೂಚಿ (Catalogue) ಯನ್ನು ಡಿಜಿಟಲೀಕರಣಗೊಳಿಸುವುದು ಹಾಗೂ ಅಪರೂಪದ ತಾಳೆಓಲೆಗಳು ಮತ್ತು ಹಸ್ತಪ್ರತಿಗಳನ್ನು ಡಿಜಿಟಲ್ ರೂಪದಲ್ಲಿ ಸಂರಕ್ಷಿಸುವುದು.
+ಪುಸ್ತಕಗಳ ವಿತರಣೆ ಮತ್ತು ಹಿಂತಿರುಗಿಸುವ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಸುಗಮಗೊಳಿಸಲು RFID ಆಧಾರಿತ ಗ್ರಂಥಾಲಯ ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆ ಹಾಗೂ ಸ್ವಯಂ ಸೇವಾ ಕಿಯೋಸ್ಕ್‌ಗಳನ್ನು ಅಳವಡಿಸುವುದು.
+ಇ-ಪುಸ್ತಕಗಳು, ಇ-ಜರ್ನಲ್‌ಗಳು, ಡೇಟಾಬೇಸ್‌ಗಳು ಮತ್ತು ದೂರಸ್ಥ ಪ್ರವೇಶ (Remote Access) ಸೌಲಭ್ಯಗಳನ್ನು ಒಳಗೊಂಡ ಡಿಜಿಟಲ್ ಸಂಪನ್ಮೂಲಗಳ ವಿಸ್ತರಣೆ.
+ಸಹಯೋಗಾತ್ಮಕ ಅಧ್ಯಯನ ಮತ್ತು ಸಂಶೋಧನಾ ಚಟುವಟಿಕೆಗಳಿಗೆ ಅನುಕೂಲವಾಗುವಂತೆ ವಿಶೇಷ ಸಂಶೋಧನಾ ಕೇಂದ್ರ (Research Commons) ಹಾಗೂ ಚರ್ಚಾ ವಲಯ (Discussion Zone) ಸ್ಥಾಪಿಸುವುದು.
+ಮಾಹಿತಿ ಸಾಕ್ಷರತೆ (Information Literacy), ಸಂಶೋಧನಾ ಬೆಂಬಲ ಸೇವೆಗಳು ಹಾಗೂ ಡೇಟಾಬೇಸ್ ಬಳಕೆಯ ಕುರಿತು ನಿಯಮಿತ ತರಬೇತಿ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಆಯೋಜಿಸುವುದು.
+ಡಿಜಿಟಲ್ ಗ್ರಂಥಾಲಯ ಸೇವೆಗಳನ್ನು ಮತ್ತಷ್ಟು ಬಲಪಡಿಸಿ, ನೂತನ ತಂತ್ರಜ್ಞಾನಗಳನ್ನು ಅಳವಡಿಸುವ ಮೂಲಕ ಜ್ಞಾನ ಸಂಪನ್ಮೂಲಗಳ ಸುಲಭ ಪ್ರವೇಶವನ್ನು ಹೆಚ್ಚಿಸುವುದು.
+ಸಂಸ್ಥೆಯ ಸಂಶೋಧನಾ ಪ್ರಕಟಣೆಗಳು ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಸಾಧನೆಗಳನ್ನು ಸಂರಕ್ಷಿಸಿ ಪ್ರಸಾರ ಮಾಡಲು ಸಾಂಸ್ಥಿಕ ಡಿಜಿಟಲ್ ರೆಪೊಸಿಟರಿಯನ್ನು (Institutional Digital Repository) ಅಭಿವೃದ್ಧಿಪಡಿಸುವುದು.`,
 
         staffTitle: 'ಗ್ರಂಥಾಲಯ ಸಿಬ್ಬಂದಿ',
         staffDesc: 'ಗ್ರಂಥಾಲಯದ ಸಿಬ್ಬಂದಿ ಸಂಗ್ರಹಣೆಯನ್ನು ನಿರ್ವಹಿಸುತ್ತಾರೆ, ಬಳಕೆದಾರರಿಗೆ ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತಾರೆ, ಪುಸ್ತಕ ವಿತರಣಾ ಕೆಲಸವನ್ನು ಬೆಂಬಲಿಸುತ್ತಾರೆ ಮತ್ತು ವಿದ್ಯಾರ್ಥಿಗಳು ಹಾಗೂ ಶಿಕ್ಷಕರಿಗೆ ಅಗತ್ಯವಿರುವ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಲು ಸಹಾಯ ಮಾಡುತ್ತಾರೆ.',
@@ -1117,7 +1132,7 @@ Information Literacy Sessions: Trains users to locate, evaluate, and effectively
       },
       askus: {
         faqEyebrow: 'ನಮ್ಮನ್ನು ಕೇಳಿ',
-        faqTitle: 'ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು',
+        faqTitle: 'ಪುನರಾವರ್ತಿತ ಪ್ರಶ್ನೆಗಳು',
         faqNotice: 'ನಿಮ್ಮ ಪ್ರಶ್ನೆ ಇಲ್ಲಿ ಪಟ್ಟಿ ಮಾಡದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಗ್ರಂಥಾಲಯ ಸಿಬ್ಬಂದಿಯನ್ನು ಸಂಪರ್ಕಿಸಿ ಅಥವಾ ಪ್ರತಿಕ್ರಿಯೆ ವಿಭಾಗದ ಮೂಲಕ ನಿಮ್ಮ ಪ್ರಶ್ನೆಯನ್ನು ಸಲ್ಲಿಸಿ.',
         faq: {
           q1: 'ಗ್ರಂಥಾಲಯದ ಸಮಯ ಎಷ್ಟು?',

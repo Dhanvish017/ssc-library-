@@ -33,7 +33,47 @@ export const searchIndex = [
   { title: 'Library Activities', crumb: 'More', to: '/activities', text: 'library activities orientation book exhibition events' },
   { title: 'Feedback', crumb: 'More', to: '/feedback', text: 'feedback suggestions form contact opinion' },
   { title: 'Contact Us', crumb: 'Contact', to: '/contact', text: 'contact address phone email google map location tumkur directions' },
+  {
+    title: 'FAQ',
+    crumb: 'Ask Us',
+    to: '/faq',
+    text: 'frequently asked questions library faq help borrowing membership'
+  },
+
+  {
+    title: 'Recommend a Book',
+    crumb: 'Ask Us',
+    to: '/recommend-book',
+    text: 'recommend book purchase suggestion library collection'
+  },
+
+  {
+    title: 'Recommend Journals',
+    crumb: 'Ask Us',
+    to: '/recommend-journals',
+    text: 'recommend journals subscription research periodicals'
+  },
+
+  {
+    title: 'Give Feedback',
+    crumb: 'Ask Us',
+    to: '/feedback',
+    text: 'feedback suggestion complaint appreciation library services'
+  },
+
+  {
+    title: 'Syllabus',
+    external: 'https://tumkuruniversity.ac.in/?%2Fug_syllabus',
+    text: 'syllabus ug syllabus curriculum tumkur university'
+  },
+
+  {
+    title: 'Question Papers',
+    external: 'https://drive.google.com/drive/folders/1-yMB3mqyGBuH2LKI6cdqlzgbEXfl3Zym',
+    text: 'question papers previous year papers old papers'
+  }
 ]
+
 
 export function runSearch(query) {
   const q = query.trim().toLowerCase()
@@ -52,4 +92,6 @@ export function runSearch(query) {
     .filter((e) => e.score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, 12)
+
+
 }

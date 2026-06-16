@@ -74,15 +74,15 @@ export default function PageLayout({ children }) {
       <div className="social-sidebar-wrapper">
         <div className="social-sidebar">
 
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" style={{ background: '#1877F2' }}>
+          <a href="https://www.facebook.com/%40sscasctumakuru" target="_blank" rel="noopener noreferrer" title="Facebook" style={{ background: '#1877F2' }}>
             <FaFacebook />
           </a>
 
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube" style={{ background: '#FF0000' }}>
+          <a href="https://www.youtube.com/channel/UCtOT6x8-A7guJOS0FwnZPUQ" target="_blank" rel="noopener noreferrer" title="YouTube" style={{ background: '#FF0000' }}>
             <FaYoutube />
           </a>
 
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer" title="X" style={{ background: '#000000' }}>
+          <a href="https://x.com/SSCASCLibrary" target="_blank" rel="noopener noreferrer" title="X" style={{ background: '#000000' }}>
             <FaXTwitter />
           </a>
 
@@ -98,7 +98,7 @@ export default function PageLayout({ children }) {
             <SiAcademia />
           </a>
 
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" style={{ background: '#0A66C2' }}>
+          <a href="https://www.linkedin.com/in/library-tumkur-063a8a416/" target="_blank" rel="noopener noreferrer" title="LinkedIn" style={{ background: '#0A66C2' }}>
             <FaLinkedin />
           </a>
 
