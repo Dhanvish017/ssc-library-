@@ -133,7 +133,10 @@ export function Future() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.about.aboutUs')} title={t('pages.about.futureTitle')} />
-        <p className="prose" style={{ whiteSpace: 'pre-line' }}>{t('pages.about.futurePara')}</p>
+        <div
+          className="prose"
+          dangerouslySetInnerHTML={{ __html: t('pages.about.futurePara') }}
+        />
       </div>
     </PageLayout>
   )
@@ -161,7 +164,7 @@ export function Staff() {
               {staff.map((s) => (
                 <tr key={s.name}>
                   <td>{s.sl || ''}</td>
-                  <td>{s.name}</td>
+                  <td>{t(`pages.about.staffNames.${s.key}`, s.name)}</td>
                   <td>{t(`pages.about.staffRoles.${s.role}`, s.role)}</td>
                 </tr>
               ))}

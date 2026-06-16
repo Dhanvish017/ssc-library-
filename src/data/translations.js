@@ -39,7 +39,7 @@ export const translations = {
       'Future Plan': 'Future Plan',
       'Library Staff': 'Library Staff',
       'Library Budget': 'Library Budget',
-      Collection: 'Collection',
+      'Library Collection': 'Library Collection',
       'Overview': 'Overview',
       'Books': 'Books',
       'Journals': 'Journals',
@@ -165,14 +165,25 @@ export const translations = {
         timingsNotice: 'Timings are indicative — please confirm current working hours at the circulation desk.',
 
         futureTitle: 'Future Plan',
-        futurePara: `The library is committed to continuous improvement and modernization to meet the evolving academic and research needs of its users. The following initiatives are planned for the future:
-Complete digitization of the library catalogue and preservation of rare palm-leaf manuscripts and handwritten collections in digital format.
-Implementation of RFID-based circulation systems and self-service kiosks for efficient borrowing and return of library materials.
-Expansion of electronic resources, including e-books, e-journals, databases, and remote access facilities for users.
-Establishment of a dedicated Research Commons and Discussion Zone to support collaborative learning and research activities.
-Organization of regular Information Literacy Programmes, Research Support Services, and Database Training Workshops to enhance users' information retrieval and research skills.
-Strengthening digital library services and integrating emerging technologies for improved access to knowledge resources.
-Development of institutional digital repositories for preserving and disseminating scholarly publications and academic outputs.`,
+        futurePara: `
+<strong>The library is committed to continuous improvement and modernization to meet the evolving academic and research needs of its users. The following initiatives are planned for the future:</strong>
+
+<ul>
+  <li>Complete digitization of the library catalogue and preservation of rare palm-leaf manuscripts and handwritten collections in digital format.</li>
+
+  <li>Implementation of RFID-based circulation systems and self-service kiosks for efficient borrowing and return of library materials.</li>
+
+  <li>Expansion of electronic resources, including e-books, e-journals, databases, and remote access facilities for users.</li>
+
+  <li>Establishment of a dedicated Research Commons and Discussion Zone to support collaborative learning and research activities.</li>
+
+  <li>Organization of regular Information Literacy Programmes, Research Support Services, and Database Training Workshops to enhance users' information retrieval and research skills.</li>
+
+  <li>Strengthening digital library services and integrating emerging technologies for improved access to knowledge resources.</li>
+
+  <li>Development of institutional digital repositories for preserving and disseminating scholarly publications and academic outputs.</li>
+</ul>
+`,
 
         staffTitle: 'Library Staff',
         staffDesc: 'The library staff maintain the collection, guide users, support circulation work, and help students and teachers access the information they need.',
@@ -184,6 +195,12 @@ Development of institutional digital repositories for preserving and disseminati
           'Assistant Librarian': 'Assistant Librarian',
           'Library Assistant / Supporting Staff': 'Library Assistant / Supporting Staff',
           'Supporting Staff': 'Supporting Staff'
+        },
+        staffNames: {
+          parimala: 'Smt. Parimala B N.',
+          basavanna: 'Sri. Basavanna B M',
+          kiran: 'Sri Kiran Kumar A.L.',
+          hemavathi: 'Smt. Hemavathi H.S.'
         },
 
         budgetTitle: 'Library Budget',
@@ -286,14 +303,6 @@ Development of institutional digital repositories for preserving and disseminati
           'Internet System': {
             title: 'Internet System',
             desc: 'Internet facility for academic and information access.'
-          },
-          'INFLIBNET N-LIST': {
-            title: 'INFLIBNET N-LIST',
-            desc: 'Access to about 6,000 e-journals and 97,000 e-books.'
-          },
-          'OPAC': {
-            title: 'OPAC',
-            desc: 'Online Public Access Catalogue to search the library collection.'
           },
           'CDs and DVDs': {
             title: 'CDs and DVDs',
@@ -651,7 +660,7 @@ Information Literacy Sessions: Trains users to locate, evaluate, and effectively
       'Future Plan': 'ಭವಿಷ್ಯದ ಯೋಜನೆ',
       'Library Staff': 'ಗ್ರಂಥಾಲಯ ಸಿಬ್ಬಂದಿ',
       'Library Budget': 'ಗ್ರಂಥಾಲಯದ ಬಜೆಟ್',
-      Collection: 'ಸಂಗ್ರಹ',
+      'Library Collection': ' ಗ್ರಂಥಾಲಯದ ಸಂಗ್ರಹ',
       'Overview': 'ಸಮಗ್ರ ಮಾಹಿತಿ',
       'Books': 'ಪುಸ್ತಕಗಳು',
       'Journals': 'ಜರ್ನಲ್‌ಗಳು',
@@ -787,15 +796,25 @@ Information Literacy Sessions: Trains users to locate, evaluate, and effectively
         timingsNotice: 'ಸಮಯಗಳು ಸೂಚಕವಾಗಿವೆ — ದಯವಿಟ್ಟು ಪುಸ್ತಕ ವಿತರಣಾ ಕೌಂಟರ್‌ನಲ್ಲಿ ಪ್ರಸ್ತುತ ಕೆಲಸದ ಸಮಯವನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.',
 
         futureTitle: 'ಭವಿಷ್ಯದ ಯೋಜನೆ',
-        futurePara: `ಬಳಕೆದಾರರ ಬದಲಾಗುತ್ತಿರುವ ಶೈಕ್ಷಣಿಕ, ಮಾಹಿತಿ ಹಾಗೂ ಸಂಶೋಧನಾ ಅಗತ್ಯಗಳನ್ನು ಪೂರೈಸುವ ಉದ್ದೇಶದಿಂದ ಗ್ರಂಥಾಲಯವು ನಿರಂತರ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ಆಧುನೀಕರಣಕ್ಕೆ ಬದ್ಧವಾಗಿದೆ. ಈ ನಿಟ್ಟಿನಲ್ಲಿ ಕೆಳಕಂಡ ಯೋಜನೆಗಳನ್ನು ಜಾರಿಗೊಳಿಸಲು ಉದ್ದೇಶಿಸಲಾಗಿದೆ:
+        futurePara: `
+<strong>ಬಳಕೆದಾರರ ಬದಲಾಗುತ್ತಿರುವ ಶೈಕ್ಷಣಿಕ, ಮಾಹಿತಿ ಹಾಗೂ ಸಂಶೋಧನಾ ಅಗತ್ಯಗಳನ್ನು ಪೂರೈಸುವ ಉದ್ದೇಶದಿಂದ ಗ್ರಂಥಾಲಯವು ನಿರಂತರ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ಆಧುನೀಕರಣಕ್ಕೆ ಬದ್ಧವಾಗಿದೆ. ಈ ನಿಟ್ಟಿನಲ್ಲಿ ಕೆಳಕಂಡ ಯೋಜನೆಗಳನ್ನು ಜಾರಿಗೊಳಿಸಲು ಉದ್ದೇಶಿಸಲಾಗಿದೆ:</strong>
 
-ಗ್ರಂಥಾಲಯದ ಸಂಪೂರ್ಣ ಪುಸ್ತಕ ಸೂಚಿ (Catalogue) ಯನ್ನು ಡಿಜಿಟಲೀಕರಣಗೊಳಿಸುವುದು ಹಾಗೂ ಅಪರೂಪದ ತಾಳೆಓಲೆಗಳು ಮತ್ತು ಹಸ್ತಪ್ರತಿಗಳನ್ನು ಡಿಜಿಟಲ್ ರೂಪದಲ್ಲಿ ಸಂರಕ್ಷಿಸುವುದು.
-ಪುಸ್ತಕಗಳ ವಿತರಣೆ ಮತ್ತು ಹಿಂತಿರುಗಿಸುವ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಸುಗಮಗೊಳಿಸಲು RFID ಆಧಾರಿತ ಗ್ರಂಥಾಲಯ ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆ ಹಾಗೂ ಸ್ವಯಂ ಸೇವಾ ಕಿಯೋಸ್ಕ್‌ಗಳನ್ನು ಅಳವಡಿಸುವುದು.
-ಇ-ಪುಸ್ತಕಗಳು, ಇ-ಜರ್ನಲ್‌ಗಳು, ಡೇಟಾಬೇಸ್‌ಗಳು ಮತ್ತು ದೂರಸ್ಥ ಪ್ರವೇಶ (Remote Access) ಸೌಲಭ್ಯಗಳನ್ನು ಒಳಗೊಂಡ ಡಿಜಿಟಲ್ ಸಂಪನ್ಮೂಲಗಳ ವಿಸ್ತರಣೆ.
-ಸಹಯೋಗಾತ್ಮಕ ಅಧ್ಯಯನ ಮತ್ತು ಸಂಶೋಧನಾ ಚಟುವಟಿಕೆಗಳಿಗೆ ಅನುಕೂಲವಾಗುವಂತೆ ವಿಶೇಷ ಸಂಶೋಧನಾ ಕೇಂದ್ರ (Research Commons) ಹಾಗೂ ಚರ್ಚಾ ವಲಯ (Discussion Zone) ಸ್ಥಾಪಿಸುವುದು.
-ಮಾಹಿತಿ ಸಾಕ್ಷರತೆ (Information Literacy), ಸಂಶೋಧನಾ ಬೆಂಬಲ ಸೇವೆಗಳು ಹಾಗೂ ಡೇಟಾಬೇಸ್ ಬಳಕೆಯ ಕುರಿತು ನಿಯಮಿತ ತರಬೇತಿ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಆಯೋಜಿಸುವುದು.
-ಡಿಜಿಟಲ್ ಗ್ರಂಥಾಲಯ ಸೇವೆಗಳನ್ನು ಮತ್ತಷ್ಟು ಬಲಪಡಿಸಿ, ನೂತನ ತಂತ್ರಜ್ಞಾನಗಳನ್ನು ಅಳವಡಿಸುವ ಮೂಲಕ ಜ್ಞಾನ ಸಂಪನ್ಮೂಲಗಳ ಸುಲಭ ಪ್ರವೇಶವನ್ನು ಹೆಚ್ಚಿಸುವುದು.
-ಸಂಸ್ಥೆಯ ಸಂಶೋಧನಾ ಪ್ರಕಟಣೆಗಳು ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಸಾಧನೆಗಳನ್ನು ಸಂರಕ್ಷಿಸಿ ಪ್ರಸಾರ ಮಾಡಲು ಸಾಂಸ್ಥಿಕ ಡಿಜಿಟಲ್ ರೆಪೊಸಿಟರಿಯನ್ನು (Institutional Digital Repository) ಅಭಿವೃದ್ಧಿಪಡಿಸುವುದು.`,
+<ul>
+  <li>ಗ್ರಂಥಾಲಯದ ಸಂಪೂರ್ಣ ಪುಸ್ತಕ ಸೂಚಿ (Catalogue) ಯನ್ನು ಡಿಜಿಟಲೀಕರಣಗೊಳಿಸುವುದು ಹಾಗೂ ಅಪರೂಪದ ತಾಳೆಓಲೆಗಳು ಮತ್ತು ಹಸ್ತಪ್ರತಿಗಳನ್ನು ಡಿಜಿಟಲ್ ರೂಪದಲ್ಲಿ ಸಂರಕ್ಷಿಸುವುದು.</li>
+
+  <li>ಪುಸ್ತಕಗಳ ವಿತರಣೆ ಮತ್ತು ಹಿಂತಿರುಗಿಸುವ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಸುಗಮಗೊಳಿಸಲು RFID ಆಧಾರಿತ ಗ್ರಂಥಾಲಯ ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆ ಹಾಗೂ ಸ್ವಯಂ ಸೇವಾ ಕಿಯೋಸ್ಕ್‌ಗಳನ್ನು ಅಳವಡಿಸುವುದು.</li>
+
+  <li>ಇ-ಪುಸ್ತಕಗಳು, ಇ-ಜರ್ನಲ್‌ಗಳು, ಡೇಟಾಬೇಸ್‌ಗಳು ಮತ್ತು ದೂರಸ್ಥ ಪ್ರವೇಶ (Remote Access) ಸೌಲಭ್ಯಗಳನ್ನು ಒಳಗೊಂಡ ಡಿಜಿಟಲ್ ಸಂಪನ್ಮೂಲಗಳ ವಿಸ್ತರಣೆ.</li>
+
+  <li>ಸಹಯೋಗಾತ್ಮಕ ಅಧ್ಯಯನ ಮತ್ತು ಸಂಶೋಧನಾ ಚಟುವಟಿಕೆಗಳಿಗೆ ಅನುಕೂಲವಾಗುವಂತೆ ವಿಶೇಷ ಸಂಶೋಧನಾ ಕೇಂದ್ರ (Research Commons) ಹಾಗೂ ಚರ್ಚಾ ವಲಯ (Discussion Zone) ಸ್ಥಾಪಿಸುವುದು.</li>
+
+  <li>ಮಾಹಿತಿ ಸಾಕ್ಷರತೆ (Information Literacy), ಸಂಶೋಧನಾ ಬೆಂಬಲ ಸೇವೆಗಳು ಹಾಗೂ ಡೇಟಾಬೇಸ್ ಬಳಕೆಯ ಕುರಿತು ನಿಯಮಿತ ತರಬೇತಿ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಆಯೋಜಿಸುವುದು.</li>
+
+  <li>ಡಿಜಿಟಲ್ ಗ್ರಂಥಾಲಯ ಸೇವೆಗಳನ್ನು ಮತ್ತಷ್ಟು ಬಲಪಡಿಸಿ, ನೂತನ ತಂತ್ರಜ್ಞಾನಗಳನ್ನು ಅಳವಡಿಸುವ ಮೂಲಕ ಜ್ಞಾನ ಸಂಪನ್ಮೂಲಗಳ ಸುಲಭ ಪ್ರವೇಶವನ್ನು ಹೆಚ್ಚಿಸುವುದು.</li>
+
+  <li>ಸಂಸ್ಥೆಯ ಸಂಶೋಧನಾ ಪ್ರಕಟಣೆಗಳು ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಸಾಧನೆಗಳನ್ನು ಸಂರಕ್ಷಿಸಿ ಪ್ರಸಾರ ಮಾಡಲು ಸಾಂಸ್ಥಿಕ ಡಿಜಿಟಲ್ ರೆಪೊಸಿಟರಿಯನ್ನು (Institutional Digital Repository) ಅಭಿವೃದ್ಧಿಪಡಿಸುವುದು.</li>
+</ul>
+`,
 
         staffTitle: 'ಗ್ರಂಥಾಲಯ ಸಿಬ್ಬಂದಿ',
         staffDesc: 'ಗ್ರಂಥಾಲಯದ ಸಿಬ್ಬಂದಿ ಸಂಗ್ರಹಣೆಯನ್ನು ನಿರ್ವಹಿಸುತ್ತಾರೆ, ಬಳಕೆದಾರರಿಗೆ ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತಾರೆ, ಪುಸ್ತಕ ವಿತರಣಾ ಕೆಲಸವನ್ನು ಬೆಂಬಲಿಸುತ್ತಾರೆ ಮತ್ತು ವಿದ್ಯಾರ್ಥಿಗಳು ಹಾಗೂ ಶಿಕ್ಷಕರಿಗೆ ಅಗತ್ಯವಿರುವ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಲು ಸಹಾಯ ಮಾಡುತ್ತಾರೆ.',
@@ -807,6 +826,12 @@ Information Literacy Sessions: Trains users to locate, evaluate, and effectively
           'Assistant Librarian': 'ಸಹಾಯಕ ಗ್ರಂಥಪಾಲಕರು',
           'Library Assistant / Supporting Staff': 'ಗ್ರಂಥಾಲಯ ಸಹಾಯಕ / ಪೂರಕ ಸಿಬ್ಬಂದಿ',
           'Supporting Staff': 'ಪೂರಕ ಸಿಬ್ಬಂದಿ'
+        },
+        staffNames: {
+          parimala: 'ಶ್ರೀಮತಿ ಪರಿಮಳ ಬಿ.ಎನ್.',
+          basavanna: 'ಶ್ರೀ ಬಸವಣ್ಣ ಬಿ.ಎಂ.',
+          kiran: 'ಶ್ರೀ ಕಿರಣ್ ಕುಮಾರ್ ಎ.ಎಲ್.',
+          hemavathi: 'ಶ್ರೀಮತಿ ಹೇಮಾವತಿ ಎಚ್.ಎಸ್.'
         },
 
         budgetTitle: 'ಗ್ರಂಥಾಲಯದ ಬಜೆಟ್',

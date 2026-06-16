@@ -19,10 +19,10 @@ export const heroStats = [
 ]
 
 export const staff = [
-  { sl: 1, name: 'Smt. Parimala B N.', role: 'Librarian' },
-  { sl: 2, name: 'Sri. Basavanna B M', role: 'Assistant Librarian' },
-  { sl: 3, name: 'Sri Kiran Kumar A.L.', role: 'Library Assistant / Supporting Staff' },
-  { sl: '', name: 'Smt. Hemavathi H.S.', role: 'Supporting Staff' },
+  { sl: 1, key: 'parimala', name: 'Smt. Parimala B N.', role: 'Librarian' },
+  { sl: 2, key: 'basavanna', name: 'Sri. Basavanna B M', role: 'Assistant Librarian' },
+  { sl: 3, key: 'kiran', name: 'Sri Kiran Kumar A.L.', role: 'Library Assistant / Supporting Staff' },
+  { sl: 4, key: 'hemavathi', name: 'Smt. Hemavathi H.S.', role: 'Supporting Staff' },
 ]
 
 export const budget = [
@@ -55,8 +55,6 @@ export const services = [
   ['Competitive Examination Section', 'Books and information for competitive examinations.'],
   ['Information Corner', 'Useful academic and general information is displayed.'],
   ['Internet System', 'Internet facility for academic and information access.'],
-  ['INFLIBNET N-LIST', 'Access to about 6,000 e-journals and 97,000 e-books.'],
-  ['OPAC', 'Online Public Access Catalogue to search the library collection.'],
   ['CDs and DVDs', 'CDs and DVDs are available for learning and reference.'],
 ]
 
@@ -234,7 +232,7 @@ export const navStructure = [
     ],
   },
   {
-    label: 'Collection',
+    label: 'Library Collection',
     to: '/collection'
   },
   {
