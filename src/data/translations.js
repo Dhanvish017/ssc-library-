@@ -304,6 +304,14 @@ export const translations = {
             title: 'Internet System',
             desc: 'Internet facility for academic and information access.'
           },
+          'INFLIBNET N-LIST': {
+            title: 'INFLIBNET N-LIST',
+            desc: 'Access to about 6,000 e-journals and 97,000 e-books.'
+          },
+          'OPAC': {
+            title: 'OPAC',
+            desc: 'Online Public Access Catalogue to search the library collection.'
+          },
           'CDs and DVDs': {
             title: 'CDs and DVDs',
             desc: 'CDs and DVDs are available for learning and reference.'
@@ -494,9 +502,9 @@ export const translations = {
         eyebrow: 'Contact',
         title: 'Contact Us',
         phoneLabel: 'Phone:',
-        phoneVal: '-0816-2278569(add number)',
+        phoneVal: '-0816-2278569',
         emailLabel: 'Email:',
-        emailVal: 'library@sscasc.in (add email)',
+        emailVal: 'library@sscasc.in',
         librarianLabel: 'Librarian:',
         librarianName: 'Smt. Parimala B N.',
         youtube: 'YouTube',
