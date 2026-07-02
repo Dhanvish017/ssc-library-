@@ -11,7 +11,10 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <Link to="/contact">Contact</Link>
-        <div className="head count">  hit count - 34</div>
+        <div className="head count">hit count - 34</div>
+        <div className="head date" style={{ marginLeft: 'auto', whiteSpace: 'nowrap' }}>
+          {new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+        </div>
       </div>
 
 
