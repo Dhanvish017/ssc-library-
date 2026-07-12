@@ -1,13 +1,10 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useApp } from '../context/AppContext.jsx'
+import { useAdmin } from '../context/AdminContext.jsx'
 import { navStructure, college } from '../data/site.js'
 import logo from '../assets/logo.png'
-import { FaYoutube, FaFacebook } from "react-icons/fa";
 import ReadAloudButton from "./ReadAloudButton";
-import { useEffect } from 'react'
-import SwamijiPhoto from './SwamijiPhoto.jsx'
-import bigswamiji from '../assets/bigswamiji.png'
 import tsh from '../assets/tsh.png'
 import smallswamiji from '../assets/smallswamiji.png'
 
@@ -32,10 +29,13 @@ function LangAndAccess() {
 
 export default function Header({ onOpenSearch }) {
   const { t } = useApp()
+  const { isAdmin, setShowLoginModal } = useAdmin()
   const [navOpen, setNavOpen] = useState(false)
   const [expanded, setExpanded] = useState(null)
   const navRef = useRef(null)
   const { pathname } = useLocation()
+  const clickCountRef = useRef(0)
+  const clickTimerRef = useRef(null)
 
   useEffect(() => {
     setExpanded(null)
@@ -49,13 +49,23 @@ export default function Header({ onOpenSearch }) {
         setNavOpen(false)
       }
     }
-
     document.addEventListener('mousedown', handleClickOutside)
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
+    return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
+
+  const handleLogoClick = () => {
+    if (isAdmin) return
+    clickCountRef.current += 1
+    if (clickTimerRef.current) clearTimeout(clickTimerRef.current)
+    if (clickCountRef.current >= 3) {
+      clickCountRef.current = 0
+      setShowLoginModal(true)
+      return
+    }
+    clickTimerRef.current = setTimeout(() => {
+      clickCountRef.current = 0
+    }, 2000)
+  }
 
   return (
     <>
@@ -71,15 +81,13 @@ export default function Header({ onOpenSearch }) {
         </div>
       </div>
 
-
-
-
-
       <div className="header-main">
         <img
           src={logo}
           alt="College Logo"
           className="header-logo"
+          onClick={handleLogoClick}
+          style={{ cursor: isAdmin ? 'default' : 'pointer' }}
         />
 
         <div className="college-info">
@@ -105,7 +113,6 @@ export default function Header({ onOpenSearch }) {
         </div>
 
         <div className="header-swamiji-group">
-
           <img
             src={tsh}
             alt="Swamiji"
@@ -116,11 +123,8 @@ export default function Header({ onOpenSearch }) {
             alt="Swamiji"
             className="header-swamiji"
           />
-
         </div>
       </div>
-
-
 
       <div className="masthead">
         <div className="container">

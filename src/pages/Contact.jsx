@@ -2,6 +2,7 @@ import { PageHead } from '../components/Building.jsx'
 import { college } from '../data/site.js'
 import PageLayout from '../components/PageLayout.jsx'
 import { useApp } from '../context/AppContext.jsx'
+import EditableField from '../components/EditableField.jsx'
 
 export function Contact() {
   const { t } = useApp()
@@ -14,12 +15,21 @@ export function Contact() {
             <h3 style={{ color: 'var(--garnet)' }}>{t('college')}</h3>
             <p className="prose">
               {t('college')}<br />
-              {t('pages.contact.place')}
+              <EditableField page="contact" section="details" field="place" fallback={t('pages.contact.place')} />
             </p>
             <div className="deflist" style={{ marginTop: 16 }}>
-              <div className="item"><strong>{t('pages.contact.phoneLabel')}</strong> {t('pages.contact.phoneVal')}</div>
-              <div className="item"><strong>{t('pages.contact.emailLabel')}</strong> {t('pages.contact.emailVal')}</div>
-              <div className="item"><strong>{t('pages.contact.librarianLabel')}</strong> {t('pages.contact.librarianName')}</div>
+              <div className="item">
+                <strong>{t('pages.contact.phoneLabel')}</strong>{' '}
+                <EditableField page="contact" section="details" field="phone" fallback={t('pages.contact.phoneVal')} />
+              </div>
+              <div className="item">
+                <strong>{t('pages.contact.emailLabel')}</strong>{' '}
+                <EditableField page="contact" section="details" field="email" fallback={t('pages.contact.emailVal')} />
+              </div>
+              <div className="item">
+                <strong>{t('pages.contact.librarianLabel')}</strong>{' '}
+                <EditableField page="contact" section="details" field="librarian" fallback={t('pages.contact.librarianName')} />
+              </div>
             </div>
             <div style={{ marginTop: 16, display: 'flex', gap: 12 }}>
               <a className="btn btn-gold" href={college.youtube} target="_blank" rel="noopener noreferrer">{t('pages.contact.youtube')}</a>
@@ -48,9 +58,7 @@ export function Disclaimer() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.contact.disclaimerEyebrow')} title={t('pages.contact.disclaimerTitle')} />
-        <p className="prose">
-          {t('pages.contact.disclaimerDesc')}
-        </p>
+        <EditableField page="contact" section="disclaimer" field="desc" fallback={t('pages.contact.disclaimerDesc')} as="p" className="prose" multiline />
       </div>
     </PageLayout>
   )
@@ -62,9 +70,7 @@ export function Privacy() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.contact.privacyEyebrow')} title={t('pages.contact.privacyTitle')} />
-        <p className="prose">
-          {t('pages.contact.privacyDesc')}
-        </p>
+        <EditableField page="contact" section="privacy" field="desc" fallback={t('pages.contact.privacyDesc')} as="p" className="prose" multiline />
       </div>
     </PageLayout>
   )
@@ -76,7 +82,7 @@ export function NotFound() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.contact.notfoundEyebrow')} title={t('pages.contact.notfoundTitle')} />
-        <p className="prose">{t('pages.contact.notfoundDesc')}</p>
+        <EditableField page="contact" section="notfound" field="desc" fallback={t('pages.contact.notfoundDesc')} as="p" className="prose" />
       </div>
     </PageLayout>
   )

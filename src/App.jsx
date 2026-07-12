@@ -5,6 +5,9 @@ import Footer from './components/Footer.jsx'
 import SearchModal from './components/SearchModal.jsx'
 import Chatbot from './components/Chatbot.jsx'
 import SwamijiPhoto from './components/SwamijiPhoto.jsx'
+import LoginModal from './components/LoginModal.jsx'
+import AdminToolbar from './components/AdminToolbar.jsx'
+import { AdminProvider } from './context/AdminContext.jsx'
 import { useApp } from './context/AppContext.jsx'
 
 import Home from './pages/Home.jsx'
@@ -18,9 +21,6 @@ import { Contact, Disclaimer, Privacy, NotFound } from './pages/Contact.jsx'
 import { FAQ, Feedback, ReportConnectionProblem, RecommendBook, RecommendJournals } from './pages/Askus.jsx'
 import NoticeBoard from './pages/noticeboard.jsx'
 
-
-
-// Scroll to top on route change, or to an anchor when a hash is present.
 function ScrollManager() {
   const { pathname, hash } = useLocation()
   useEffect(() => {
@@ -36,11 +36,10 @@ function ScrollManager() {
   return null
 }
 
-export default function App() {
+function AppInner() {
   const [searchOpen, setSearchOpen] = useState(false)
   const { t } = useApp()
 
-  // Open search with the "/" shortcut (when not typing in a field).
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === '/' && !['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
@@ -56,6 +55,7 @@ export default function App() {
     <>
       <a className="skip-link" href="#main">{t('skip')}</a>
       <ScrollManager />
+      <AdminToolbar />
       <div className="site-frame">
         <Header onOpenSearch={() => setSearchOpen(true)} />
         <main id="main">
@@ -90,9 +90,6 @@ export default function App() {
             <Route path="/rab" element={<RecommendBook />} />
             <Route path="/rj" element={<RecommendJournals />} />
             <Route path="/noticeboard" element={<NoticeBoard />} />
-
-
-
           </Routes>
         </main>
         <Footer />
@@ -101,6 +98,15 @@ export default function App() {
       <Chatbot />
       <SwamijiPhoto />
       <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
+      <LoginModal />
     </>
+  )
+}
+
+export default function App() {
+  return (
+    <AdminProvider>
+      <AppInner />
+    </AdminProvider>
   )
 }

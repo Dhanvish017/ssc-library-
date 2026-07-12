@@ -2,50 +2,24 @@ import { useState } from 'react'
 import { PageHead } from '../components/Building.jsx'
 import PageLayout from '../components/PageLayout.jsx'
 import { useApp } from '../context/AppContext.jsx'
+import EditableField from '../components/EditableField.jsx'
 
 export function FAQ() {
   const { t } = useApp()
-  const faqs = [
-    {
-      q: t('pages.askus.faq.q1'),
-      a: t('pages.askus.faq.a1')
-    },
-    {
-      q: t('pages.askus.faq.q2'),
-      a: t('pages.askus.faq.a2')
-    },
-    {
-      q: t('pages.askus.faq.q3'),
-      a: t('pages.askus.faq.a3')
-    },
-    {
-      q: t('pages.askus.faq.q4'),
-      a: t('pages.askus.faq.a4')
-    },
-    {
-      q: t('pages.askus.faq.q5'),
-      a: t('pages.askus.faq.a5')
-    },
-    {
-      q: t('pages.askus.faq.q6'),
-      a: t('pages.askus.faq.a6')
-    }
-  ]
+  const faqKeys = ['1', '2', '3', '4', '5', '6']
 
   return (
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.askus.faqEyebrow')} title={t('pages.askus.faqTitle')} />
-
         <div className="prose">
-          {faqs.map((faq, index) => (
-            <div key={index} style={{ marginBottom: '20px' }}>
-              <h3>{faq.q}</h3>
-              <p>{faq.a}</p>
+          {faqKeys.map(n => (
+            <div key={n} style={{ marginBottom: '20px' }}>
+              <EditableField page="askus" section="faq" field={`q${n}`} fallback={t(`pages.askus.faq.q${n}`)} as="h3" />
+              <EditableField page="askus" section="faq" field={`a${n}`} fallback={t(`pages.askus.faq.a${n}`)} as="p" multiline />
             </div>
           ))}
         </div>
-
       </div>
     </PageLayout>
   )
@@ -98,30 +72,21 @@ export function ReportConnectionProblem() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.askus.reportEyebrow')} title={t('pages.askus.reportTitle')} />
-
-        <p className="prose">
-          {t('pages.askus.reportIntro')}
-        </p>
-
+        <EditableField page="askus" section="report" field="intro" fallback={t('pages.askus.reportIntro')} as="p" className="prose" multiline />
         <form className="form-grid" onSubmit={(e) => e.preventDefault()}>
           <div>
             <label>{t('pages.askus.report.name')}</label>
             <input type="text" />
           </div>
-
           <div>
             <label>{t('pages.askus.report.email')}</label>
             <input type="email" />
           </div>
-
           <div>
             <label>{t('pages.askus.report.problemDesc')}</label>
             <textarea rows="5"></textarea>
           </div>
-
-          <button className="btn btn-gold">
-            {t('pages.askus.report.submit')}
-          </button>
+          <button className="btn btn-gold">{t('pages.askus.report.submit')}</button>
         </form>
       </div>
     </PageLayout>
@@ -134,55 +99,41 @@ export function RecommendBook() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.askus.recommendBookEyebrow')} title={t('pages.askus.recommendBookTitle')} />
-
-        <p className="prose">
-          {t('pages.askus.recommendBookIntro')}
-        </p>
-
+        <EditableField page="askus" section="recommendBook" field="intro" fallback={t('pages.askus.recommendBookIntro')} as="p" className="prose" multiline />
         <form className="form-grid" onSubmit={(e) => e.preventDefault()}>
           <div>
             <label>{t('pages.askus.recommendBook.name')}</label>
             <input type="text" />
           </div>
-
           <div>
             <label>{t('pages.askus.recommendBook.email')}</label>
             <input type="email" />
           </div>
-
           <div>
             <label>{t('pages.askus.recommendBook.title')}</label>
             <input type="text" />
           </div>
-
           <div>
             <label>{t('pages.askus.recommendBook.authors')}</label>
             <input type="text" />
           </div>
-
           <div>
             <label>{t('pages.askus.recommendBook.publisher')}</label>
             <input type="text" />
           </div>
-
           <div>
             <label>{t('pages.askus.recommendBook.year')}</label>
             <input type="text" />
           </div>
-
           <div>
             <label>{t('pages.askus.recommendBook.isbn')}</label>
             <input type="text" />
           </div>
-
           <div>
             <label>{t('pages.askus.recommendBook.reason')}</label>
             <textarea rows="4" placeholder={t('pages.askus.recommendBook.reasonPlaceholder')}></textarea>
           </div>
-
-          <button className="btn btn-gold">
-            {t('pages.askus.recommendBook.submit')}
-          </button>
+          <button className="btn btn-gold">{t('pages.askus.recommendBook.submit')}</button>
         </form>
       </div>
     </PageLayout>
@@ -195,58 +146,41 @@ export function RecommendJournals() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.askus.recommendJournalEyebrow')} title={t('pages.askus.recommendJournalTitle')} />
-
-        <p className="prose">
-          {t('pages.askus.recommendJournalIntro')}
-        </p>
-
+        <EditableField page="askus" section="recommendJournal" field="intro" fallback={t('pages.askus.recommendJournalIntro')} as="p" className="prose" multiline />
         <form className="form-grid" onSubmit={(e) => e.preventDefault()}>
           <div>
             <label>{t('pages.askus.recommendJournal.name')}</label>
             <input type="text" />
           </div>
-
           <div>
             <label>{t('pages.askus.recommendJournal.email')}</label>
             <input type="email" />
           </div>
-
           <div>
             <label>{t('pages.askus.recommendJournal.title')}</label>
             <input type="text" />
           </div>
-
           <div>
             <label>{t('pages.askus.recommendJournal.publisher')}</label>
             <input type="text" />
           </div>
-
           <div>
             <label>{t('pages.askus.recommendJournal.issn')}</label>
             <input type="text" />
           </div>
-
           <div>
             <label>{t('pages.askus.recommendJournal.frequency')}</label>
             <input type="text" />
           </div>
-
           <div>
             <label>{t('pages.askus.recommendJournal.subject')}</label>
             <input type="text" />
           </div>
-
           <div>
             <label>{t('pages.askus.recommendJournal.reason')}</label>
-            <textarea
-              rows="4"
-              placeholder={t('pages.askus.recommendJournal.reasonPlaceholder')}
-            />
+            <textarea rows="4" placeholder={t('pages.askus.recommendJournal.reasonPlaceholder')} />
           </div>
-
-          <button className="btn btn-gold">
-            {t('pages.askus.recommendJournal.submit')}
-          </button>
+          <button className="btn btn-gold">{t('pages.askus.recommendJournal.submit')}</button>
         </form>
       </div>
     </PageLayout>

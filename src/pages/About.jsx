@@ -1,7 +1,8 @@
 import { PageHead } from '../components/Building.jsx'
-import { staff, budget, college } from '../data/site.js'
+import { staff, budget } from '../data/site.js'
 import PageLayout from '../components/PageLayout.jsx'
 import { useApp } from '../context/AppContext.jsx'
+import EditableField from '../components/EditableField.jsx'
 
 export function AboutInstitution() {
   const { t } = useApp()
@@ -10,10 +11,10 @@ export function AboutInstitution() {
       <div className="container page">
         <PageHead eyebrow={t('pages.about.aboutUs')} title={t('pages.about.institutionTitle')} />
         <div className="prose">
-          <p dangerouslySetInnerHTML={{ __html: t('pages.about.institutionPara1') }} />
-          <p dangerouslySetInnerHTML={{ __html: t('pages.about.institutionPara2') }} />
-          <p dangerouslySetInnerHTML={{ __html: t('pages.about.institutionPara3') }} />
-          <p dangerouslySetInnerHTML={{ __html: t('pages.about.institutionPara4') }} />
+          <EditableField page="about" section="institution" field="para1" fallback={t('pages.about.institutionPara1')} as="p" html multiline />
+          <EditableField page="about" section="institution" field="para2" fallback={t('pages.about.institutionPara2')} as="p" html multiline />
+          <EditableField page="about" section="institution" field="para3" fallback={t('pages.about.institutionPara3')} as="p" html multiline />
+          <EditableField page="about" section="institution" field="para4" fallback={t('pages.about.institutionPara4')} as="p" html multiline />
         </div>
       </div>
     </PageLayout>
@@ -27,10 +28,10 @@ export function AboutLibrary() {
       <div className="container page">
         <PageHead eyebrow={t('pages.about.aboutUs')} title={t('pages.about.libraryTitle')} />
         <div className="prose">
-          <p>{t('pages.about.libraryPara1')}</p>
-          <p>{t('pages.about.libraryPara2')}</p>
-          <p>{t('pages.about.libraryPara3')}</p>
-          <p>{t('pages.about.libraryPara4')}</p>
+          <EditableField page="about" section="library" field="para1" fallback={t('pages.about.libraryPara1')} as="p" multiline />
+          <EditableField page="about" section="library" field="para2" fallback={t('pages.about.libraryPara2')} as="p" multiline />
+          <EditableField page="about" section="library" field="para3" fallback={t('pages.about.libraryPara3')} as="p" multiline />
+          <EditableField page="about" section="library" field="para4" fallback={t('pages.about.libraryPara4')} as="p" multiline />
         </div>
       </div>
     </PageLayout>
@@ -45,17 +46,15 @@ export function Vision() {
         <PageHead eyebrow={t('pages.about.aboutUs')} title={t('pages.about.visionMissionTitle')} />
         <div className="section">
           <h3>{t('pages.about.visionHeading')}</h3>
-          <p className="prose">
-            {t('pages.about.visionText')}
-          </p>
+          <EditableField page="about" section="vision" field="text" fallback={t('pages.about.visionText')} as="p" className="prose" multiline />
         </div>
         <div className="section">
           <h3>{t('pages.about.missionHeading')}</h3>
           <ul className="prose">
-            <li>{t('pages.about.missionItem1')}</li>
-            <li>{t('pages.about.missionItem2')}</li>
-            <li>{t('pages.about.missionItem3')}</li>
-            <li>{t('pages.about.missionItem4')}</li>
+            <li><EditableField page="about" section="mission" field="item1" fallback={t('pages.about.missionItem1')} /></li>
+            <li><EditableField page="about" section="mission" field="item2" fallback={t('pages.about.missionItem2')} /></li>
+            <li><EditableField page="about" section="mission" field="item3" fallback={t('pages.about.missionItem3')} /></li>
+            <li><EditableField page="about" section="mission" field="item4" fallback={t('pages.about.missionItem4')} /></li>
           </ul>
         </div>
       </div>
@@ -65,20 +64,17 @@ export function Vision() {
 
 export function Rules() {
   const { t } = useApp()
-  const rules = [
-    t('pages.about.rule1'),
-    t('pages.about.rule2'),
-    t('pages.about.rule3'),
-    t('pages.about.rule4'),
-    t('pages.about.rule5'),
-    t('pages.about.rule6'),
-  ]
+  const ruleKeys = ['rule1', 'rule2', 'rule3', 'rule4', 'rule5', 'rule6']
   return (
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.about.aboutUs')} title={t('pages.about.rulesTitle')} />
         <ul className="prose">
-          {rules.map((r) => <li key={r}>{r}</li>)}
+          {ruleKeys.map(key => (
+            <li key={key}>
+              <EditableField page="about" section="rules" field={key} fallback={t(`pages.about.${key}`)} />
+            </li>
+          ))}
         </ul>
       </div>
     </PageLayout>
@@ -91,9 +87,7 @@ export function Committee() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.about.aboutUs')} title={t('pages.about.committeeTitle')} />
-        <p className="prose">
-          {t('pages.about.committeeDesc')}
-        </p>
+        <EditableField page="about" section="committee" field="desc" fallback={t('pages.about.committeeDesc')} as="p" className="prose" multiline />
       </div>
     </PageLayout>
   )
@@ -133,10 +127,7 @@ export function Future() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.about.aboutUs')} title={t('pages.about.futureTitle')} />
-        <div
-          className="prose"
-          dangerouslySetInnerHTML={{ __html: t('pages.about.futurePara') }}
-        />
+        <EditableField page="about" section="future" field="text" fallback={t('pages.about.futurePara')} as="div" className="prose" html multiline />
       </div>
     </PageLayout>
   )
@@ -148,9 +139,7 @@ export function Staff() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.about.aboutUs')} title={t('pages.about.staffTitle')} />
-        <p className="prose">
-          {t('pages.about.staffDesc')}
-        </p>
+        <EditableField page="about" section="staff" field="desc" fallback={t('pages.about.staffDesc')} as="p" className="prose" multiline />
         <div className="table-wrap" style={{ maxWidth: 720 }}>
           <table className="data">
             <thead>
@@ -182,9 +171,7 @@ export function Budget() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.about.aboutUs')} title={t('pages.about.budgetTitle')} />
-        <p className="prose">
-          {t('pages.about.budgetDesc')}
-        </p>
+        <EditableField page="about" section="budget" field="desc" fallback={t('pages.about.budgetDesc')} as="p" className="prose" multiline />
         <div className="table-wrap" style={{ maxWidth: 560 }}>
           <table className="data">
             <thead>
