@@ -32,7 +32,7 @@ export function Feedback() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.askus.feedbackEyebrow')} title={t('pages.askus.feedbackTitle')} />
-        <p className="prose">{t('pages.askus.feedbackIntro')}</p>
+        <EditableField page="askus" section="feedback" field="intro" fallback={t('pages.askus.feedbackIntro')} as="p" className="prose" multiline />
         {sent ? (
           <div className="notice">{t('pages.askus.feedbackSuccess')}</div>
         ) : (

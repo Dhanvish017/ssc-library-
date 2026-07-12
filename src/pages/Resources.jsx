@@ -2,6 +2,7 @@ import { PageHead, ResourceTable, ToolTable, LinkTable } from '../components/Bui
 import { oaJournals, oaBooks, etds, researchTools, aiTools, elearning } from '../data/site.js'
 import PageLayout from '../components/PageLayout.jsx'
 import { useApp } from '../context/AppContext.jsx'
+import EditableField from '../components/EditableField.jsx'
 
 export function OAResources() {
   const { t } = useApp()
@@ -9,20 +10,18 @@ export function OAResources() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.resources.oaEyebrow')} title={t('pages.resources.oaTitle')} />
-        <p className="prose">
-          {t('pages.resources.oaIntro')}
-        </p>
+        <EditableField page="resources" section="oa" field="intro" fallback={t('pages.resources.oaIntro')} as="p" className="prose" multiline />
         <div className="section">
-          <h3>{t('pages.resources.oaJournalsTitle')}</h3>
-          <ResourceTable rows={oaJournals} />
+          <EditableField page="resources" section="oa" field="journalsTitle" fallback={t('pages.resources.oaJournalsTitle')} as="h3" />
+          <ResourceTable rows={oaJournals} tableKey="oaJournals" />
         </div>
         <div className="section">
-          <h3>{t('pages.resources.oaBooksTitle')}</h3>
-          <ResourceTable rows={oaBooks} />
+          <EditableField page="resources" section="oa" field="booksTitle" fallback={t('pages.resources.oaBooksTitle')} as="h3" />
+          <ResourceTable rows={oaBooks} tableKey="oaBooks" />
         </div>
         <div className="section">
-          <h3>{t('pages.resources.etdsTitle')}</h3>
-          <ResourceTable rows={etds} />
+          <EditableField page="resources" section="oa" field="etdsTitle" fallback={t('pages.resources.etdsTitle')} as="h3" />
+          <ResourceTable rows={etds} tableKey="etds" />
         </div>
       </div>
     </PageLayout>
@@ -35,10 +34,8 @@ export function ResearchSupport() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.resources.researchEyebrow')} title={t('pages.resources.researchTitle')} />
-        <p className="prose">
-          {t('pages.resources.researchIntro')}
-        </p>
-        <ToolTable groups={researchTools} />
+        <EditableField page="resources" section="research" field="intro" fallback={t('pages.resources.researchIntro')} as="p" className="prose" multiline />
+        <ToolTable groups={researchTools} tableKey="researchTools" />
       </div>
     </PageLayout>
   )
@@ -50,10 +47,8 @@ export function AITools() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.resources.aiEyebrow')} title={t('pages.resources.aiTitle')} />
-        <p className="prose">
-          {t('pages.resources.aiIntro')}
-        </p>
-        <ToolTable groups={aiTools} />
+        <EditableField page="resources" section="ai" field="intro" fallback={t('pages.resources.aiIntro')} as="p" className="prose" multiline />
+        <ToolTable groups={aiTools} tableKey="aiTools" />
       </div>
     </PageLayout>
   )
@@ -65,10 +60,8 @@ export function Elearning() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.resources.elearningEyebrow')} title={t('pages.resources.elearningTitle')} />
-        <p className="prose">
-          {t('pages.resources.elearningIntro')}
-        </p>
-        <LinkTable rows={elearning} />
+        <EditableField page="resources" section="elearning" field="intro" fallback={t('pages.resources.elearningIntro')} as="p" className="prose" multiline />
+        <LinkTable rows={elearning} tableKey="elearning" />
       </div>
     </PageLayout>
   )

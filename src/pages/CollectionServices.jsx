@@ -2,6 +2,7 @@ import { PageHead } from '../components/Building.jsx'
 import { collection, services } from '../data/site.js'
 import PageLayout from '../components/PageLayout.jsx'
 import { useApp } from '../context/AppContext.jsx'
+import EditableField from '../components/EditableField.jsx'
 
 export function Collection() {
   const { t } = useApp()
@@ -9,12 +10,10 @@ export function Collection() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.collection.eyebrow')} title={t('pages.collection.title')} />
-        <p className="prose">
-          {t('pages.collection.intro')}
-        </p>
+        <EditableField page="collection" section="intro" field="text" fallback={t('pages.collection.intro')} as="p" className="prose" multiline />
 
         <div className="section" id="books">
-          <h3>{t('pages.collection.stockTitle')}</h3>
+          <EditableField page="collection" section="stockSection" field="title" fallback={t('pages.collection.stockTitle')} as="h3" />
           <div className="table-wrap">
             <table className="data">
               <thead>
@@ -28,8 +27,19 @@ export function Collection() {
                 {collection.map((c) => (
                   <tr key={c.sl}>
                     <td>{c.sl}</td>
-                    <td>{t(`pages.collection.items.${c.item}`, c.item)}</td>
-                    <td>{t(`pages.collection.details.${c.details}`, c.details)}</td>
+                    <td>
+                      <EditableField
+                        page="collection" section="items" field={`row_${c.sl}_item`}
+                        fallback={t(`pages.collection.items.${c.item}`, c.item)}
+                      />
+                    </td>
+                    <td>
+                      <EditableField
+                        page="collection" section="items" field={`row_${c.sl}_details`}
+                        fallback={t(`pages.collection.details.${c.details}`, c.details)}
+                        multiline
+                      />
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -38,24 +48,18 @@ export function Collection() {
         </div>
 
         <div className="section" id="journals">
-          <h3>{t('pages.collection.journalsTitle')}</h3>
-          <p className="prose">
-            {t('pages.collection.journalsDesc')}
-          </p>
+          <EditableField page="collection" section="journals" field="title" fallback={t('pages.collection.journalsTitle')} as="h3" />
+          <EditableField page="collection" section="journals" field="desc" fallback={t('pages.collection.journalsDesc')} as="p" className="prose" multiline />
         </div>
 
         <div className="section" id="question-paper">
-          <h3>{t('pages.collection.questionPaperTitle')}</h3>
-          <p className="prose">
-            {t('pages.collection.questionPaperDesc')}
-          </p>
+          <EditableField page="collection" section="questionPaper" field="title" fallback={t('pages.collection.questionPaperTitle')} as="h3" />
+          <EditableField page="collection" section="questionPaper" field="desc" fallback={t('pages.collection.questionPaperDesc')} as="p" className="prose" multiline />
         </div>
 
         <div className="section" id="magazines">
-          <h3>{t('pages.collection.magazinesTitle')}</h3>
-          <p className="prose">
-            {t('pages.collection.magazinesDesc')}
-          </p>
+          <EditableField page="collection" section="magazines" field="title" fallback={t('pages.collection.magazinesTitle')} as="h3" />
+          <EditableField page="collection" section="magazines" field="desc" fallback={t('pages.collection.magazinesDesc')} as="p" className="prose" multiline />
         </div>
       </div>
     </PageLayout>
@@ -68,31 +72,37 @@ export function Services() {
     <PageLayout>
       <div className="container page">
         <PageHead eyebrow={t('pages.services.eyebrow')} title={t('pages.services.title')} />
-        <p className="prose">{t('pages.services.intro')}</p>
+        <EditableField page="services" section="intro" field="text" fallback={t('pages.services.intro')} as="p" className="prose" multiline />
 
         <div className="section" id="circulation">
-          <h3>{t('pages.services.circulationTitle')}</h3>
+          <EditableField page="services" section="circulation" field="title" fallback={t('pages.services.circulationTitle')} as="h3" />
           <div className="deflist">
-            {services.map(([name, desc]) => (
+            {services.map(([name, desc], i) => (
               <div className="item" key={name}>
-                <strong>{t(`pages.services.list.${name}.title`, name)}:</strong> {t(`pages.services.list.${name}.desc`, desc)}
+                <strong>
+                  <EditableField
+                    page="services" section="list" field={`item_${i}_title`}
+                    fallback={t(`pages.services.list.${name}.title`, name)}
+                  />
+                </strong>:{' '}
+                <EditableField
+                  page="services" section="list" field={`item_${i}_desc`}
+                  fallback={t(`pages.services.list.${name}.desc`, desc)}
+                  multiline
+                />
               </div>
             ))}
           </div>
         </div>
 
         <div className="section" id="reference">
-          <h3>{t('pages.services.referenceTitle')}</h3>
-          <p className="prose">
-            {t('pages.services.referenceDesc')}
-          </p>
+          <EditableField page="services" section="reference" field="title" fallback={t('pages.services.referenceTitle')} as="h3" />
+          <EditableField page="services" section="reference" field="desc" fallback={t('pages.services.referenceDesc')} as="p" className="prose" multiline />
         </div>
 
         <div className="section" id="opac">
-          <h3>{t('pages.services.opacTitle')}</h3>
-          <p className="prose">
-            {t('pages.services.opacDesc')}
-          </p>
+          <EditableField page="services" section="opac" field="title" fallback={t('pages.services.opacTitle')} as="h3" />
+          <EditableField page="services" section="opac" field="desc" fallback={t('pages.services.opacDesc')} as="p" className="prose" multiline />
         </div>
       </div>
     </PageLayout>

@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useApp } from '../context/AppContext.jsx'
+import EditableField from './EditableField.jsx'
 
-// Sets the section heading and (optionally) updates the document title.
 export function PageHead({ eyebrow, title }) {
   useEffect(() => {
     if (title) document.title = `SSCASC Library, Tumkur`
@@ -15,7 +15,8 @@ export function PageHead({ eyebrow, title }) {
 }
 
 // Three-column resource table: Name | Link | Description.
-export function ResourceTable({ caption, rows, linkLabel = 'Visit' }) {
+// Pass tableKey to enable inline editing of name and desc cells.
+export function ResourceTable({ caption, rows, linkLabel = 'Visit', tableKey = null, pageKey = 'resources' }) {
   const { t } = useApp()
   return (
     <div className="table-wrap">
@@ -33,13 +34,23 @@ export function ResourceTable({ caption, rows, linkLabel = 'Visit' }) {
           {rows.map(([name, url, desc], i) => (
             <tr key={url + i}>
               <td>{i + 1}</td>
-              <td>{t(`pages.resources.items.${name}.name`, name)}</td>
+              <td>
+                {tableKey
+                  ? <EditableField page={pageKey} section={tableKey} field={`row_${i}_name`} fallback={t(`pages.resources.items.${name}.name`, name)} />
+                  : t(`pages.resources.items.${name}.name`, name)
+                }
+              </td>
               <td>
                 <a href={url} target="_blank" rel="noopener noreferrer">
                   {t('pages.resources.tableHeaders.linkLabel', linkLabel)} →
                 </a>
               </td>
-              <td>{t(`pages.resources.items.${name}.desc`, desc)}</td>
+              <td>
+                {tableKey
+                  ? <EditableField page={pageKey} section={tableKey} field={`row_${i}_desc`} fallback={t(`pages.resources.items.${name}.desc`, desc)} multiline />
+                  : t(`pages.resources.items.${name}.desc`, desc)
+                }
+              </td>
             </tr>
           ))}
         </tbody>
@@ -49,7 +60,8 @@ export function ResourceTable({ caption, rows, linkLabel = 'Visit' }) {
 }
 
 // Grouped tool table: Category | Tools (links) | Purpose.
-export function ToolTable({ caption, groups }) {
+// Pass tableKey to enable inline editing of heading and purpose cells.
+export function ToolTable({ caption, groups, tableKey = null, pageKey = 'resources' }) {
   const { t } = useApp()
   return (
     <div className="table-wrap">
@@ -67,7 +79,14 @@ export function ToolTable({ caption, groups }) {
           {groups.map((g, i) => (
             <tr key={g.heading}>
               <td>{i + 1}</td>
-              <td><strong>{t(`pages.resources.groups.${g.heading}.heading`, g.heading)}</strong></td>
+              <td>
+                <strong>
+                  {tableKey
+                    ? <EditableField page={pageKey} section={tableKey} field={`group_${i}_heading`} fallback={t(`pages.resources.groups.${g.heading}.heading`, g.heading)} />
+                    : t(`pages.resources.groups.${g.heading}.heading`, g.heading)
+                  }
+                </strong>
+              </td>
               <td>
                 {g.tools.map(([name, url], j) => (
                   <span key={url}>
@@ -76,7 +95,12 @@ export function ToolTable({ caption, groups }) {
                   </span>
                 ))}
               </td>
-              <td>{t(`pages.resources.groups.${g.heading}.purpose`, g.purpose)}</td>
+              <td>
+                {tableKey
+                  ? <EditableField page={pageKey} section={tableKey} field={`group_${i}_purpose`} fallback={t(`pages.resources.groups.${g.heading}.purpose`, g.purpose)} multiline />
+                  : t(`pages.resources.groups.${g.heading}.purpose`, g.purpose)
+                }
+              </td>
             </tr>
           ))}
         </tbody>
@@ -86,7 +110,8 @@ export function ToolTable({ caption, groups }) {
 }
 
 // Simple two-column link list (name | link).
-export function LinkTable({ caption, rows }) {
+// Pass tableKey to enable inline editing of the platform name cell.
+export function LinkTable({ caption, rows, tableKey = null, pageKey = 'resources' }) {
   const { t } = useApp()
   return (
     <div className="table-wrap">
@@ -103,9 +128,16 @@ export function LinkTable({ caption, rows }) {
           {rows.map(([name, url], i) => (
             <tr key={url}>
               <td>{i + 1}</td>
-              <td>{name}</td>
               <td>
-                <a href={url} target="_blank" rel="noopener noreferrer">{url.replace(/^https?:\/\//, '').replace(/\/$/, '')}</a>
+                {tableKey
+                  ? <EditableField page={pageKey} section={tableKey} field={`row_${i}_name`} fallback={name} />
+                  : name
+                }
+              </td>
+              <td>
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                  {url.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                </a>
               </td>
             </tr>
           ))}
