@@ -3,6 +3,7 @@ import { staff, budget } from '../data/site.js'
 import PageLayout from '../components/PageLayout.jsx'
 import { useApp } from '../context/AppContext.jsx'
 import EditableField from '../components/EditableField.jsx'
+import principalPhoto from '../assets/principal.jpg'
 
 export function AboutInstitution() {
   const { t } = useApp()
@@ -32,6 +33,57 @@ export function AboutLibrary() {
           <EditableField page="about" section="library" field="para2" fallback={t('pages.about.libraryPara2')} as="p" multiline />
           <EditableField page="about" section="library" field="para3" fallback={t('pages.about.libraryPara3')} as="p" multiline />
           <EditableField page="about" section="library" field="para4" fallback={t('pages.about.libraryPara4')} as="p" multiline />
+        </div>
+      </div>
+    </PageLayout>
+  )
+}
+
+export function PrincipalSpeech() {
+  const { t } = useApp()
+  return (
+    <PageLayout>
+      <div className="container page">
+        <PageHead eyebrow={t('pages.about.aboutUs')} title={t('pages.about.principalTitle')} />
+        <div style={{ overflow: 'hidden' }}>
+
+          <div style={{ float: 'right', margin: '0 0 20px 28px', textAlign: 'center' }}>
+            <img
+              src={principalPhoto}
+              alt={`${t('pages.about.principalName')}, ${t('pages.about.principalRole')}`}
+              style={{
+                width: 180,
+                borderRadius: 10,
+                border: '3px solid var(--garnet)',
+                display: 'block',
+                boxShadow: '0 4px 16px rgba(0,0,0,0.15)',
+              }}
+            />
+            <div style={{ fontSize: '0.82rem', color: 'var(--ink-soft)', marginTop: 8, lineHeight: 1.5 }}>
+              <strong style={{ color: 'var(--garnet)', display: 'block' }}>{t('pages.about.principalName')}</strong>
+              {t('pages.about.principalRole')}
+            </div>
+          </div>
+
+          <div className="prose">
+            <p><strong>{t('pages.about.principalGreeting')}</strong></p>
+            <EditableField
+              page="about" section="principal" field="para1"
+              fallback={t('pages.about.principalPara1')}
+              as="p" multiline
+            />
+            <EditableField
+              page="about" section="principal" field="para2"
+              fallback={t('pages.about.principalPara2')}
+              as="p" multiline
+            />
+            <p style={{ marginTop: 28 }}>
+              {t('pages.about.principalSignoff')}<br />
+              <strong>{t('pages.about.principalName')}</strong><br />
+              {t('pages.about.principalRole')}
+            </p>
+          </div>
+
         </div>
       </div>
     </PageLayout>

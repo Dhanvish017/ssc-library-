@@ -12,7 +12,7 @@ import { useApp } from './context/AppContext.jsx'
 
 import Home from './pages/Home.jsx'
 import {
-  AboutInstitution, AboutLibrary, Vision, Rules, Committee, Timings, Future, Staff, Budget,
+  AboutInstitution, AboutLibrary, PrincipalSpeech, Vision, Rules, Committee, Timings, Future, Staff, Budget,
 } from './pages/About.jsx'
 import { Collection, Services } from './pages/CollectionServices.jsx'
 import { OAResources, ResearchSupport, AITools, Elearning } from './pages/Resources.jsx'
@@ -63,6 +63,7 @@ function AppInner() {
             <Route path="/" element={<Home />} />
             <Route path="/about/institution" element={<AboutInstitution />} />
             <Route path="/about/library" element={<AboutLibrary />} />
+            <Route path="/about/principal" element={<PrincipalSpeech />} />
             <Route path="/about/vision" element={<Vision />} />
             <Route path="/about/rules" element={<Rules />} />
             <Route path="/about/committee" element={<Committee />} />

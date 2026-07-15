@@ -222,6 +222,7 @@ export const navStructure = [
     children: [
       { label: 'About Institution', to: '/about/institution' },
       { label: 'About the Library', to: '/about/library' },
+      { label: "Principal's Speech", to: '/about/principal' },
       { label: 'Vision / Mission', to: '/about/vision' },
       { label: 'Library Rules', to: '/about/rules' },
       { label: 'Library Committee', to: '/about/committee' },
