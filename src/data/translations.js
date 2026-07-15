@@ -554,7 +554,10 @@ export const translations = {
         feedbackEyebrow: 'More',
         feedbackTitle: 'Feedback',
         feedbackIntro: 'Your suggestions help us improve. Please share your feedback below.',
-        feedbackSuccess: 'Thank you — your feedback has been recorded (demo). Connect this form to your backend or a Google Form to collect responses.',
+        feedbackSuccess: 'Feedback submitted successfully. Thank you!',
+        reportSuccess: 'Your report has been submitted. We will look into it.',
+        recommendBookSuccess: 'Book recommendation submitted successfully. Thank you!',
+        recommendJournalSuccess: 'Journal recommendation submitted successfully. Thank you!',
         feedback: {
           name: 'Name',
           email: 'Email',
@@ -1202,7 +1205,10 @@ Information Literacy Sessions: Trains users to locate, evaluate, and effectively
         feedbackEyebrow: 'ಇನ್ನಷ್ಟು',
         feedbackTitle: 'ಪ್ರತಿಕ್ರಿಯೆ',
         feedbackIntro: 'ನಿಮ್ಮ ಸಲಹೆಗಳು ನಮ್ಮನ್ನು ಸುಧಾರಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಕೆಳಗೆ ಹಂಚಿಕೊಳ್ಳಿ.',
-        feedbackSuccess: 'ಧನ್ಯವಾದಗಳು — ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ದಾಖಲಿಸಲಾಗಿದೆ (ಡೆಮೋ). ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಈ ಫಾರ್ಮ್ ಅನ್ನು ನಿಮ್ಮ ಬ್ಯಾಕೆಂಡ್ ಅಥವಾ ಗೂಗಲ್ ಫಾರ್ಮ್‌ಗೆ ಸಂಪರ್ಕಿಸಿ.',
+        feedbackSuccess: 'ಪ್ರತಿಕ್ರಿಯೆ ಯಶಸ್ವಿಯಾಗಿ ಸಲ್ಲಿಸಲಾಗಿದೆ. ಧನ್ಯವಾದಗಳು!',
+        reportSuccess: 'ನಿಮ್ಮ ವರದಿ ಸಲ್ಲಿಸಲಾಗಿದೆ. ನಾವು ಅದನ್ನು ಪರಿಶೀಲಿಸುತ್ತೇವೆ.',
+        recommendBookSuccess: 'ಪುಸ್ತಕ ಶಿಫಾರಸು ಯಶಸ್ವಿಯಾಗಿ ಸಲ್ಲಿಸಲಾಗಿದೆ. ಧನ್ಯವಾದಗಳು!',
+        recommendJournalSuccess: 'ನಿಯತಕಾಲಿಕ ಶಿಫಾರಸು ಯಶಸ್ವಿಯಾಗಿ ಸಲ್ಲಿಸಲಾಗಿದೆ. ಧನ್ಯವಾದಗಳು!',
         feedback: {
           name: 'ಹೆಸರು',
           email: 'ಇಮೇಲ್',
