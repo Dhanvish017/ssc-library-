@@ -359,7 +359,8 @@ img {
   margin: 0;
   line-height: 0.9;
   color: #fff;
-  font-style: italic;
+  font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif;
+  font-style: normal;
   text-align: center;
   padding-left: 20px;
   margin-top: -40px;

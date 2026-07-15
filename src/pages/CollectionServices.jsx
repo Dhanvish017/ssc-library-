@@ -104,6 +104,24 @@ export function Services() {
           <EditableField page="services" section="opac" field="title" fallback={t('pages.services.opacTitle')} as="h3" />
           <EditableField page="services" section="opac" field="desc" fallback={t('pages.services.opacDesc')} as="p" className="prose" multiline />
         </div>
+
+        <div className="section" id="nlist">
+          <EditableField page="services" section="nlist" field="title" fallback="N-List" as="h3" />
+          <EditableField
+            page="services" section="nlist" field="desc"
+            fallback="An INFLIBNET programme offering free access to e-journals and e-books for eligible colleges. Available for Private-Aided institutions to support academic research and learning."
+            as="p" className="prose" multiline
+          />
+          <a
+            href="https://nlist.inflibnet.ac.in/index.php"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-gold"
+            style={{ display: 'inline-block', marginTop: 8 }}
+          >
+            Visit N-List →
+          </a>
+        </div>
       </div>
     </PageLayout>
   )

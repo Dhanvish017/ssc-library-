@@ -31,10 +31,6 @@ export function Contact() {
                 <EditableField page="contact" section="details" field="librarian" fallback={t('pages.contact.librarianName')} />
               </div>
             </div>
-            <div style={{ marginTop: 16, display: 'flex', gap: 12 }}>
-              <a className="btn btn-gold" href={college.youtube} target="_blank" rel="noopener noreferrer">{t('pages.contact.youtube')}</a>
-              <a className="btn btn-ghost" style={{ color: 'var(--garnet)', borderColor: 'var(--garnet)' }} href={college.facebook} target="_blank" rel="noopener noreferrer">{t('pages.contact.facebook')}</a>
-            </div>
           </div>
           <div>
             <iframe
