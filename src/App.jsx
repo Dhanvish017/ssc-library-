@@ -56,8 +56,10 @@ function AppInner() {
       <a className="skip-link" href="#main">{t('skip')}</a>
       <ScrollManager />
       <AdminToolbar />
-      <div className="site-frame">
+      <div className="header-wrapper">
         <Header onOpenSearch={() => setSearchOpen(true)} />
+      </div>
+      <div className="site-frame">
         <main id="main">
           <Routes>
             <Route path="/" element={<Home />} />

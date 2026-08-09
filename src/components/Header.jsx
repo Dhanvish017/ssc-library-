@@ -82,47 +82,49 @@ export default function Header({ onOpenSearch }) {
       </div>
 
       <div className="header-main">
-        <img
-          src={logo}
-          alt="College Logo"
-          className="header-logo"
-          onClick={handleLogoClick}
-          style={{ cursor: isAdmin ? 'default' : 'pointer' }}
-        />
-
-        <div className="college-info">
-          <div className="society-name">
-            {t('societyName')}
-          </div>
-
-          <h1 className="college-name">
-            {t('collegeName')}
-          </h1>
-
-          <h2 className="college-streams">
-            {t('collegeStreams')}
-          </h2>
-
-          <div className="affiliation">
-            {t('affiliation')}
-          </div>
-
-          <div className="address">
-            {t('address')}
-          </div>
-        </div>
-
-        <div className="header-swamiji-group">
+        <div className="header-inner">
           <img
-            src={tsh}
-            alt="Swamiji"
-            className="small-swamiji"
+            src={logo}
+            alt="College Logo"
+            className="header-logo"
+            onClick={handleLogoClick}
+            style={{ cursor: isAdmin ? 'default' : 'pointer' }}
           />
-          <img
-            src={smallswamiji}
-            alt="Swamiji"
-            className="header-swamiji"
-          />
+
+          <div className="college-info">
+            <div className="society-name">
+              {t('societyName')}
+            </div>
+
+            <h1 className="college-name">
+              {t('collegeName')}
+            </h1>
+
+            <h2 className="college-streams">
+              {t('collegeStreams')}
+            </h2>
+
+            <div className="affiliation">
+              {t('affiliation')}
+            </div>
+
+            <div className="address">
+              {t('address')}
+            </div>
+          </div>
+
+          <div className="header-swamiji-group">
+            <img
+              src={tsh}
+              alt="Swamiji"
+              className="small-swamiji"
+            />
+            <img
+              src={smallswamiji}
+              alt="Swamiji"
+              className="header-swamiji"
+            />
+          </div>
         </div>
       </div>
 

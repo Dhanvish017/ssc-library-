@@ -38,15 +38,23 @@ html {
 
 body {
   margin: 0;
-  background:
-    repeating-linear-gradient(45deg, rgba(136, 89, 97, 0.04) 0 14px, rgba(122, 30, 46, 0.06) 14px 28px),
-    #d7d0c4;
+  background: #ffffff;
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Full-width header wrapper */
+.header-wrapper {
+  width: 100%;
+}
+
+.header-wrapper .container {
+  max-width: 1050px;
+}
+
 
 /* Boxed "WordPress-style" content frame */
 .site-frame {
@@ -178,12 +186,17 @@ img {
 /* ---------- Header Main ---------- */
 .header-main {
   width: 100%;
+  background-color: #7A1E2E;
+}
+
+.header-inner {
+  max-width: 1050px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   padding: 10px 20px;
-  background-color: #7A1E2E;
 }
 
 .header-logo {
@@ -1193,7 +1206,7 @@ table.data td a {
 .swamiji-photo {
   position: fixed;
   bottom: -70px;
-  left: 150px;
+  left: 100px;
   width: clamp(200px, 100vw, 200px);
   height: auto;
   z-index: 1200;
@@ -1802,7 +1815,7 @@ table.data td a {
   }
 
   /* Header main */
-  .header-main {
+  .header-inner {
     flex-wrap: wrap;
     gap: 12px;
     padding: 8px 14px;
@@ -1909,7 +1922,7 @@ table.data td a {
   }
 
   /* Header main: stack nicely on mobile */
-  .header-main {
+  .header-inner {
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -2268,7 +2281,7 @@ table.data td a {
   background: rgba(255, 255, 255, 0.28);
 }
 
-body.admin-mode .site-frame {
+body.admin-mode .header-wrapper {
   margin-top: 36px;
 }
 
