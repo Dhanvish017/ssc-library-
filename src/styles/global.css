@@ -350,7 +350,14 @@ img {
   gap: 14px;
   flex: 1;
   min-width: 0;
-  padding-left: 200px;
+  padding-left: 0;
+  justify-content: center;
+}
+
+.brand-text {
+  display: block;
+  width: 100%;
+  min-width: 0;
 }
 
 .crest {
@@ -368,15 +375,14 @@ img {
 }
 
 .brand-text h1 {
-  font-size: 2.25rem;
+  font-size: clamp(1.45rem, 1.8vw, 2rem);
   margin: 0;
-  line-height: 0.9;
+  line-height: 1.1;
   color: #fff;
   font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', serif;
   font-style: normal;
   text-align: center;
-  padding-left: 20px;
-  margin-top: -40px;
+  padding: 0 12px;
 }
 
 .brand-text p {

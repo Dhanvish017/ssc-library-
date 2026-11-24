@@ -5,7 +5,7 @@ export const translations = {
   en: {
     langName: 'English',
     college: 'Sree Siddaganga College of Arts, Science and Commerce',
-    libCenter: 'Library and Information Center',
+    libCenter: 'Sri Sri Shivakumara Swamiji Library and Information Center',
     tagline: 'The library is the heart of the institution.',
     search: 'Search',
     searchPlaceholder: 'Search pages, resources and services…',
@@ -648,7 +648,7 @@ Information Literacy Sessions: Trains users to locate, evaluate, and effectively
   kn: {
     langName: 'ಕನ್ನಡ',
     college: 'ಶ್ರೀ ಸಿದ್ದಗಂಗಾ ಕಲಾ, ವಿಜ್ಞಾನ ಮತ್ತು ವಾಣಿಜ್ಯ ಕಾಲೇಜು',
-    libCenter: 'ಗ್ರಂಥಾಲಯ ಮತ್ತು ಮಾಹಿತಿ ಕೇಂದ್ರ',
+    libCenter: 'ಶ್ರೀ ಶ್ರೀ ಶಿವಕುಮಾರ ಸ್ವಾಮೀಜಿ ಗ್ರಂಥಾಲಯ ಮತ್ತು ಮಾಹಿತಿ ಕೇಂದ್ರ',
     tagline: 'ಗ್ರಂಥಾಲಯವು ಸಂಸ್ಥೆಯ ಹೃದಯ.',
     search: 'ಹುಡುಕಿ',
     searchPlaceholder: 'ಪುಟಗಳು, ಸಂಪನ್ಮೂಲಗಳು ಮತ್ತು ಸೇವೆಗಳನ್ನು ಹುಡುಕಿ…',
